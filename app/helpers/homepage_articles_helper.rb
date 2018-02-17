@@ -1,0 +1,2 @@
+module HomepageArticlesHelper
+end

@@ -1,0 +1,2 @@
+class GunbadController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module DrakHelper
+end

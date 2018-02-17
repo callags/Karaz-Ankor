@@ -1,0 +1,451 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>The Warriors of the Karaz Ankor</h1>
+</div>
+
+
+<div class="title_page">
+	<h1>Infantry</h1>
+</div>
+<br>
+
+<%= image_tag("dwarf army.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Dwarf Warriors</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br>
+
+<%= image_tag("miner.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Miners</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.4" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+<%= image_tag("longbeards.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Longbeards</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.5" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("ironbreaker.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br><br><br>
+<h1>Ironbreakers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.7" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+
+<%= image_tag("hammerer.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br><br><br>
+<h1>Hammerers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.8" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br>
+
+<%= image_tag("slayer 1.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Slayers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.9" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.10" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.11" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br><br>
+<%= image_tag("slayer 3.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Troll Slayers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.12" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h1>Giant Slayers</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.13" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h1>Dragon Slayers</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.14" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<%= image_tag("slayer 2.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<h1>Demon Slayers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.15" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="title_page">
+	<h1>Missile Infantry</h1>
+</div>
+<br>
+
+<%= image_tag("quarreller.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Quarrellers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br>
+
+<%= image_tag("thunderer.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Thunderers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("bugman rangers.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Dwarf Rangers</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.6" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("irondrakes.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Irondrakes</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.16" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="title_page">
+	<h1>Artillery<h1>
+</div>
+<br>
+
+<%= image_tag("bolt thrower.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Dwarf Bolt Thrower<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.17" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br><br><br><br>
+
+<%= image_tag("grudge thrower.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Grudge Thrower<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.18" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("flame cannon.png", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br><br><br>
+<h1>Flame Cannon<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.19" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br><br><br>
+
+<%= image_tag("dwarf cannon - organ gun.png", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Dwarf Cannon<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.20" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br><br><br>
+
+<%= image_tag("organ gun.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Organ Gun<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.21" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br><br><br><br><br>
+
+<div class="title_page">
+	<h1>Steam-powered Airships<h1>
+</div>
+
+<%= image_tag("gyrocopter.png", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Gyrocopter<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.22" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br>
+
+<%= image_tag("gyrobomber.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Gyrobomber<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.23" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br><br><br>
+
+<div class="title_page">
+	<h1>Navy<h1>
+</div>
+<br>
+
+<%= image_tag("monitor.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Monitor<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.30" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("nautilus.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Nautlius<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.31" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.32" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+
+<%= image_tag("ironclad.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Ironclad<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.29" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br>
+
+<%= image_tag("dreadnought.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Dreadnought<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.33" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br><br><br><br><br><br>
+
+<div class="title_page">
+	<h1>Nobles<h1>
+</div>
+
+<%= image_tag("king.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Dwarf King<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.24" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h1>Dwarf Lord<h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.26" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<div class="title_page">
+	<h1>Dwarf Heroes<h1>
+</div>
+
+<%= image_tag("thane.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Thane<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.25" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("runesmith.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Runesmith<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.27" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("engineer.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Engineer<h1>
+<% @articles.each do |article| %>
+	<% if article.title == "military pt.28" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<%= render 'banner' %>
+</body>
+</html>

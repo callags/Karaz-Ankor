@@ -1,0 +1,2 @@
+module ProminentHelper
+end

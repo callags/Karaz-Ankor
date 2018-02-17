@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*
+
+	project: gentle wiki
+	author: luka cvrk
+
+*/
+
+/* global reset */
+:link,:visited { text-decoration:none } :focus, :active { outline: 0 } ul,ol { list-style:none } h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; } ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0 } a img,:link img,:visited img { border:none } address { font-style:normal }
+body { font: .74em Arial, Sans-Serif; background: #F0DAF2 url(../images/bg.gif) repeat-x; color: #333; line-height: 1.6em; }
+a { color: #752B7D; text-decoration: underline; }
+/* a:hover { color: #0000FF; } */
+
+p.text-under-image {
+	color: #000000;
+    text-align: center;
+	font-size: 130%;
+}
+h2 { background: url(../images/bullet.gif) no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
+h2 a { text-decoration: underline; 
+}
+h1 { font: 1.9em Georgia; margin: 0 0 22px;  text-align: center;
+}
+h1 a { color: #262626; 
+}
+td {
+	border: 1px dotted blue;
+}
+table{
+	border-collapse: separate;
+    border-spacing: 0 1em;
+}
+.message_wrapper{
+	position: relative;
+	top: 0;
+	width: 100%;
+	background-color: coral;
+}
+.notice{
+	padding: 0.75rem 0;
+	text-align: center;
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 200 
+}
+.clear { clear: both; 
+}
+.wrap { margin: 25px auto; width: 680px; 
+}
+.picture { margin: 25px auto 
+}
+.homepage-leftsidepicture { 
+				width: 370px;  
+				float: left;
+				height: 600px;
+}
+.homepage-rightsidepicture { 
+				width: 375px; 
+				float:right;
+				height: 600px;
+}
+.homepage-centerpicture { 
+				height: 600px;
+				width: 595px;
+				margin-left: 5px;
+}
+.leftsidepicture { 
+				width: 375px; 
+				float:left 
+}
+.rightsidepicture { 
+				width: 375px; 
+				float:right 
+}
+.leftsidepicture-with-background{
+				margin: 5px;
+				width: 15%; 
+				float:left;
+				background-color: #7f7f7f;
+				
+}
+.social-category-layout { background-color: #7f7f7f;
+				   position: relative; 
+				   width: 91%;
+				   margin-left: 50px;
+}
+.empire-category-layout { background-color: #7f7f7f;
+				   position: relative; 
+				   width: 90%;
+				   margin-left: 50px;
+}
+.div-center{
+	margin: 0 auto;
+}
+.category-layout-item {
+	list-style: none;
+	display: inline-block;
+	margin: 15px;
+}
+
+.title_page {font-size: 16pt; margin: 25px auto; width: 800px;
+}
+.text { margin: 25px auto; width: 680px; font-size: 15pt
+}
+.center { margin: 0 auto; width: 680px; 
+}
+
+#left_tab { display:inline-block;
+		margin-left: 80px; }
+
+#right_tab { display:inline-block;
+		margin-left: 650px; }		
+
+#options { float: right; color: #B565BE; font-weight: bold; }
+	#options a { color: #B97AC0; padding: 0 0 0 8px; background: url(../images/bullet.gif) no-repeat left 5px; margin: 0 0 0 10px; }
+	#options a:hover { color: #E6E8B1; }
+
+#menu { float: left; margin: 0 0 10px; }
+#menu li { display: inline; }
+#menu li a { float: left; padding: 8px 30px; margin: 0 1px 0 0; color: #fff; background: #595959;  }
+	#menu li a:hover { color: #fff; background: #cc0000; }
+
+#left { float: left; width: 600px; margin: 0 0 40px; }
+#right { float: right; width: 270px; margin: 0 0 40px; background: #fff; border: 1px solid #D1AFD5; padding: 1px; }
+	.box { background: #E3C6E6; border-bottom: 1px solid #D1AFD5; border-right: 1px solid #D1AFD5; color: #9C5CA3; padding: 15px; }
+	.box h3 { margin: 0 0 10px; }
+	.box p { margin: 0; }
+
+#footer { clear: both; color: #808080; padding: 10px 0; }
+	#footer ul { float: left; width: 20px; }
+	#footer li { padding: 5px 8px; background: url(../images/dot.gif) repeat-x bottom; }
+		#footer li a { color: #CB799F; }
+		#footer li a:hover { color: #F5CFE1; }
+	#footer #col { float: left; width: 200px;   }
+	#copyright { color: #595959; padding: 24px 0 0; font-size: .9em; }

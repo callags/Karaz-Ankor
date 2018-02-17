@@ -1,0 +1,200 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Renowned figures of the Dwarf Empire</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.1" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("snorri.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Snorri Whitebeard</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.2" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("gotrek.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Gotrek Starbreaker</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.3" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("kurgan.png", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Kurgan Ironbeard</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.4" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br><br><br><br>
+
+
+<%= image_tag("thorgrim.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Thorgrim Grudgebearer</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.5" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("grombrindal.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Grombrindal</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.6" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br>
+
+<%= image_tag("The_Slayer_King.png", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Ungrim Ironfist</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.7" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("belegar.png", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Belegar Ironhammer</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.8" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br>
+
+<%= image_tag("bugman.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Josef Bugman</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.9" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br>
+
+<%= image_tag("byrrnoth.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Byrrnoth Grundadrakk</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.10" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br>
+
+<%= image_tag("skalf.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Skalf Dragonslayer</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.11" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br>
+
+<%= image_tag("ulther.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Ulther Stonehammer</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.12" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br>
+
+<%= image_tag("kazador.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Kazador Thunderhorn</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.13" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br>
+
+<%= image_tag("thorek.png", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Thorek Ironbrow</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "prominent pt.14" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %>
+
+</body>
+</html>

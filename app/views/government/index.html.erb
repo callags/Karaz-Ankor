@@ -1,0 +1,92 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>The Commonwealth of the Karaz Ankor</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.1" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.2" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.3" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<div class="title_page">
+	<h1>Dwarf Law</h1>
+</div>
+	
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.4" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.5" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.6" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.7" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.8" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Rune Magic</h1>
+</div>
+<%= image_tag("runesmith.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<div class="title_page">
+	<h1>Famous Rune Weapons</h1>
+</div>
+
+<%= image_tag("ghal maraz.jpg", :class => "rightsidepicture", style:"height:500px") %>
+<br><br>
+<h1>Ghal Maraz</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.4" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.5" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("war axe.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Grimmaz</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.6" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.7" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br><br>
+
+<%= image_tag("hammer.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Gnoldron</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.8" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br
+
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.9" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br
+
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.10" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br><br><br>
+
+<h1>Bryngandaz</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.11" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "magic pt.12" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %>
+
+</body>
+</html>

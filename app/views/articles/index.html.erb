@@ -1,0 +1,507 @@
+<% if user_signed_in? %>
+
+<%= render 'banner' %>
+	
+	<h1>Listing articles</h1>
+	
+	<% about = 1 %><% about_string = "about" %>						<% izor = 16 %><% izor_string = "izor" %>
+	<% agilwutraz = 2 %><% agilwutraz_string = "agilwutraz" %>		<% kadrin = 17 %><% kadrin_string = "kadrin" %>
+	<% azgal =  3 %><% azgal_string = "azgal" %>					<% magic = 18 %><% magic_string = "magic" %>
+	<% azul =  4 %><% azul_string = "azul" %>						<% military = 19 %><% military_string = "military" %>
+	<% capital =  5 %><% capital_string = "capital" %>				<% norn = 20 %><% norn_string = "norn" %>
+	<% diplomacy =  6 %><% diplomacy_string = "diplomacy" %>		<% peaks = 21 %><% peaks_string = "peaks" %>
+	<% drak =  7 %><% drak_string = "drak" %>						<% prominent = 22 %><% prominent_string = "prominent" %>
+	<% drazh =  8 %><% drazh_string = "drazh" %>					<% religion = 23 %><% religion_string = "religion" %>
+	<% economy =  9 %><% economy_string = "economy" %>				<% social = 24 %><% social_string = "social" %>
+	<% ekrund =  10 %><% ekrund_string = "ekrund" %>				<% ungor = 25 %><% ungor_string = "ungor" %>
+	<% government =  11 %><% government_string = "government" %>	<% varn = 26 %><% varn_string = "varn" %>
+	<% guild = 12 %><% guild_string = "guild" %>					<% varr = 27 %><% varr_string = "varr" %>
+	<% gunbad = 13 %><% gunbad_string = "gunbad" %>					<% vlag = 28 %><% vlag_string = "vlag" %>
+	<% hirn = 14 %><% hirn_string = "hirn" %>						<% zhufbar = 29 %><% zhufbar_string = "zhufbar" %>
+	<% history = 15 %><% history_string = "history" %>
+	
+	<% @articles.each do |article| %>
+		
+		<% if article.title.split[0].split(" ") == about_string %>			
+			<% article.user_id = about %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == agilwutraz_string %>
+			<% article.user_id = agilwutraz %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == azgal_string %>
+			<% article.user_id = azgal %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == capital_string %>
+			<% article.user_id = capital %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == diplomacy_string %>
+			<% article.user_id = diplomacy %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == drak_string %>
+			<% article.user_id = drak %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == drazh_string %>
+			<% article.user_id = drazh %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == economy_string %>
+			<% article.user_id = economy %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == ekrund_string %>
+			<% article.user_id = ekrund %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == government_string %>
+			<% article.user_id = government %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == guild_string %>
+			<% article.user_id = guild %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == hirn_string %>
+			<% article.user_id = hirn %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == history_string %>
+			<% article.user_id = history %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == izor_string %>
+			<% article.user_id = izor %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == kadrin_string %>
+			<% article.user_id = kadrin %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == magic_string %>
+			<% article.user_id = magic %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == military_string %>
+			<% article.user_id = military %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == norn_string %>
+			<% article.user_id = norn %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == peaks_string %>
+			<% article.user_id = peaks %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == prominent_string %>
+			<% article.user_id = prominent %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == religion_string %>
+			<% article.user_id = religion %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == social_string %>
+			<% article.user_id = social %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == ungor_string %>
+			<% article.user_id = ungor %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == varn_string %>
+			<% article.user_id = varn %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == varr_string %>
+			<% article.user_id = varr %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == vlag_string %>
+			<% article.user_id = vlag %>
+		<% end %>
+		
+		<% if article.title.split[0].split(" ") == zhufbar_string %>
+			<% article.user_id = zhufbar %>
+		<% end %>
+		
+		
+	<% end %>
+	
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Text</th>
+		</tr>
+		<% @articles.each do |article| %>
+			<tr>
+				<% if article.user_id == about%>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == agilwutraz %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == azgal %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == azul %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == capital %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == diplomacy %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == drak %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == drazh %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == economy %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == ekrund %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == government %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == guild %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == gunbad %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == hirn %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == history %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == izor %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == kadrin %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == magic %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == military %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == norn %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == peaks %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == prominent %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == religion %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == social %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == ungor %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == varn %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == varr %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == vlag %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+				<% if article.user_id == zhufbar %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
+			</tr>
+		<% end %>
+		<%= link_to 'Create a new article', new_article_url %>
+	</table>
+
+<%= render 'banner' %>	
+
+<% else %>
+<%= render 'banner' %>
+<div class="title_page">
+	<h1><%= link_to 'Access Denied! Please return to the Homepage', root_path %></h1>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<%= render 'banner' %>
+<% end %>

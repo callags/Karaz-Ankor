@@ -1,0 +1,70 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Economy</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.1" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.2" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.3" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.4" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.5" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "economy pt.6" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+class VarrController < ApplicationController
+end

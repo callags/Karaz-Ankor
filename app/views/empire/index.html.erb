@@ -1,0 +1,162 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/">Back to Homepage</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>The grand Karaz Ankor</h1>
+</div>
+
+<h1>Governed Holds</h1>
+<div class="div-center">
+	<div class="empire-category-layout">
+		<div class="category-layout-item">
+			<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"capital()", style:"height: 100px") %>
+			<p class="text-under-image">Karaz-A-Karak</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-kadrin-banner.png", onclick:"kadrin()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Kadrin</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-norn-banner.png", onclick:"norn()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Norn</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("barak-varr-banner.png", onclick:"varr()", style:"height: 100px") %>
+			<p class="text-under-image">Barak Varr</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-azul-banner.png", onclick:"azul()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Azul</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-hirn-banner.png", onclick:"hirn()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Hirn</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaka-drak-banner.png", onclick:"drak()", style:"height: 100px") %>
+			<p class="text-under-image">Kraka Drak</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-izor-banner.png", onclick:"izor()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Izor</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("zhufbar.png", onclick:"zhufbar()", style:"height: 100px") %>
+			<p class="text-under-image">Zhufbar</p>
+		</div>
+	</div>
+
+<br>
+
+<h1>Captured/Lost Holds</h1>
+
+	<div class="empire-category-layout">
+		<div class="category-layout-item">
+			<%= link_to image_tag("karak-8-peaks.jpg", onclick:"peaks()", style:"height: 100px") %>
+			<p class="text-under-image">Karak 8 Peaks</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"azgal()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Azgal</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"drazh()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Drazh</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"agilwutraz()", style:"height: 100px") %>
+			<p class="text-under-image">Karag Agilwutraz</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"gunbad()", style:"height: 100px") %>
+			<p class="text-under-image">Karaz Gunbad</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"varn()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Varn</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"ungor()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Ungor</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"vlag()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Vlag</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"ekrund()", style:"height: 100px") %>
+			<p class="text-under-image">Ekrund</p>
+		</div>
+	</div>
+</div>
+
+<% if notice %>
+	<script>
+		setTimeout(location.reload.bind(location), 8000);
+	</script>
+<% end %>
+<script>
+function izor() {
+	setTimeout(function(){ window.location.href='/empire/izor' }, 1000);
+}
+function capital() {
+	setTimeout(function(){ window.location.href='/empire/capital' }, 1000);
+}
+function kadrin() {
+	setTimeout(function(){ window.location.href='/empire/kadrin' }, 1000);
+}
+function norn() {
+	setTimeout(function(){ window.location.href='empire/norn' }, 1000);
+}
+function varr() {
+	setTimeout(function(){ window.location.href='empire/varr' }, 1000);
+}
+function azul() {
+	setTimeout(function(){ window.location.href='empire/azul' }, 1000);
+}
+function hirn() {
+	setTimeout(function(){ window.location.href='empire/hirn' }, 1000);
+}
+function drak() {
+	setTimeout(function(){ window.location.href='empire/drak' }, 1000);
+}
+function zhufbar() {
+	setTimeout(function(){ window.location.href='empire/zhufbar' }, 1000);
+}
+function peaks() {
+	setTimeout(function(){ window.location.href='empire/peaks' }, 1000);
+}
+function azgal() {
+	setTimeout(function(){ window.location.href='empire/azgal' }, 1000);
+}
+function drazh() {
+	setTimeout(function(){ window.location.href='empire/drazh' }, 1000);
+}
+function agilwutraz() {
+	setTimeout(function(){ window.location.href='empire/agilwutraz' }, 1000);
+}
+function gunbad() {
+	setTimeout(function(){ window.location.href='empire/gunbad' }, 1000);
+}
+function varn() {
+	setTimeout(function(){ window.location.href='empire/varn' }, 1000);
+}
+function ungor() {
+	setTimeout(function(){ window.location.href='empire/ungor' }, 1000);
+}
+function vlag() {
+	setTimeout(function(){ window.location.href='empire/vlag' }, 1000);
+}
+function ekrund() {
+	setTimeout(function(){ window.location.href='empire/ekrund' }, 1000);
+}
+</script>
+<br>
+<%= render 'banner' %>
+</body>
+</html>

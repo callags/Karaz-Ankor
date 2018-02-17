@@ -1,0 +1,2 @@
+class EkrundController < ApplicationController
+end

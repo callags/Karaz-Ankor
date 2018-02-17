@@ -1,0 +1,135 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Diplomacy</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.1" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("empire.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>The Empire</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.2" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br><br>
+
+<%= image_tag("bretonnia.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Bretonnia</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.3" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br>
+
+<%= image_tag("high-elves.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>High Elves</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.4" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br>
+
+<%= image_tag("wood-elves.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Wood Elves</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.5" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br><br>
+
+<%= image_tag("greenskins.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Greenskins</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.6" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br>
+
+<%= image_tag("skaven.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Skaven</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.7" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("vampire.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Vampires</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.8" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br>
+
+<%= image_tag("lizardmen.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Lizardmen</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "diplomacy pt.9" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %>
+
+</body>
+</html>

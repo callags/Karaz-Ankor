@@ -1,0 +1,2 @@
+class UngorController < ApplicationController
+end

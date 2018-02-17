@@ -1,0 +1,2 @@
+class VlagController < ApplicationController
+end

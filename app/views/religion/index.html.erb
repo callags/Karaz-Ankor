@@ -1,0 +1,139 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Religion</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br
+
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("grungni.png", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2; background-color:#ffffff") %>
+<br><br>
+<h1>Grungni</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.4" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br><br>
+
+<%= image_tag("valaya.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Valaya</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.5" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("grimnir.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Grimnir</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.6" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("gazul.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Gazul</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.7" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("smednir.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Smednir</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.8" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("thungni.png", :class => "rightsidepicture", style:"height:350px") %>
+<br><br>
+<h1>Thungni</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.9" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<br><br><br><br>
+
+<%= image_tag("morgrim.png", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+<br><br>
+<h1>Morgrim</h1>
+<% @articles.each do |article| %>
+	<% if article.title == "religion pt.10" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= render 'banner' %> 
+
+</body>
+</html>

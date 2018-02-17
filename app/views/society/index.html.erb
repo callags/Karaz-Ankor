@@ -1,0 +1,94 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/">Back to Homepage</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Dwarven Society</h1>
+</div>
+<br>
+
+<div class="div-center">
+	<div class="social-category-layout">
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"social()", style:"height: 100px") %>
+			<p class="text-under-image">Social Life</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"military()", style:"height: 100px") %>
+			<p class="text-under-image">Military</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"magic()", style:"height: 100px") %>
+			<p class="text-under-image">Magic</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"religion()", style:"height: 100px") %>
+			<p class="text-under-image">Religion</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"guilds()", style:"height: 100px") %>
+			<p class="text-under-image">Guilds</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"government()", style:"height: 100px") %>
+			<p class="text-under-image">Government</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"economy()", style:"height: 100px") %>
+			<p class="text-under-image">Economy</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"prominent()", style:"height: 100px") %>
+			<p class="text-under-image">Prominent Dwarfs</p>
+		</div>
+		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"diplomacy()", style:"height: 100px") %>
+			<p class="text-under-image">Diplomacy</p>
+		</div>
+	</div>
+</div>
+
+<% if notice %>
+	<script>
+		setTimeout(location.reload.bind(location), 8000);
+	</script>
+<% end %>
+
+<script>
+function social() {
+	setTimeout(function(){ window.location.href='society/social' }, 1000);
+}
+function military() {
+	setTimeout(function(){ window.location.href='society/military' }, 1000);
+}
+function magic() {
+	setTimeout(function(){ window.location.href='society/magic' }, 1000);
+}
+function religion() {
+	setTimeout(function(){ window.location.href='society/religion' }, 1000);
+}
+function guilds() {
+	setTimeout(function(){ window.location.href='society/guilds' }, 1000);
+}
+function government() {
+	setTimeout(function(){ window.location.href='society/government' }, 1000);
+}
+function economy() {
+	setTimeout(function(){ window.location.href='society/economy' }, 1000);
+}
+function prominent() {
+	setTimeout(function(){ window.location.href='society/prominent' }, 1000);
+}
+function diplomacy() {
+	setTimeout(function(){ window.location.href='society/diplomacy' }, 1000);
+}
+
+</script>
+<br><br><br><br><br><br><br>
+<%= render 'banner' %>
+</body>
+</html>

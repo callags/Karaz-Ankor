@@ -1,0 +1,17 @@
+<p>
+ <strong>Title:</strong>
+ <%= @article.title %>
+</p>
+<br>
+<p>
+ <strong>Text:</strong>
+ <%= @article.text %>
+</p>
+<br>
+<p>
+ <%= link_to 'Back to list of articles', articles_path %>
+</p>  
+<br>
+<p>
+ <%= link_to 'Edit this article', edit_article_path(@article) %>
+</p>  

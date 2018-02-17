@@ -1,0 +1,217 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/">Back to Homepage</a></li>
+</ul>
+<br><br>
+<div class ="title_page">	
+	<h1>History of the Dwarfs</h1>
+</div>
+
+<h1>From the very beginning</h1>
+	
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<h2><span id="left_tab">The Southlands</span></h2>
+
+<%= image_tag("The Southlands.jpg", :class => "leftsidepicture") %>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>	
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>	
+
+<h2><span id="right_tab">The Worlds Edge Mountains in the Old World</span></h2>
+<%= link_to '/assets/Worlds Edge Mountains.jpg' do %>	
+	<%= image_tag("Worlds Edge Mountains.jpg", :class => "rightsidepicture") %>
+<% end %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<h1>The Threat of Chaos</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.4" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>	
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.5" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>	
+
+<br>
+<h1>The Coalition of the Dwarven and Elven race</h1> 
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.6" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>	
+
+<h2><span id="left_tab">The city of Marienburg</span></h2>
+<%= image_tag("Marienburg.jpg", :class => "leftsidepicture") %>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.7" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<h2><span id="right_tab">The Northern Wastes (Chaos Wastes)</span></h2>
+<%= image_tag("The Chaos Wastes.jpg", :class => "rightsidepicture") %>
+
+<br><br><br><br><br><br><br><br><br>
+<h1>The Golden Age</h1> 
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.8" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("Dragonback Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+ 
+<%= image_tag("Black Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+
+<br><br><br><br>
+
+<h1>The War of Vengeance</h1> 
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.9" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.10" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+<h1>The Rise of the Grobi Scum</h1> 
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.11" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+
+<h1>The Rift within the Karaz Ankor</h1> 
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.12" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h2><span id="left_tab">Karak Norn of the Grey Mountains</span></h2>
+<%= image_tag("Grey Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.13" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h2><span id="right_tab">Karak Izor of the Vaults</span></h2>
+<%= image_tag("The Vaults.jpg", :class => "rightsidepicture") %>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h1>The Emergence of Humanity</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.14" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.15" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.16" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br><br>
+<h1>The Karaz Ankor Today</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "history pt.17" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+
+<br>
+
+<%= render 'banner' %>
+
+<% if notice %>
+	<script>
+		setTimeout(location.reload.bind(location), 8000);
+	</script>
+<% end %>
+
+</body>
+</html>

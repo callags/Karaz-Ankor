@@ -1,0 +1,37 @@
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/empire">Back to the Dwarven Empire</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Karak Vlag</h1>
+</div>
+
+<%= image_tag("lost-dwarfhold-banner.png", :class => "leftsidepicture-with-background") %> <%= image_tag("vlag.jpg", :class => "rightsidepicture", style:"height:250px") %>
+
+<% @articles.each do |article| %>
+	<% if article.title == "vlag pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "vlag pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "vlag pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br><br><br><br>
+
+<%= render 'banner' %>

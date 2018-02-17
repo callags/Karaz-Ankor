@@ -1,0 +1,2 @@
+module GunbadHelper
+end

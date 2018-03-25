@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Updated loofah (3/24/18)
+gem 'loofah', '~> 2.2.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -64,6 +64,10 @@ table{
 }
 .picture { margin: 25px auto 
 }
+.empire-centerpicture { 
+				height: 400px;
+				width: 60%;
+}
 .homepage-leftsidepicture { 
 				width: 370px;  
 				float: left;
@@ -77,6 +81,21 @@ table{
 .homepage-centerpicture { 
 				height: 600px;
 				width: 595px;
+				margin-left: 5px;
+}
+.society-leftsidepicture { 
+				width: 370px;  
+				float: left;
+				height: 600px;
+}
+.society-rightsidepicture { 
+				width: 385px; 
+				float:right;
+				height: 600px;
+}
+.society-centerpicture { 
+				height: 600px;
+				width: 580px;
 				margin-left: 5px;
 }
 .leftsidepicture { 

@@ -22,7 +22,7 @@
 
 <h2><span id="left_tab">The Southlands</span></h2>
 
-<%= image_tag("The Southlands.jpg", :class => "leftsidepicture") %>
+<%= image_tag("The Southlands.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
 
 <% @articles.each do |article| %>
 	<% if article.title == "history pt.2" %>
@@ -76,7 +76,7 @@
 <% end %>	
 
 <h2><span id="left_tab">The city of Marienburg</span></h2>
-<%= image_tag("Marienburg.jpg", :class => "leftsidepicture") %>
+<%= image_tag("Marienburg.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
 
 <% @articles.each do |article| %>
 	<% if article.title == "history pt.7" %>

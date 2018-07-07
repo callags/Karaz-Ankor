@@ -42,6 +42,10 @@
 			<p class="text-under-image">Economy</p>
 		</div>
 		<div class="category-layout-item">
+			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"language()", style:"height: 100px") %>
+			<p class="text-under-image">Language</p>
+		</div>
+		<div class="category-layout-item">
 			<%= link_to image_tag("karaz_ankor_homepage_image.png", onclick:"prominent()", style:"height: 100px") %>
 			<p class="text-under-image">Prominent Dwarfs</p>
 		</div>
@@ -90,6 +94,9 @@ function prominent() {
 }
 function diplomacy() {
 	setTimeout(function(){ window.location.href='society/diplomacy' }, 1000);
+}
+function language() {
+	setTimeout(function(){ window.location.href='society/language' }, 1000);
 }
 
 </script>

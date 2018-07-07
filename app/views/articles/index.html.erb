@@ -1,137 +1,24 @@
-<% if user_signed_in? %>
+<% if current_user.admin? %>
 
 <%= render 'banner' %>
 	
 	<h1>Listing articles</h1>
 	
-	<% about = 1 %><% about_string = "about" %>						<% izor = 16 %><% izor_string = "izor" %>
-	<% agilwutraz = 2 %><% agilwutraz_string = "agilwutraz" %>		<% kadrin = 17 %><% kadrin_string = "kadrin" %>
-	<% azgal =  3 %><% azgal_string = "azgal" %>					<% magic = 18 %><% magic_string = "magic" %>
-	<% azul =  4 %><% azul_string = "azul" %>						<% military = 19 %><% military_string = "military" %>
-	<% capital =  5 %><% capital_string = "capital" %>				<% norn = 20 %><% norn_string = "norn" %>
-	<% diplomacy =  6 %><% diplomacy_string = "diplomacy" %>		<% peaks = 21 %><% peaks_string = "peaks" %>
-	<% drak =  7 %><% drak_string = "drak" %>						<% prominent = 22 %><% prominent_string = "prominent" %>
-	<% drazh =  8 %><% drazh_string = "drazh" %>					<% religion = 23 %><% religion_string = "religion" %>
-	<% economy =  9 %><% economy_string = "economy" %>				<% social = 24 %><% social_string = "social" %>
-	<% ekrund =  10 %><% ekrund_string = "ekrund" %>				<% ungor = 25 %><% ungor_string = "ungor" %>
-	<% government =  11 %><% government_string = "government" %>	<% varn = 26 %><% varn_string = "varn" %>
-	<% guild = 12 %><% guild_string = "guild" %>					<% varr = 27 %><% varr_string = "varr" %>
-	<% gunbad = 13 %><% gunbad_string = "gunbad" %>					<% vlag = 28 %><% vlag_string = "vlag" %>
-	<% hirn = 14 %><% hirn_string = "hirn" %>						<% zhufbar = 29 %><% zhufbar_string = "zhufbar" %>
-	<% history = 15 %><% history_string = "history" %>
-	
-	<% @articles.each do |article| %>
-		
-		<% if article.title.split[0].split(" ") == about_string %>			
-			<% article.user_id = about %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == agilwutraz_string %>
-			<% article.user_id = agilwutraz %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == azgal_string %>
-			<% article.user_id = azgal %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == capital_string %>
-			<% article.user_id = capital %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == diplomacy_string %>
-			<% article.user_id = diplomacy %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == drak_string %>
-			<% article.user_id = drak %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == drazh_string %>
-			<% article.user_id = drazh %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == economy_string %>
-			<% article.user_id = economy %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == ekrund_string %>
-			<% article.user_id = ekrund %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == government_string %>
-			<% article.user_id = government %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == guild_string %>
-			<% article.user_id = guild %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == hirn_string %>
-			<% article.user_id = hirn %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == history_string %>
-			<% article.user_id = history %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == izor_string %>
-			<% article.user_id = izor %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == kadrin_string %>
-			<% article.user_id = kadrin %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == magic_string %>
-			<% article.user_id = magic %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == military_string %>
-			<% article.user_id = military %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == norn_string %>
-			<% article.user_id = norn %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == peaks_string %>
-			<% article.user_id = peaks %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == prominent_string %>
-			<% article.user_id = prominent %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == religion_string %>
-			<% article.user_id = religion %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == social_string %>
-			<% article.user_id = social %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == ungor_string %>
-			<% article.user_id = ungor %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == varn_string %>
-			<% article.user_id = varn %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == varr_string %>
-			<% article.user_id = varr %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == vlag_string %>
-			<% article.user_id = vlag %>
-		<% end %>
-		
-		<% if article.title.split[0].split(" ") == zhufbar_string %>
-			<% article.user_id = zhufbar %>
-		<% end %>
-		
-		
-	<% end %>
+	<% about = 1 %>	<% izor = 16 %>
+	<% agilwutraz = 2 %><% kadrin = 17 %>
+	<% azgal =  3 %><% language = 18 %>
+	<% azul =  4 %>	<% magic = 19 %>
+	<% capital =  5 %><% military = 20 %>
+	<% diplomacy =  6 %><% norn = 21 %>
+	<% drak =  7 %><% peaks = 22 %>
+	<% drazh =  8 %><% prominent = 23 %>
+	<% economy =  9 %><% religion = 24 %>
+	<% ekrund =  10 %><% social = 25 %>
+	<% government =  11 %><% ungor = 26 %>
+	<% guild = 12 %><% varn = 27 %>
+	<% gunbad = 13 %><% varr = 28 %>
+	<% hirn = 14 %><% vlag = 29 %>
+	<% history = 15 %><% zhufbar = 30 %>
 	
 	<table>
 		<tr>
@@ -344,6 +231,18 @@
 					<% end %>
 				<% end %>
 				
+				<% if article.user_id == language %>
+					<td><%= article.title %></td>
+					<td><%= article.text %></td>
+					<% if current_user.admin? %>
+						<td><%= link_to 'Show', article_path(article) %></td>
+						<td><%= link_to 'Edit', edit_article_path(article) %></td>
+						<td><%= link_to 'Destroy', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+					<% end %>
+				<% end %>
+				
 				<% if article.user_id == magic %>
 					<td><%= article.title %></td>
 					<td><%= article.text %></td>
@@ -494,6 +393,9 @@
 	</table>
 
 <%= render 'banner' %>	
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
+<% end %>
 
 <% else %>
 <%= render 'banner' %>

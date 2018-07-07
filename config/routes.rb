@@ -36,6 +36,7 @@ Rails.application.routes.draw do
 	resources :government
 	resources :economy
 	resources :prominent
+	resources :language
   end
   get "*path" => redirect { |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; '/' }
   root 'homepage#index'

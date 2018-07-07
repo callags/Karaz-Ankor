@@ -14,6 +14,9 @@ class SocietyController < ApplicationController
 
 		elsif url == ('/society/social')
 			render 'social/index'
+			
+		elsif url == ('/society/language')
+			render 'language/index'
 
 		elsif url == ('/society/military')
 			render 'military/index'

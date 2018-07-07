@@ -2,14 +2,14 @@ class ArticlesController < ApplicationController
 	before_action :authenticate_admin!
 	
 	def new
-	  @article = current_user.articles.build
+	  @articles = current_user.articles.build
 	end
 	
 	def create
-	  @article = current_user.articles.build(article_params)
+	  @articles = current_user.articles.build(article_params)
 	  
-	  if @article.save
-		redirect_to @article
+	  if @articles.save
+		redirect_to @articles
 	  else
 		render 'new'
 	  end 
@@ -24,14 +24,14 @@ class ArticlesController < ApplicationController
 	end
 	
 	def edit
-	  @article = Article.find(params[:id])
+	  @articles = Article.find(params[:id])
 	end
 	
 	def update
-	  @article = Article.find(params[:id])
+	  @articles = Article.find(params[:id])
 	  
-	  if @article.update(article_params)
-	    redirect_to @article
+	  if @articles.update(article_params)
+	    redirect_to @articles
 	  else
 		render 'edit'
 	  end
@@ -46,6 +46,6 @@ class ArticlesController < ApplicationController
 	
 	private 
 		def article_params
-			params.require(:article).permit(:title, :text)
+			params.require(:article).permit(:title, :text, :user_id)
 		end
 end

@@ -1,0 +1,322 @@
+<html>
+<body>
+
+<ul id="menu">
+	<li><%= render 'banner' %></li>
+	<li><a href="/society">Back to Dwarven Society</a></li>
+</ul>:
+
+<div class="title_page">
+	<h1>Khazalid</h1>
+</div>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<center><h1>Thesaurus</h1></center>
+
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "A" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Argul = Stone Carving; lines in face of a very old dwarf" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Angaz = Ironwork" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ankor = Domain or realm" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Arm = The Khazalid irregular verb to be (present tense arm - past tense urz)." %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Az = War Axe." %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Azgal = Treasure hold." %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Azul = Metal of any kind;dependable;a sturdy dwarf." %></h2>
+</div>
+
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "B" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bak = Fist or punch" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bar = A fortified gateway or door" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Barag = A warmachine" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Baraz = A bond or promise" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Boga = A candle that blows unexpectedly plunging the tunnel in darkness" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bok = Banging your head on the roof of a low tunnel; characteristic scar on forehead caused by same" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Boki = Slang word for dwarf miners" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bolg = Large, fat belly. Also a state of extreme wealth, age and contentment" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bozdok = Unhinged as a result of constantly banging one's head against low roofs and pit-props - 'crosseyed'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bran = Clever, alert, mentally sharp" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Brodag = An annual brewing festival of Grungni" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bryn = Gold that shines strikingly in the sunlight;anything shiny or brillant" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Bugrit = An invocation against ill-luck uttered by a dwarf who has banged his head, hit his thumb, stubbed his toe or some other minor misfortune. Usually repeated three times for luck" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "C" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Chuf = Piece of very old cheese a dwarf miner keeps under his hat for emergencies" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "D" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dal = Old, good" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dammaz = A grievance, grudge or insult to be avenged" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dammaz Kron= The Book of Grudges" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dar = A challenge or bet" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dawi = Dwarfs" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dawr = As good as something can get without it being proven over time and hard use. Most dwarf words for 'good' imply age and reliability too, but dwar simply means 'looks like it might be good'. It literally translates to 'like dwarf'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Deb = New, untried, raw" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dibnin = The act of tinkering with something that already works perfectly, out of a belief that if can still be improved - hence Dibna, a dwarf who engages in dibnin." %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Doh = Stupid, slow-witted, gullable" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dok = Watch, observe, see, the eye" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dongliz = The parts of a dwarf's body impossible for him to scratch" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dork = Giant, tall, unstable" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Drakk = Dragon" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Drek = Far, a great distance; great ambition or enterprise." %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dreng = Slay in combat" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Drengi = Slayer, one of the cult of Slayers" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Drengnel = Dragon stew with cave mushrooms marinated in strong ale" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Drung = To vanquish, defeat" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Duk = low, narrow tunnel" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dum = Doom or darkness" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Dunkin = Annual bath traditionally taken whether needed or not" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Durak = Hard" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Duraz = Stone or slab" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "E" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ekrund = A stairway decesending beneath the ground" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Elgi = Elves" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Elgram = Weak, enfeebled, thin" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Elgraz = Construction that looks as if it is about to collapse" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Endrukli = An engineer or mechanic (generally a dwarf engineer)" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "F" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Fleg = Banner, standard" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Frongol = Mushrooms that grow in the back of a cave" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "G" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Galaz = Gold of particular ornamental value" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gand = Find, discover" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Garaz = Rebellious, fearless" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gazan = Plains, wasteland" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gibal = Fragments of food enmeshed in a dwarf's beard" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ginit = Small stone which works its way into your boot causing discomfort" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Girt = Broad tunnel with plenty of headroom" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Git = The Khazalid irregular verb to go (present tense git - past tense ged) the word is related to got (ibid)" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gnol = Old, reliable, proven, wise" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gnollengrom = Respect due to a dwarf who has a longer and more spectacular beard" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gnorl = An especially bright and obvious boil or similar blemish on the end of the nose" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gor = Wild beast" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gorak = Great cunning, uncanny" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gorl = Gold that is especially soft and yellow; the color yellow" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gorog = Ale; high spirits; a drinking binge" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Got = March or travel quickly with purpose" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gov = Thane" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gozunda = Practically anything kept under the bed 'for emergencies'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gov = Thane" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grik = Pain in the neck caused by continually stooping low in tunnels" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grim = Harsh, unyielding" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grimaz = Barren place" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grindal = Long flaxen plaits worn by female maidens" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grint = Waste rock or spoil left by miners' excavations" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grizal = Poor meat" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grizdal = Ale that has been fermented for at least a century" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grob = The colour green, also goblins and orcs - literally greenies" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grobi = Goblins" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grobkaz = Goblin works, evil deeds" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grobkul = The art of stalking goblins in caves" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grog = Inferior or watered ale; mannish brew" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grom = Brave or defiant" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gromdal = An ancient artefact" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gromthi = Ancestor" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grong = Anvil" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gronit = The Khazalid irregular verb to do (present tense gronit - past tense gird)" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gronti = Giant (as in the creature)" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grumbak = A short measure of ale; trivial complaint or grumble" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grumbaki = A grumbler or whiner" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grund = Hammer (also sometimes called 'rikkaz')" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grung = A mine" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grungnaz = Making or smithying" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grungni = Dwarf ancestor, god of smiths and mines" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Grungron = A forge" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gruntaz = Strip of cloth worn around the loins and supposedly eaten in extreme emergencies hence, 'down to his gruntaz'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Gruntitrogg = Secret coming of age ritual practiced amongst dwarfkind - details of this are amongst the mostly kept of all dwarf secrets" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Guz = To consume food or drink" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Guzzen = Push, feed, insert" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "H" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Hazkal = Ale brewed recently; a fiery young warrior" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Hunk = Carry heavy rocks or burden" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Hruki = Breed of mountain goat" %></h2>
+</div> 
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "I" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ik = Putting your hand in something slimy and unpleasant in the darkness" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Irkul = Pillared vault hewn in rock" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "J" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Jifful = Process of careful and percise adjustment to fit - especially in respect of engineering or stonemasonry" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "K" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kadrin = Mountain pass" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kalan = Clan" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Karag = Volcano or barren mountain" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Karak = Enduring" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Karaz = Mountain" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Karin = Shield, temporary protection" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kazad = Fortress" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kazak = War or battle" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Khaz = An underground hall" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Khazhunki = Knight, calvary, rider. Lit. 'carried warrior'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Khazukan = Dwarfs - literally hall-dwellers" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Khrum = War drum" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Klad = Armour" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Klinka = Chisel" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Klinkharum = Common runes" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kol = Black stone, the colour black, sombre" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Konk = Gold that is ruddy in colour; large and bulbous nose" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Krink = Bad back due to continuous stooping" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kro = Crow, raven, dark bird" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kron = Book, record, history" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kruk = A seemingly promising vein of ore which gives out suddenly; An unexpected disappointment; A venture that comes to nothing" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Krunk = Underground rockfall; a disaster" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Krut = A discomforting disease contracted from mountain goats" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kruti = A dwarf suffering from Krut; a goatherd; an insult" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kulgur = The art of cooking troll" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Kuri = Meat stew boiled up by travelling dwarfs from whatever ingredients are at hand. Traditionally spiced with wild berries" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "L" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Lok = Highly embellished or intricate; praiseworthy" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "M" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Makaz = Weapon or tool" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Mingol = Tall watchtower built on lowland" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "N" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Naggrund = An area of great upheaval, devastation or industry" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Narwangli = A dung collector or dwarf who smells strongly of dung" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Nogarung = Drinking tankard made from a troll's skull" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Nubunki = A dwarf child deformed at birth, shunned by its clan and exiled; A great shame to the clan and the hold" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "O" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ogri = Ogre" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ok = Cunning or skill" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Okri = Craftsman - a common personal name" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Onk = Comradely accretion of dirt and grime on a company of dwarfs who have spent many days underground." %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "R" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ragarin = Coarse and uncomfortable clothing made from a troll's hide" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rhun = Rune, word or power" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rhunki = Runesmith" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rik = King or lord" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rikkazen = Crush, to beat to a pulp, to turn to rubble" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rikkit = A small stone that falls on your head as you walk down a tunnel" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ril = Gold ore that shines brightly in rock" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rink = Command, to give orders, to lead" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rinn = A lady dwarf or king's consort" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rogwak = An improvished team game played underground and using anything on hand as a ball - often a rock, preferably a goblin's head or whole goblin body" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rorkaz = Informal shouting contest" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ruf = A large underground dome either natural or constructed" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Runk = A one-sided fight; a sound thrashing" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Rutz = Slackness of bowels caused by drinking too much ale" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "S" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skarrenruf = The colour bright blue, the day time sky" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skaz = Thief" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skoz = A cold meal eaten underground" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skrat = To search for gold amongst rock debris or stream bed; sparse living; scavenge" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skrati = Poor prospector" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skree = Loose rock on a mountainside" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skruff = A scrawny beard; an outrageous insult" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skrund = To hew rock; to get stuck in" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Skuf = A drunken brawl or skirmish" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Slotch = The sodden mix of water, mud and pulverized stone found at the bottom of a mineworking" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Smak = Punish physically" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Stok = To hit or strike" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Strol = Walk or travel leisurely" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Stromez = Stream" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "T" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thag = Slay by act of treachery" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thagi = Murderous traitor" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thaggoraki = Skaven, assassin, footpad" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thindrongal = Secret vault in which ale or treasure is hidden" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thingaz = Dense forest" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Throng = Army, huge assembly of dwarfs; a clan" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Thrund = A handgun" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Trogg = A feast or heavy drinking bout" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Troll = Troll" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Tromm = Beard; respect due to age or experience" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Tusk = Tooth" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "U" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ufdi = A dwarf overfond of preening and decorating his beard; a vain dwarf; a dwarf who cannot be trusted to fight" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Umanar = Roughly or approximately, and also indecision or vaillation" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Umgak = Shoddy, poorly made" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Umgi = Men" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Unbak = Break permanently" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Unbaraki = An oathbreaker - there is nothing worse in dwarf estimation" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Und = A watchpost carved into the mountainside" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ungdrin = Ankor Underway, the ancient underground roadway of the dwarfs" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ungor = Cavern" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Ungrim = A dwarf who has not yet fulfilled an important oath; an untrustworthy dwarf" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Urbar = trade" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Urbaz = A trading post or market" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Urk = Orc or enemy (also fear, to be afraid of, to retreat)" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Uzkul = Bones or death" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Uzkular = Undead" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "V" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Valdahaz = Brewery" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Varf = Wolf, hound" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Varn = Mountain lake" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Vongol = Raiding band" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Vorn = Farm" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "W" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Wan = On its own at the start of a phrase, wan shows the phrase is a question. It's the dwarf equivalent of a question mark. This is usually missed where a standard wan - question word is used instead (wanrag, wanrak, wanrum). Wan - is also used immediately before another word to frame a question(ek wangit? 'are you going' literally 'you go?', wandar 'Is it good?' lit. 'good?)'" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Wanaz = A disreputable dwarf with an unkempt beard, an insult" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Wattock = An unsuccessful dwarf prospector; a down-at-heel dwarf; an insult" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Wazzock = A dwarf who has exchanged gold or some other valuable item for something of little or no worth; a foolish or gullible dwarf; an insult" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Werit = A dwarf who has forgotten where he placed his tankard of ale; a state of befuddlement" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Wutroth = Wood from ancient mountain oak" %></h2>
+</div>
+<div class="language-index-layout">
+	<h2 class="language-thesaurus-layout"><%= "Z" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zak = An isolated hut in the mountains" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zaki = A crazed dwarf who wanders the mountains" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zan = Blood, the colour red" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zanen = A bleeding wound" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zanguzaz = Vampire" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zank = Cleave, cut, divide" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zhazz = Fire" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zhuf = Waterfall or rapidly flowing river" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zint = The metal tin - hence zinti, a tinsmith or tinker" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zorn = Upland plateau or high meadow" %></h2>
+	<h2 class="language-thesaurus-layout"><%= "Zon = Sun" %></h2>
+</div>
+<br><br><br><br><br>
+<%= render 'banner' %>
+
+</body>
+</html>

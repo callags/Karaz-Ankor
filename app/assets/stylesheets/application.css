@@ -104,7 +104,7 @@ table{
 }
 .rightsidepicture { 
 				width: 375px; 
-				float:right 
+				float:right; 
 }
 .leftsidepicture-with-background{
 				margin: 5px;
@@ -115,8 +115,18 @@ table{
 }
 .social-category-layout { background-color: #7f7f7f;
 				   position: relative; 
-				   width: 91%;
-				   margin-left: 50px;
+				   width: 101%;
+}
+
+.language-index-layout { background-color: #fff;
+				   position: relative; 
+				   margin: 40px;
+				   width: 85%;
+				   padding-left: 100px;
+}
+
+.language-thesaurus-layout {
+				padding-left: 50px;
 }
 .empire-category-layout { background-color: #7f7f7f;
 				   position: relative; 

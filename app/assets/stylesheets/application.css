@@ -98,6 +98,21 @@ table{
 				width: 580px;
 				margin-left: 5px;
 }
+.language-leftsidepicture { 
+				width: 370px;  
+				float: left;
+				height: 300px;
+}
+.language-rightsidepicture { 
+				width: 385px; 
+				float:right;
+				height: 300px;
+}
+.language-centerpicture { 
+				height: 300px;
+				width: 380px;
+				margin-left: 110px;
+}
 .leftsidepicture { 
 				width: 375px; 
 				float:left 
@@ -125,7 +140,7 @@ table{
 				   padding-left: 100px;
 }
 
-.language-thesaurus-layout {
+.language-padding {
 				padding-left: 50px;
 }
 .empire-category-layout { background-color: #7f7f7f;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209220243) do
+ActiveRecord::Schema.define(version: 20180725221919) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "article_id"
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(version: 20180209220243) do
     t.integer "articles_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fido_usf_devices", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "user_type", null: false
+    t.bigint "user_id", null: false
+    t.string "name", default: "", null: false
+    t.string "key_handle", default: "", null: false
+    t.binary "public_key", null: false
+    t.binary "certificate", limit: 16777215, null: false
+    t.integer "counter", default: 0, null: false
+    t.timestamp "last_authenticated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key_handle"], name: "index_fido_usf_devices_on_key_handle"
+    t.index ["last_authenticated_at"], name: "index_fido_usf_devices_on_last_authenticated_at"
+    t.index ["user_type", "user_id"], name: "index_fido_usf_devices_on_user_type_and_user_id"
   end
 
   create_table "histories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|

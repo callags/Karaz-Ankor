@@ -69,19 +69,16 @@ table{
 				width: 60%;
 }
 .homepage-leftsidepicture { 
-				width: 370px;  
-				float: left;
+				width: 33%;  
 				height: 600px;
 }
 .homepage-rightsidepicture { 
-				width: 375px; 
-				float:right;
+				width: 33%; 
 				height: 600px;
 }
 .homepage-centerpicture { 
 				height: 600px;
-				width: 595px;
-				margin-left: 5px;
+				width: 33%;
 }
 .society-leftsidepicture { 
 				width: 370px;  

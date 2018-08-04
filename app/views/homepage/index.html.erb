@@ -12,10 +12,12 @@
 			<li><a href="/about">About</a></li>
 		</ul>
 	</div>
-
-	​<%= image_tag("dwarf army.jpg", :class => "homepage-centerpicture") %>
-	​<%= image_tag("The_Slayer_King.png", :class => "homepage-rightsidepicture") %>
+	<br><br>
+	<br><br>
 	<%= image_tag("longbeards.jpg", :class => "homepage-leftsidepicture") %>	
+	​<%= image_tag("dwarf army.jpg", :class => "homepage-centerpicture") %>
+	<%= image_tag("The_Slayer_King.png", :class => "homepage-rightsidepicture", onclick:"download()") %>
+	
 
 <% if notice %>
 	<script>
@@ -27,6 +29,12 @@
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
 <% end %>
+
+<script>
+function download() {
+	 alert("Download this image in png format!");
+}
+</script>
 
 </body>
 </html>

@@ -1,0 +1,37 @@
+<div class="center">
+	
+	<%= form_with model: @users, local: true do |form| %>
+		<% if @users.errors.any? %>
+			<div id="error_explanation">
+				<h2>
+				<%= pluralize(@users.errors.count, "error") %> prohibited
+				this article from being saved:
+			</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+			</div>
+		<% end %>
+		<p>
+			<%= form.label :title %><br>
+			<%= form.text_field :title %>
+		</p>
+		
+		<p>
+			<%= form.label :text %><br>
+			<%= form.text_area :text %>
+		</p>
+		
+		<p>
+			<%= form.label :user_id %><br>
+			<%= form.text_field :user_id %>
+		</p>
+		
+		<p>
+			<%= form.submit %>
+		</p>
+	<% end %>
+	
+</div>

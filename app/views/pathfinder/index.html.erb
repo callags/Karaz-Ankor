@@ -1,0 +1,46 @@
+<html>
+<body>
+
+<%= render 'banner' %>
+
+<ul id="menu">
+	<li><a href="/">Back to Homepage</a></li>
+</ul>
+<br><br>
+<br><br>
+<br><br>
+
+<% choice_1 = "1" %>
+<% choice_2 = "2" %>
+<% choice_3 = "3" %>
+
+<%= form_tag("/pathfinder", method: "get") do %>
+  <%= text_field_tag(:q, @input, maxlength: 1) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<% input = @input %> 
+
+<% if input == choice_1 %>
+	<%= input %>
+<% elsif input == choice_2 %>
+	<%= input %>
+<% elsif input == choice_3 %>
+	<%= input %>
+<% end %>
+
+
+
+	
+<br><br><br>
+
+<% if notice %>
+	<script>
+		setTimeout(location.reload.bind(location), 8000);
+	</script>
+<% end %>
+
+<%= render 'banner' %>
+	
+</body>
+</html>

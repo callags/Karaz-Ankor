@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :about
   resources :history
+  resources :pathfinder
   resources :empire do
 	resources :articles
 	resources :capital

@@ -22,7 +22,10 @@
 
 /* global reset */
 :link,:visited { text-decoration:none } :focus, :active { outline: 0 } ul,ol { list-style:none } h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; } ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0 } a img,:link img,:visited img { border:none } address { font-style:normal }
-body { font: .74em Arial, Sans-Serif; background: #F0DAF2 url(../images/bg.gif) repeat-x; color: #333; line-height: 1.6em; }
+body { font: .74em Arial, Sans-Serif; background: #F0DAF2 repeat-x; color: #333; line-height: 1.6em; background-size:cover;  }
+body, html {
+	min-height: 100%;
+}
 a { color: #752B7D; text-decoration: underline; }
 /* a:hover { color: #0000FF; } */
 
@@ -31,7 +34,7 @@ p.text-under-image {
     text-align: center;
 	font-size: 130%;
 }
-h2 { background: url(../images/bullet.gif) no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
+h2 { background:  no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
 h2 a { text-decoration: underline; 
 }
 h1 { font: 1.9em Georgia; margin: 0 0 22px;  text-align: center;
@@ -81,19 +84,16 @@ table{
 				width: 33%;
 }
 .society-leftsidepicture { 
-				width: 370px;  
-				float: left;
 				height: 600px;
+				width: 33%;
 }
 .society-rightsidepicture { 
-				width: 385px; 
-				float:right;
 				height: 600px;
+				width: 33%;
 }
 .society-centerpicture { 
 				height: 600px;
-				width: 580px;
-				margin-left: 5px;
+				width: 33%;
 }
 .language-leftsidepicture { 
 				width: 370px;  
@@ -127,7 +127,7 @@ table{
 }
 .social-category-layout { background-color: #7f7f7f;
 				   position: relative; 
-				   width: 101%;
+				   width: 90%;
 }
 
 .language-index-layout { background-color: #fff;
@@ -145,9 +145,7 @@ table{
 				   width: 90%;
 				   margin-left: 50px;
 }
-.div-center{
-	margin: 0 auto;
-}
+
 .category-layout-item {
 	list-style: none;
 	display: inline-block;

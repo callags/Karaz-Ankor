@@ -5,7 +5,18 @@ Rails.application.routes.draw do
   resources :articles
   resources :about
   resources :history
-  resources :pathfinder
+  resources :pathfinder do
+	resources :quest1
+	resources :quest2
+	resources :quest3
+	resources :quest4
+	resources :quest5
+	resources :quest6
+	resources :quest7
+	resources :quest8
+	resources :quest9
+	resources :articles
+  end
   resources :empire do
 	resources :articles
 	resources :capital

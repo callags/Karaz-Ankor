@@ -6,9 +6,9 @@
 #
 default: &default
   adapter: mysql2
-  database: karaz-ankor
+  database: karazankor
   username: root
-  password: Dolphin32##
+  password: Indigo43##
   host: localhost
   port: 3306
 

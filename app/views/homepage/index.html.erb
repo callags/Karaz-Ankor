@@ -15,27 +15,22 @@
 	</div>
 	<br><br>
 	<br><br>
-	<%= image_tag("longbeards.jpg", :class => "homepage-leftsidepicture") %>	
-	​<%= image_tag("dwarf army.jpg", :class => "homepage-centerpicture") %>
-	<%= image_tag("The_Slayer_King.png", :class => "homepage-rightsidepicture", onclick:"download()") %>
-	
+	<%= image_tag("longbeards.jpg", :class => "homepage-leftsidepicture", onclick: "window.open('#{call_script_url}', '_blank')" ) %>	
+	​<%= image_tag("dwarf army.jpg", :class => "homepage-centerpicture") %> 
+	<%= image_tag("The_Slayer_King.png", :class => "homepage-rightsidepicture", onclick: "window.open('#{homepage_slayer_png_url}', '_blank')") %>
+
 
 <% if notice %>
 	<script>
 		setTimeout(location.reload.bind(location), 8000);
 	</script>
 <% end %>
-<%= render 'banner' %>
+<%= render 'banner' %> 
 
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
 <% end %>
 
-<script>
-function download() {
-	 alert("Download this image in png format!");
-}
-</script>
 
 </body>
 </html>

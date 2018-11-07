@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   get 'homepage/index'
   get 'call_script' => 'script#call_script', as: 'call_script'
+  get 'call_script2' => 'script#call_script2', as: 'call_script2'
   get 'homepage/slayer_png'
 	
   resources :articles

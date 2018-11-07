@@ -10,6 +10,6 @@ class HomepageController < ApplicationController
 		filename: "Slayer_CTF.png",
 		type: "application/png"
 	)
-	
   end
+	
 end

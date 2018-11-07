@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while true
+
+do
+        gnome-terminal -x sh -c "./Thorgrim.sh; bash"
+        clear
+        sleep 1
+        trap '' 2
+        exit
+done
+

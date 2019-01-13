@@ -2,7 +2,9 @@
 <body>
 <%= render 'banner' %>
 <br><br><br><br><br><br>
-Test script page
+<% gif_count = `ls -A /home/ncs/Karaz-Ankor/app/assets/images/gifs | wc -L` %>
+
+<center><%= image_tag("gifs/#{rand(gif_count.to_i)}.gif", :class => "gif-centered") %></center>
 <br><br><br><br><br><br>
 <%= render 'banner' %>
 </body>

@@ -67,6 +67,9 @@ table{
 }
 .picture { margin: 25px auto 
 }
+.gif-centered {
+				width: 30%;
+}
 .empire-centerpicture { 
 				height: 400px;
 				width: 60%;

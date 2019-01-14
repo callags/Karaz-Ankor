@@ -12,16 +12,9 @@
 	<h1>About the Karaz Ankor</h1>
 </div>
 
-<% @articles.each do |article| %>
-	<% if article.title == "about pt.1" %>
-		<p>
-			<center><h2><%= article.text %></h2></center>
-		</p>
-	<% end %>
-<% end %>
 <br>
 <% @articles.each do |article| %>
-	<% if article.title == "about pt.2" %>
+	<% if article.title == "about pt.1" %>
 		<p>
 			<center><h2><%= article.text %></h2></center>
 		</p>
@@ -29,7 +22,7 @@
 <% end %>	
 <br>	
 <% @articles.each do |article| %>
-	<% if article.title == "about pt.3" %>
+	<% if article.title == "about pt.2" %>
 		<p>
 			<center><h2><%= article.text %></h2></center>
 		</p>

@@ -9,12 +9,8 @@ class EmpireController < ApplicationController
 		url = request.path_info
 		url_reset = empire_index_path
 		host = request.host
-		
-		if url.include?('articles')
-			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
-			redirect_to url_reset
-		
-		elsif url == ('/empire/peaks')
+			
+		if url == ('/empire/peaks')
 			render 'peaks/index'
 		
 		elsif url == ('/empire/hirn')

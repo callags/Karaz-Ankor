@@ -1,10 +1,9 @@
 class PathfinderController < ApplicationController
 
 	def index
-		if params[:q].present?
-			@input = "#{params[:q]}" 
-		end
+		
 	end
+	
 	def show
 	
 		@articles = Article.all
@@ -12,11 +11,10 @@ class PathfinderController < ApplicationController
 		url_reset = pathfinder_index_path
 		host = request.host
 		
-		if url.include?('articles')
-			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
-			redirect_to url_reset
-		
-		elsif url == ('/pathfinder/quest1')
+		if url == ('/pathfinder/quest1')
+			if params[:q].present?
+				@input = "#{params[:q]}" 
+			end
 			render 'quest1/index'
 		
 		elsif url == ('/pathfinder/quest2')

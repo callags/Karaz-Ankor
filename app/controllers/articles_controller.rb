@@ -17,6 +17,8 @@ class ArticlesController < ApplicationController
 	
 	def show
 	  @article = Article.find(params[:id])
+	  rescue ActiveRecord::RecordNotFound => e
+		redirect_to :articles, :flash => { :notice => 'Article not found'}
 	end
 	
 	def index

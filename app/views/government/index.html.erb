@@ -86,6 +86,16 @@
 <% end %>
 <br>
 
+<% @articles.each do |article| %>
+	<% if article.title == "government pt.9" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+
 <%= render 'banner' %>
 
 </body>

@@ -3,6 +3,46 @@
 	<li><a href="/pathfinder">Back to Pathfinder menu</a></li>
 </ul>:
 
-<h1><%= "Quest 1 index page"%></h1>
+<% @articles.each do |article| %>
+	<% if article.title == "quest1 pt.1" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
 
+<% @articles.each do |article| %>
+	<% if article.title == "quest1 pt.2" %> 
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% choice_1 = "1" %>
+<% choice_2 = "2" %>
+<% choice_3 = "3" %>
+
+<%= form_tag("/pathfinder/quest1", method: "get") do %>
+  <%= text_field_tag(:q, @input, maxlength: 1) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<% input = @input %> 
+
+<% if input == choice_1 %>
+	<%= input %>
+	<% guess = rand(1..50) %>
+	<%= guess %>
+<% elsif input == choice_2 %>
+	<%= input %>
+<% elsif input == choice_3 %>
+	<%= input %>
+<% else %>
+	<%= "Please enter a number between 1 and 3" %>
+<% end %>
+
+<br><br><br>
 <%= render 'banner' %>

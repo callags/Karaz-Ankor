@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   get 'homepage/index'
   
   resources :articles
-  resources :about
-  resources :history
+  resources :about do
+	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'about/' }, via: :get
+  end
+  resources :history do
+	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'history/' }, via: :get
+  end
   resources :pathfinder do
 	resources :quest1
 	resources :quest2
@@ -15,10 +19,9 @@ Rails.application.routes.draw do
 	resources :quest7
 	resources :quest8
 	resources :quest9
-	resources :articles
+	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'pathfinder/' }, via: :get
   end
   resources :empire do
-	resources :articles
 	resources :capital
 	resources :kadrin
 	resources :norn
@@ -36,10 +39,9 @@ Rails.application.routes.draw do
 	resources :vlag
 	resources :ungor
 	resources :ekrund
-	match '*path' => redirect('empire/'), via: :get
+	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'empire/' }, via: :get
   end
   resources :society do
-	resources :articles
 	resources :social
 	resources :military
 	resources :magic
@@ -49,6 +51,7 @@ Rails.application.routes.draw do
 	resources :economy
 	resources :prominent
 	resources :language
+	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'society/' }, via: :get
   end
   get "*path" => redirect { |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; '/' }
   root 'homepage#index'

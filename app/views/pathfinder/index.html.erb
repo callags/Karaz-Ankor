@@ -10,27 +10,6 @@
 <br><br>
 <br><br>
 
-<% choice_1 = "1" %>
-<% choice_2 = "2" %>
-<% choice_3 = "3" %>
-
-<%= form_tag("/pathfinder", method: "get") do %>
-  <%= text_field_tag(:q, @input, maxlength: 1) %>
-  <%= submit_tag("Submit") %>
-<% end %>
-
-<% input = @input %> 
-
-<% if input == choice_1 %>
-	<%= input %>
-<% elsif input == choice_2 %>
-	<%= input %>
-<% elsif input == choice_3 %>
-	<%= input %>
-<% else %>
-	<%= "Please enter a number between 1 and 3" %>
-<% end %>
-
 <h1>Governed Holds</h1>
 
 	<div class="empire-category-layout">

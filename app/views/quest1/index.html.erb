@@ -3,6 +3,8 @@
 	<li><a href="/pathfinder">Back to Pathfinder menu</a></li>
 </ul>:
 
+<% segment_2 = false %>
+
 <% @articles.each do |article| %>
 	<% if article.title == "quest1 pt.1" %> 
 		<p>
@@ -21,27 +23,95 @@
 <% end %>
 <br>
 
-<% choice_1 = "1" %>
-<% choice_2 = "2" %>
-<% choice_3 = "3" %>
+<center><h2><%= "1. Climb down to the rope fastened on the side of the staircase" %></h2></center>
+<br>
+<center><h2><%= "2. Willingly jump to grab the rope from the staircase" %></h2></center>
+<br>
+
+<% choice_1a = "1" %>
+<% choice_1b = "2" %>
 
 <%= form_tag("/pathfinder/quest1", method: "get") do %>
-  <%= text_field_tag(:q, @input, maxlength: 1) %>
-  <%= submit_tag("Submit") %>
+  <center><%= text_field_tag(:a, @input_1, maxlength: 1) %>
+  <%= submit_tag("Submit") %></center>
 <% end %>
 
-<% input = @input %> 
+<% input_1 = @input_1 %> 
 
-<% if input == choice_1 %>
-	<%= input %>
-	<% guess = rand(1..50) %>
-	<%= guess %>
-<% elsif input == choice_2 %>
-	<%= input %>
-<% elsif input == choice_3 %>
-	<%= input %>
+<% if input_1 == choice_1a %>
+
+	<% climb = rand(1..100) %>
+
+	<% if climb <= 5 %>
+		<h2><%= "Klarkel loses his grip and falls" %></h2>
+		<br>
+		<% fall_outcome = rand(1..100) %>
+		<% if fall_outcome <= 10 %>
+			<h2><%= "Klarkel manages to the grab the rope. Feeling the recoil of the cable, Klarkel is thrown up and down vigorously." %></h2>
+		<% else%>
+			<h2><%= "Klarkel plummets to his death" %></h2>
+			<h2><%= "You have failed!" %></h2>
+			<script type="text/javascript">
+				setTimeout(function(){window.location.href="/pathfinder/quest1"}, 10000);
+			</script>
+		<% end %>
+		
+	<% else %>
+		<h2><%= "Klarkel grabs on to the lose marble blocks and slowly climbs down the wall" %></h2>
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest1 pt.3a" %> 
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>
+		<br>
+		<% choice_2a = "1" %>
+		<% choice_2b = "2" %>
+
+		<center><h2><%= "1. Chuck throwing axes at the support cables of the hanging light" %></h2></center>
+		<br>
+		<center><h2><%= "2. Shoot the light with your gun" %></h2></center>
+		<br>
+		
+		<%= form_tag("/pathfinder/quest1", method: "get") do %>
+			<center><%= text_field_tag(:b, @input_2, maxlength: 1) %>
+			<%= submit_tag("Submit") %></center>
+		<% end %>
+
+		<% input_2 = @input_2 %>
+		
+		<% if input_2 == choice_2a %>
+			<% input_2 %>
+		<% elsif input_2 == choice_2b %>
+			<% input_2 %>
+		<% else %>
+			<center><h2><%= "Please enter your choice here!" %></h2></center>
+		<%end %>
+		
+		<br>
+	<% end %>
+
+
+<% elsif input_1 == choice_1b %>
+	
+	<% fall = rand(1..100) %>
+	
+	<% if fall <= 95 %>
+		<h2><%= "Klarkel plummets to his death" %></h2>
+		<h2><%= "You have failed!" %></h2>
+		<script type="text/javascript">
+			var horizontal = 0;
+			var vertical = 5000;
+			function scrollWin(horizontal, vertical) {window.scrollBy(horizontal, vertical)};
+			setTimeout(function(){window.location.href="/pathfinder/quest1"}, 10000);
+		</script>
+	<% else %>
+		<h2><%= "Klarkel manages to the grab the rope. Feeling the recoil of the cable, Klarkel is thrown up and down vigorously." %></h2>
+	<% end %>
 <% else %>
-	<%= "Please enter a number between 1 and 3" %>
+	<center><h2><%= "Please enter your choice here!" %></h2></center>
 <% end %>
 
 <br><br><br>

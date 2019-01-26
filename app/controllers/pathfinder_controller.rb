@@ -12,8 +12,10 @@ class PathfinderController < ApplicationController
 		host = request.host
 		
 		if url == ('/pathfinder/quest1')
-			if params[:q].present?
-				@input = "#{params[:q]}" 
+			if params[:a].present?
+				@input_1 = "#{params[:a]}"
+			elsif params[:b].present?
+				@input_2 = "#{params[:b]}"
 			end
 			render 'quest1/index'
 		

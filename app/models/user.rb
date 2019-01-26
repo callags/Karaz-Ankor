@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-		  :fido_usf_registerable, :fido_usf_authenticatable
+		  :fido_usf_registerable, :fido_usf_authenticatable, :timeoutable
 		  
   attr_accessor :email, :password, :password_confirmation
   

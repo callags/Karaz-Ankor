@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, :skip => [:registrations]
-  get 'homepage/index'
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   
   resources :articles
   resources :about do
@@ -10,7 +9,11 @@ Rails.application.routes.draw do
 	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'history/' }, via: :get
   end
   resources :pathfinder do
-	resources :quest1
+	resources :quest1 do
+		resources :selection_1a
+		resources :selection_1b
+		resources :selection_1c
+	end
 	resources :quest2
 	resources :quest3
 	resources :quest4

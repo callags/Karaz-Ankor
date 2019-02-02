@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -22,5 +22,5 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-<%= link_to 'Sign Up', new_user_registration_path %>
-<%= render "devise/shared/links" %>
+
+<%= render "users/shared/links" %>

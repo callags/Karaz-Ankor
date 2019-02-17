@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   end
   resources :pathfinder do
 	resources :quest1 do
-		resources :selection_1a
-		resources :selection_1b
-		resources :selection_1c
+		resources :q1sub1 do
+			resources :q1sub1a
+		end
 	end
+	
 	resources :quest2
 	resources :quest3
 	resources :quest4

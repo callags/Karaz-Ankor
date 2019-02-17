@@ -1,203 +1,199 @@
-<ul id="menu">
-	<li><%= render 'banner' %></li>
-	<li><a href="/pathfinder">Back to Pathfinder menu</a></li>
-</ul>:
-
-<% if notice %>
-	<script>
-		setTimeout(location.reload.bind(location), 8000);
-	</script>
+<% @url = request.original_fullpath %>
+<% if not @url.include?('q1sub1') %>
+	<%= render 'menu' %>
 <% end %>
-
-<% invalid_counter = 0 %>
-
-<% @articles.each do |article| %>
-	<% if article.title == "quest1 intro pt.1" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
-	<% end %>
-<% end %>
-<br>
-
-<% @articles.each do |article| %>
-	<% if article.title == "quest1 intro pt.2" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
-	<% end %>
-<% end %>
-<br>
-
-<center><h2><%= "You come up with the following choices" %></h2></center>
-<br>
-<center><h2><%= "1. Climb down to the rope fastened on the side of the staircase" %></h2></center>
-<br>
-<center><h2><%= "2. Willingly jump to grab the rope from the staircase" %></h2></center>
-<br>
-<center><h2><%= "3. Walk to the courtyard and request to speak with the High King" %></h2></center>
-<br>
-
-<% choice_1a = "1a" %>
-<% choice_1b = "1b" %>
-<% choice_1c = "1c" %>
-
-<%= form_for("/pathfinder/a/quest1", method: :post) do %>
-  <center>
-	<h2><%= label_tag(:section_1_input, "Please choose an option:") %></h2>
-	<%= text_field_tag :section_1_input, @response, maxlength:1 %>
-	<%= submit_tag("Submit") %>
-  </center> 
-<% end %>
-<br>
-
-<% if request.path_info.include?('selection') %>
-	<%= "User entered " + @user_input + " as their answer" %>
-	<br>
-<% end %>
-
-<% if @user_input == choice_1a %>
 	
-	<% climb = rand(1..100) %>
-	<% if climb <= 5 %>
+<%# CLIMB_SAVE = 0 %>
 	
-		<center>
-			<h2>
-				<%= "Klarkel loses his grip and falls" %>
-				<br>
-			</h2>
-		</center>
-		
-		<% fall_outcome = rand(1..100) %>
-
-		<% if fall_outcome <= 10 %>
-		
-			<center>
-				<h2>
-					<%= "Klarkel manages to the grab the rope. Feeling the recoil of the cable, he is thrown up and down vigorously." %></h2>
-					<br>
-					<%= "Mustering all of his strength, the foolish dwarf is able to climb to the top of the statue." %>
-					<br>
-				</h2>
-			</center>
-			
-			<% @articles.each do |article| %>
-				<% if article.title == "quest1 section 1 pt.1a" %> 
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>
-			<br>
-		
-		<% else%>
-		
-			<center>
-				<h2>
-					<%= "Klarkel plummets to his death" %>
-					<br>
-					<%= "You have failed!" %>
-					<br>
-					<%= button_to 'restart', pathfinder_quest1_index_path %>
-				</h2>
-			</center>
-			
-		<% end %>
-		
-	<% else %>
-		
-		<h2><%= "Klarkel grabs on to the lose marble blocks and slowly climbs down the wall" %></h2>
-		<br>
-
+<% segment_sub_1 = 0 %>
+<center>
+	<h2>
 		<% @articles.each do |article| %>
-			<% if article.title == "quest1 section 1 pt.1a" %> 
+			<% if article.title == "quest1 intro pt.1" %> 
 				<p>
-					<h2><%= article.text %></h2>
+					<%= article.text %>
 				</p>
 			<% end %>
 		<% end %>
 		<br>
-		
-		<%# choice_2a = "1" %>
-		<%# choice_2b = "2" %>
 
-		<center>
-			<h2>
-				<%#= "1. Chuck throwing axes at the support cables of the hanging light" %>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest1 intro pt.2" %> 
+				<p>
+					<%= article.text %>
+				</p>
+			<% end %>
+		<% end %>
+		<br>
+	</h2>
+</center>
+<% choice_1a = "1a" %>
+<% choice_1b = "1b" %>
+<% choice_1c = "1c" %>
+
+<% if not (@url.include?('/1a') or @url.include?('/1b') or @url.include?('/1c')) %>
+	<center>
+		<h2>
+			<%= "You come up with the following choices" %>
+			<br><br>
+			<%= "1. Climb down to the rope fastened on the side of the staircase" %>
+			<br><br>
+			<%= "2. Willingly jump to grab the rope from the staircase" %>
+			<br><br>
+			<%= "3. Walk to the courtyard and request to speak with the High King" %>
+			<br><br>
+
+			<%= form_for("/pathfinder/a/quest1", method: :post) do %>
+				<%= label_tag(:section_1_input, "Please choose a path:") %>
+				<%= text_field_tag :section_1_input, @response, maxlength:1 %>
+				<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+			<% end %>
+		</h2>
+	</center>
+<% end %> 
+
+<% if @user_input == choice_1a %>
+
+	<body onload="ScrollDown()">
+	<center>
+		<h2>
+			<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down the wall to reach the statue." %>
+			<br><br>
+		
+			<% climb = rand(1..100) %>
+			<%= "Climb is #{climb}" %>
+			<% if climb.between?(1,5) %>
+				<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
 				<br>
-				<%#= "2. Shoot the light with your gun" %>
-			</h2>
-		</center>
+			
+				<% fall_outcome = rand(1..100) %>
+				<%= "fall outcome is #{fall_outcome}" %><br><br>
+				<% if fall_outcome.between?(1,10) %>
+					<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
+					<br><br>
+					<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling the recoil of the rope throughout his body, he is thrown up and down vigorously." %>
+					<br><br>
+					<%= "Mustering all of his strength, our friend is able to pull himself to the top of the statue." %>
+					<br><br>
+
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 pt.2" %> 
+							<p>
+								<%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>
+					<br>
+							
+					<% @segment_sub_1 = 1 %>
 				
-	<% end %>
-	
+				<% else%>
+					<%= "Klarkel plummets to his death" %>
+					<br><br>
+					<%= "You have failed!" %>
+					<br><br>
+					<%= button_to 'restart', pathfinder_quest1_index_path %>
+				
+				<% end %>
+			
+			<% else %>
+			
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 pt.2" %> 
+						<p>
+							<%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+			
+				<% @segment_sub_1 = 1 %>
+			
+			<% end %>
+		</h2>
+	</center>
+	</body>
+
 <% elsif @user_input == choice_1b %>	
 
-	<% fall = rand(1..100) %>
-		
-	<% if fall <= 95 %>
-		
-		<center>
-			<h2>
+	<body onload="ScrollDown()">
+	<center>
+		<h2>
+			<% fall = rand(1..100) %>
+
+			<% if fall.between?(1,95) %>
+				<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
+				<br><br>
 				<%= "Klarkel plummets to his death" %>
 				<br><br>
 				<%= "You have failed!" %>
 				<br>
 				<%= button_to 'restart', pathfinder_quest1_index_path %>
-			</h2>
-		</center>
-
-	<% else %>
-
-		<center>
-			<h2>
-				<%= "Klarkel manages to the grab the rope. Feeling the recoil of the cable, he is thrown up and down vigorously." %>
+			
+			<% else %>
+				<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
 				<br><br>
-				<%= "Mustering all of his strength, the foolish dwarf is able to climb to the top of the statue." %>
+				<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling the recoil of the rope throughout his body, he is thrown up and down vigorously." %>
 				<br><br>
-			</h2>				
-		</center>
-		<% @articles.each do |article| %>
-			<% if article.title == "quest1 section 1 pt.1a" %> 
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
+				<%= "Mustering all of his strength, our friend is able to pull himself to the top of the statue." %>
+				<br><br>
+
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 pt.2" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+			
+				<% @segment_sub_1 = 1 %>
+
 			<% end %>
-		<% end %>
-		<br>
-
-	<% end %>
-
+		</h2>
+	</center>
+	</body>	
+	
 <% elsif @user_input == choice_1c %>
-	
-	<% @articles.each do |article| %>
-		<% if article.title == "quest1 section 1 pt.1ca" %> 
-			<p>
-				<h2><%= article.text %></h2>
-			</p>
-		<% end %>
-	<% end %>
-	<br>
-	
-	<% @articles.each do |article| %>
-		<% if article.title == "quest1 section 1 pt.1cb" %> 
-			<p>
-				<h2><%= article.text %></h2>
-			</p>
-		<% end %>
-	<% end %>
-	<br>
-	
+
+	<body onload="ScrollDown()">	
 	<center>
 		<h2>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest1 section 1 pt.1ca" %> 
+					<p>
+						<%= article.text %>
+					</p>
+				<% end %>
+			<% end %>
+			<br>
+		
+			<% @articles.each do |article| %>
+				<% if article.title == "quest1 section 1 pt.1cb" %> 
+					<p>
+						<%= article.text %>
+					</p>
+				<% end %>
+			<% end %>
+			
+			<br>
+		
 			<%= "You have failed!" %>
 			<br>
 			<%= button_to 'restart', pathfinder_quest1_index_path %>
 		</h2>
-	</center>
+	</center>	
+	</body>	
 	
-	<br>	
 <% end %>
 
-<br><br><br>
-<%= render 'banner' %>
+<% if not @url.include?('q1sub1') %>
+	<br><br><br>
+	<%= render 'homepage/banner' %>
+<% end %>
+
+<script>
+function ScrollDown(){
+	window.scrollBy(0,9999);
+} 
+</script>

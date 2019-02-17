@@ -1,0 +1,40 @@
+<% @url = request.original_fullpath %>
+<% if not @url.include?('q1sub1a') %>
+	<%= render 'menu' %>
+<% end %>
+<%= render :template => "quest1/index" %>
+
+<% if @segment_sub_1 == 1 %>
+
+	<% choice_2a = "1a1" %>
+	<% choice_2b = "1a2" %>
+	
+	<center>
+		<h2>
+			<% if not ( @url.include?('1a1') or @url.include?('1a2')) %>
+				<%= "1. Shoot the light with your gun" %>
+				<br><br>
+				<%= "2. Chuck throwing axes at the support cables of the hanging light" %>
+				<br><br>
+				<br>
+				<%= form_for("pathfinder/a/quest1/#{@user_input}/q1sub1", method: :post) do %>
+					<%= label_tag(:section_sub1_input, "Please choose a path:") %>
+					<%= text_field_tag :section_sub1_input, @response_sub1, maxlength:1 %>
+					<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+				<% end %>
+			<% end %>
+		</h2>
+	</center>
+
+<% end %>
+
+<% if not @url.include?('q1sub1a') %>
+	<br><br><br>
+	<%= render 'homepage/banner' %>
+<% end %>
+
+<script>
+function ScrollDown(){
+	window.scrollBy(0,9999);
+} 
+</script>

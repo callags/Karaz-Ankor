@@ -14,9 +14,10 @@ class PathfinderController < ApplicationController
 		if url == ('/pathfinder/articles')
 			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
 			redirect_to url_reset
-		else
-			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
-			redirect_to url_reset
+
+		#else
+		#	flash[:notice] = "Error, #{host}#{url} is not a valid URL"
+		#	redirect_to url_reset
 		end
 	end
 end

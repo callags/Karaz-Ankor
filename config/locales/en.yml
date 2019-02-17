@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+
+en:
+    devise:
+        fido_usf_authentications:
+            user:
+                signed_in:
+                    "Sign in successful!"

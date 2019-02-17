@@ -1,6 +1,7 @@
 class Quest1Controller < ApplicationController
 	def index
 	  @articles = Article.all
+	  
 	end
 	
 	def create
@@ -15,41 +16,21 @@ class Quest1Controller < ApplicationController
 		@response = "1c"
 	  end
 	  
-	  @path1 = "/selection_" + "#{@response}"
+	  @path1 = "/" + "#{@response}" + "/q1sub1" 
 	  
-	  if @path1 == "/selection_1a"
+	  if @path1 == "/1a/q1sub1"
 		redirect_to "#{pathfinder_quest1_index_path}#{@path1}" if @path1.present?
-	  elsif @path1 == "/selection_1b"
+	  elsif @path1 == "/1b/q1sub1" 
 		redirect_to "#{pathfinder_quest1_index_path}#{@path1}" if @path1.present?
-	  elsif @path1 == "/selection_1c"
+	  elsif @path1 == "/1c/q1sub1"
 		redirect_to "#{pathfinder_quest1_index_path}#{@path1}" if @path1.present?
 	  else
 		redirect_to "#{pathfinder_quest1_index_path}" if @path1.present?
 	  end
+	  
 	end
 	
 	def show
-		@articles = Article.all
-		url = request.path_info
-		url_reset = pathfinder_quest1_index_path
-		host = request.host	
-	
-		if url.include?('articles')
-			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
-			redirect_to url_reset
-	
-		elsif url == ('/pathfinder/a/quest1/selection_1a')
-			@user_input = "1a"
-			render 'quest1/index'
-			
-		elsif url == ('/pathfinder/a/quest1/selection_1b')
-			@user_input = "1b"
-			render 'quest1/index'
-
-		elsif url == ('/pathfinder/a/quest1/selection_1c')
-			@user_input = "1c"
-			render 'quest1/index'
-
-		end
+		
 	end 
 end

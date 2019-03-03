@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   resources :pathfinder do
 	resources :quest1 do
 		resources :q1sub1 do
-			resources :q1sub1a
+			resources :q1sub1a do
+				resources :q1sub1b
+			end
 		end
 	end
 	

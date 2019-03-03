@@ -1,6 +1,6 @@
 <% if current_user.admin? %>
 
-<%= render 'banner' %>
+<%= render 'homepage/banner' %>
 	
 	<h1>Listing articles</h1>
 	
@@ -26,13 +26,13 @@
 		<%= link_to 'Create a new article', new_article_url %>
 	</table>
 
-<%= render 'banner' %>	
+<%= render 'homepage/banner' %>	
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
 <% end %>
 
 <% else %>
-<%= render 'banner' %>
+<%= render 'homepage/banner' %>
 <div class="title_page">
 	<h1><%= link_to 'Access Denied! Please return to the Homepage', root_path %></h1>
 </div>

@@ -1,0 +1,81 @@
+<% @url = request.original_fullpath %>
+
+<%= render :template => 'q1sub1a/index' %>
+
+<div id="input_sub1b">
+	<% if @user_input_sub1a == "1b1"%>
+		<center>
+			<h2>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b1 pt.1" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b1 pt.2" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% segment_sub_1b = 1 %>
+			</h2>
+		</center>
+
+	<% elsif @user_input_sub1a == "1b2"%>
+		<center>
+			<h2>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b2 pt.1" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b2 pt.2" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% segment_sub_1b = 1 %>
+			</h2>
+		</center>
+	<% end %>
+
+	<% if segment_sub_1b == 1 %>
+		<center>
+			<h2>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b conclusion pt.1" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 1 sub1b conclusion pt.2" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+			</h2>
+		</center>
+	<% end %>
+</div>
+	
+<% if not @url.include?('temp') %>
+	<br><br>
+	<%= render 'homepage/banner' %>
+<% end %>
+

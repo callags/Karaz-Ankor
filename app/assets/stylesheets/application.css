@@ -181,7 +181,7 @@ table{
 	.box p { margin: 0; }
 
 #footer { clear: both; color: #808080; padding: 10px 0; }
-	#footer ul { float: left; width: 20px; }
+	#footer ul { float: left; width: 20px;}
 	#footer li { padding: 5px 8px; background: url(../images/dot.gif) repeat-x bottom; }
 		#footer li a { color: #CB799F; }
 		#footer li a:hover { color: #F5CFE1; }

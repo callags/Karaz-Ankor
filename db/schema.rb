@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190126204534) do
+ActiveRecord::Schema.define(version: 20190223195653) do
 
   create_table "abouts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "article_id"
@@ -52,6 +52,24 @@ ActiveRecord::Schema.define(version: 20190126204534) do
     t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "quest1s", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "climb"
+    t.boolean "necklace"
+    t.integer "table_choice"
+    t.integer "goblin_parry"
+    t.boolean "gor_fight"
+    t.boolean "axe_used"
+    t.integer "bar_result"
+    t.integer "keg_count"
+    t.boolean "molotov"
+    t.integer "keg_explosion"
+    t.integer "spear_thrown"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "fall_outcome"
+    t.boolean "booze_cover"
   end
 
   create_table "societies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|

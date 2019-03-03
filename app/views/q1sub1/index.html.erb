@@ -1,14 +1,11 @@
 <% @url = request.original_fullpath %>
 <% if not @url.include?('q1sub1a') %>
-	<%= render 'menu' %>
+	<%= render 'quest1/menu' %>
 <% end %>
+
 <%= render :template => "quest1/index" %>
 
-<% if @segment_sub_1 == 1 %>
-
-	<% choice_2a = "1a1" %>
-	<% choice_2b = "1a2" %>
-	
+<% if @segment_sub_1a == 1 %>
 	<center>
 		<h2>
 			<% if not ( @url.include?('1a1') or @url.include?('1a2')) %>
@@ -32,9 +29,3 @@
 	<br><br><br>
 	<%= render 'homepage/banner' %>
 <% end %>
-
-<script>
-function ScrollDown(){
-	window.scrollBy(0,9999);
-} 
-</script>

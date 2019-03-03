@@ -4,6 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
 		  :fido_usf_registerable, :fido_usf_authenticatable, :timeoutable
-  
   has_many :articles
 end

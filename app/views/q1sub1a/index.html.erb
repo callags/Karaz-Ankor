@@ -1,45 +1,62 @@
-
 <% @url = request.original_fullpath %>
+
 <% if not @url.include?('temp') %>
-	<%= render 'menu' %>
+	<%= render 'quest1/menu' %>
 <% end %>
-<%#= render :template => 'quest1/index' %> 
+
 <%= render :template => 'q1sub1/index' %>
 
 <% segment_sub_1a = 0 %>
 
-<% if @user_input_sub1 == "1a1" %>
-
-	<body onload="ScrollDown()">
-
-	<% bullet_hit = rand(1..100) %>		
-	<% bullet_success = rand(1..10) %>
-	<% recoil_success = rand(1..10) %>
-
-	<center>
-		<h2>
-			<% if bullet_hit.between?(1,10) %>
-				<% if bullet_success.between?(1,7) %>
-					<%= "Despite emptying his clip, not a single bullet was able to destroy the support cable." %>
-					<br><br>
-					<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
-					<br><br>
-					<%= "You have failed!" %>
-					<br>
-					<%= button_to 'restart', pathfinder_quest1_index_path %>
-				<% elsif bullet_success.between?(8,9) %>
-					<% if recoil_success.between?(1,3) %>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 zip pistol recoil succeed" %> 
-								<p>
-									<%= article.text %>
-								</p>
+<div id="input_sub1a">
+	<% if @user_input_sub1 == "1a1" %>
+		<body onload="ScrollDown()">
+			<center>
+				<h2>
+					<% if $bullet_hit.between?(1,10) %>
+						<% if $bullet_success.between?(1,7) %>
+							<%= "Despite emptying his clip, not a single bullet was able to destroy the support cable." %>
+							<br><br>
+							<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
+							<br><br>
+							<%= "You have failed!" %>
+							<br>
+							<%= button_to 'restart', pathfinder_quest1_index_path %>
+						<% elsif $bullet_success.between?(8,9) %>
+							<% if $recoil_success.between?(1,3) %>
+								<% @articles.each do |article| %>
+									<% if article.title == "quest1 zip pistol recoil succeed" %> 
+										<p>
+											<%= article.text %>
+										</p>
+									<% end %>
+								<% end %>
+								<br>
+								<%= "You have failed!" %>
+								<br><br>
+								<%= button_to 'restart', pathfinder_quest1_index_path %>
+							<% else %>
+								<%= "Despite emptying his clip, not a single bullet was able to destroy the support cable." %>
+								<br><br>
+								<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
+								<br><br>
+								<%= "You have failed!" %>
+								<br>
+								<%= button_to 'restart', pathfinder_quest1_index_path %>
 							<% end %>
-						<% end %>
-						<br>
-						<%= "You have failed!" %>
-						<br><br>
-						<%= button_to 'restart', pathfinder_quest1_index_path %>
+						<% else %>
+							<% @articles.each do |article| %>
+								<% if article.title == "quest1 zip pistol succeed" %> 
+									<p>
+										<%= article.text %>
+									</p>
+								<% end %>
+							<% end %>
+							<br>
+							
+							<% segment_sub_1a = 1 %>
+							
+						<% end %>	
 					<% else %>
 						<%= "Despite emptying his clip, not a single bullet was able to destroy the support cable." %>
 						<br><br>
@@ -49,87 +66,61 @@
 						<br>
 						<%= button_to 'restart', pathfinder_quest1_index_path %>
 					<% end %>
-				<% else %>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 zip pistol succeed" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br><br>
-					<%= "You have failed!" %>
-					<br>
-					<%= button_to 'restart', pathfinder_quest1_index_path %>
-				<% end %>	
-			<% else %>
-				<%= "Despite emptying his clip, not a single bullet was able to destroy the support cable." %>
-				<br><br>
-				<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
-				<br><br>
-				<%= "You have failed!" %>
-				<br>
-				<%= button_to 'restart', pathfinder_quest1_index_path %>
-			<% end %>
-		
-		</h2>
-	</center>
-	</body>
-	
-<% elsif @user_input_sub1 == "1a2" %>
-
-	<body onload="ScrollDown()">
-	
-		<% axe_hit = rand(1..100) %>
-		<% axe_recoil = rand(1..100) %>
-		
-		<center>
-			<h2>
-				<% if axe_hit.between?(1,75)%>
-					
-					<% if axe_recoil.between?(1,85)%>
 				
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 axe hit succeed" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% segment_sub_1a = 1 %>
-					<% else %>
+				</h2>
+			</center>
+		</body>
+		
+	<% elsif @user_input_sub1 == "1a2" %>
+		<body onload="ScrollDown()">
+			<center>
+				<h2>
+					<% if $axe_hit.between?(1,75)%>
+						
+						<% if $axe_recoil.between?(1,85)%>
 					
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 axe recoil succeed" %> 
-								<p>
-									<%= article.text %>
-								</p>
+							<% @articles.each do |article| %>
+								<% if article.title == "quest1 axe hit succeed" %> 
+									<p>
+										<%= article.text %>
+									</p>
+								<% end %>
 							<% end %>
+							<br>
+							<% segment_sub_1a = 1 %>
+						<% else %>
+						
+							<% @articles.each do |article| %>
+								<% if article.title == "quest1 axe recoil succeed" %> 
+									<p>
+										<%= article.text %>
+									</p>
+								<% end %>
+							<% end %>
+							<br>
+							<%= "You have failed!" %>
+							<br>
+							<%= button_to 'restart', pathfinder_quest1_index_path %>
+							
 						<% end %>
-						<br>
+					
+					<% else%>
+					
+						<%= "Despite throwing each axe, not a single one was able to destroy the support cable." %>
+						<br><br>
+						<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
+						<br><br>
 						<%= "You have failed!" %>
 						<br>
 						<%= button_to 'restart', pathfinder_quest1_index_path %>
-						
+					
 					<% end %>
-				
-				<% else%>
-				
-					<%= "Despite throwing each axe, not a single one was able to destroy the support cable." %>
-					<br><br>
-					<%= "Failing to drop the chandelier, Klarkel slams into the metallic frame killing him instantly." %>
-					<br><br>
-					<%= "You have failed!" %>
-					<br>
-					<%= button_to 'restart', pathfinder_quest1_index_path %>
-				
-				<% end %>
-			</h2>
-		</center>
-	</body>
-<% end %>
-
+				</h2>
+			</center>
+		</body>
+	<% end %>
+</div>
+	
 <% if segment_sub_1a == 1 %>
 	<center>
 		<h2>
@@ -149,17 +140,41 @@
 				<% end %>
 			<% end %>
 			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest1 section 1 sub1a pt.3" %> 
+					<p>
+						<%= article.text %>
+					</p>
+				<% end %>
+			<% end %>
+			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest1 section 1 sub1a pt.4" %> 
+					<p>
+						<%= article.text %>
+					</p>
+				<% end %>
+			<% end %>
+			<br>
+			<% if not ( @url.include?('1b1') or @url.include?('1b2')) %>
+				<%= "Which table do you choose?" %>
+				<br><br>
+				<%= "1. The Slayers" %>
+				<br><br>
+				<%= "2. The Warriors" %>
+				<br><br>
+				<%= form_for("pathfinder/a/quest1/#{@user_input}/q1sub1/#{@user_input_sub1}/q1sub1a", method: :post) do %>
+					<%= label_tag(:section_sub1a_input, "Please choose a path:") %>
+					<%= text_field_tag :section_sub1a_input, @response_sub1a, maxlength:1 %>
+					<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+					<a href="#input_sub1b"></a>
+				<% end %>
+			<% end %>
 		</h2>
 	</center>
 <% end %>
 
-<% if not @url.include?('temp') %>
-	<br><br><br>
+<% if not @url.include?('q1sub1b') %>
+	<br><br>
 	<%= render 'homepage/banner' %>
 <% end %>
-
-<script>
-function ScrollDown(){
-	window.scrollBy(0,9999);
-} 
-</script>

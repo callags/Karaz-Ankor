@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  climb: 1
+  fall_outcome: MyString
+  necklace: false
+  table_choice: 1
+  goblin_parry: 1
+  gor_fight: false
+  axe_used: false
+  bar_result: 1
+  keg_count: 1
+  boolean_covering: false
+  molotov: false
+  keg_explosion: 1
+  spear_thrown: 1
+
+two:
+  climb: 1
+  fall_outcome: MyString
+  necklace: false
+  table_choice: 1
+  goblin_parry: 1
+  gor_fight: false
+  axe_used: false
+  bar_result: 1
+  keg_count: 1
+  boolean_covering: false
+  molotov: false
+  keg_explosion: 1
+  spear_thrown: 1

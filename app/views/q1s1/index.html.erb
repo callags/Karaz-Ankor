@@ -1,9 +1,9 @@
 <% @url = request.original_fullpath %>
-<% if not @url.include?('q1sub1a') %>
-	<%= render 'quest1/menu' %>
+<% if not @url.include?('q1s1a') %>
+	<%= render 'q1/menu' %>
 <% end %>
 
-<%= render :template => "quest1/index" %>
+<%= render :template => "q1/index" %>
 
 <% if @segment_sub_1a == 1 %>
 	<center>
@@ -14,7 +14,7 @@
 				<%= "2. Chuck throwing axes at the support cables of the hanging light" %>
 				<br><br>
 				<br>
-				<%= form_for("pathfinder/a/quest1/#{@user_input}/q1sub1", method: :post) do %>
+				<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1", method: :post) do %>
 					<%= label_tag(:section_sub1_input, "Please choose a path:") %>
 					<%= text_field_tag :section_sub1_input, @response_sub1, maxlength:1 %>
 					<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
@@ -25,7 +25,7 @@
 
 <% end %>
 
-<% if not @url.include?('q1sub1a') %>
+<% if not @url.include?('q1s1a') %>
 	<br><br><br>
 	<%= render 'homepage/banner' %>
 <% end %>

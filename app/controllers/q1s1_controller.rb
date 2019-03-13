@@ -1,4 +1,6 @@
-class Q1sub1Controller < ApplicationController
+class Q1s1Controller < ApplicationController
+	
+	
 	def index
 		
 		params.merge(climb: rand(1..100)) if params[:climb].blank?
@@ -11,21 +13,9 @@ class Q1sub1Controller < ApplicationController
 		
 		@articles = Article.all
 		
-		url = request.path_info
-		url_reset = pathfinder_quest1_index_path
-		host = request.host	
-	
-	
-		if url.include?('1a') 
-			@user_input = "1a"
-		elsif url.include?('1b')  
-			@user_input = "1b"
-		elsif url.include?('1c')  
-			@user_input = "1c"
-		else
-			flash[:notice] = "Error, #{host}#{url} is not a valid URL"
-			redirect_to url_reset
-		end
+		url = request.path
+		
+		@user_input = Q1Controller.url_sub1(url)
 		
 	end
 	
@@ -50,21 +40,21 @@ class Q1sub1Controller < ApplicationController
 	  
 	  if @response_sub1 == "1"
 		@response_sub1 = "1a1"
-		@path1_sub1 = "/" + "#{@response_sub1}" + "/q1sub1a/?bullet_hit=#{@bullet_hit}"\
+		@path1_sub1 = "/" + "#{@response_sub1}" + "/q1s1a/?bullet_hit=#{@bullet_hit}"\
 					  "&bullet_success=#{@bullet_success}" + "&recoil_success=#{@recoil_success}"\
-					  "#input_sub1a"
+					  "#1a"
 	  elsif @response_sub1 == "2"
 		@response_sub1 = "1a2"
-		@path1_sub1 = "/" + "#{@response_sub1}" + "/q1sub1a/?axe_hit=#{@axe_hit}&axe_recoil="\
-					  "#{@axe_recoil}#input_sub1a"
+		@path1_sub1 = "/" + "#{@response_sub1}" + "/q1s1a/?axe_hit=#{@axe_hit}&axe_recoil="\
+					  "#{@axe_recoil}#1a"
 	  end
 	  
 	  
-	  if @path1_sub1 == "/1a1/q1sub1a/?bullet_hit=#{@bullet_hit}&bullet_success=#{@bullet_success}"\
-						"&recoil_success=#{@recoil_success}#input_sub1a"
-		redirect_to "#{pathfinder_quest1_q1sub1_index_path}#{@path1_sub1}" if "#{@path1_sub1}".present?
-	  elsif @path1_sub1 = "/1a2/q1sub1a/?axe_hit=#{@axe_hit}&axe_recoil=#{@axe_recoil}#input_sub1a"
-		redirect_to "#{pathfinder_quest1_q1sub1_index_path}#{@path1_sub1}" if "#{@path1_sub1}".present?
+	  if @path1_sub1 == "/1a1/q1s1a/?bullet_hit=#{@bullet_hit}&bullet_success=#{@bullet_success}"\
+						"&recoil_success=#{@recoil_success}#1a"
+		redirect_to "#{pathfinder_q1_q1s1_index_path}#{@path1_sub1}" if "#{@path1_sub1}".present?
+	  elsif @path1_sub1 = "/1a2/q1s1a/?axe_hit=#{@axe_hit}&axe_recoil=#{@axe_recoil}#1a"
+		redirect_to "#{pathfinder_q1_q1s1_index_path}#{@path1_sub1}" if "#{@path1_sub1}".present?
 	  end
 	  
 	end

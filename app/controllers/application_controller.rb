@@ -7,5 +7,6 @@ class ApplicationController < ActionController::Base
 	authenticate_user!
 	redirect_to :root, status: :unauthorized unless current_user.admin?
   end
-	
+
+  
 end

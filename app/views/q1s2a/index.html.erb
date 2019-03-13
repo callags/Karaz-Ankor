@@ -1,0 +1,77 @@
+<% @url = request.original_fullpath %>
+<% if not @url.include?('q1s3') %>
+	<%= render 'q1/menu' %>
+<% end %>
+<%= render :template => 'q1s2/index' %>
+
+<div id="2a">
+	<center>
+		<h2>
+			<% if @user_input_sub2 == "2a1" %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 2a1 pt.1" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% if @user_input_sub1a == "1b1" %>
+					<%= "The dwarf claims the weapon as his own to right the grudge against "\
+						"these minotaur for stealing the Forgebreaker from his 'brother', Revrot Goldvein" %>
+					<br><br>
+				<% elsif @user_input_sub1a == "1b2" %>
+					<%= "The dwarf later 'realizes' that Revrot was his brother or cousin and his warhammer"\
+						" must returned, even though this 'memory' was the discussion he had with the dwarf"\
+						" warriors earlier." %>
+					<br><br>
+				<% end %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 2a1 pt.2" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 2a1 pt.3" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% segment_sub2a = 1%>
+			<% elsif @user_input_sub2 == "2a2" %>
+				<%= "Klarkel charges out to face the minotaurs and is torn to pieces by them." %>
+				<br><br>
+				<%= "You have failed!" %>
+				<br><br>
+				<%= button_to 'restart', pathfinder_q1_index_path, :method => :get %>
+				<br>
+			<% end %>
+			<% if segment_sub2a == 1 %>
+				<% if not ( @url.include?('3a') or @url.include?('3b')) %>
+					<%= "1. Go left" %>
+					<br><br>
+					<%= "2. Go right" %>
+					<br><br>
+					<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
+							"q1s1a/{@user_input_sub1a}/q1s1b/#{@user_input_sub1b}/q1s1c"\
+							"#{@user_input_sub1c}/q1s1d/#{@user_input_sub1d}/q1s2/"\
+							"#{@user_input_sub2}/q1s2a" , method: :post) do %>
+						<%= label_tag(:section_sub2a_input, "Please choose a path:") %>
+						<%= text_field_tag :section_sub2a_input, @response_sub2a, maxlength:1 %>
+						<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+					<% end %>
+				<% end %>
+			<% end %>
+		</h2>
+	</center>
+</div>
+
+<% if not @url.include?('q1s3') %>
+	<br><br>
+	<%= render 'homepage/banner' %>
+<% end %>

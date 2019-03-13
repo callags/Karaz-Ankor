@@ -1,0 +1,10 @@
+<% @url = request.original_fullpath %>
+<% if not @url.include?('temp') %>
+	<%= render 'quest1/menu' %>
+<% end %>
+<%= render :template => 'q1sub3/index' %>
+
+<% if not @url.include?('temp') %>
+	<br><br>
+	<%= render 'homepage/banner' %>
+<% end %>

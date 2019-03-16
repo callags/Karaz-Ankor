@@ -18,11 +18,8 @@ Rails.application.routes.draw do
 							resources :q1s2 do
 								resources :q1s2a do
 									resources :q1s3 do
-										resources :q1s3a do
-											resources :q1s3aa
-										end
-										resources :q1s3b do
-											resources :q1s3bb
+										resources :q1s3a #go left
+										resources :q1s3b do #go right
 										end
 									end
 								end

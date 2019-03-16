@@ -1,5 +1,5 @@
 <% @url = request.original_fullpath %>
-<% if not @url.include?('q1s3a') %>
+<% if not ( @url.include?('q1s3a')  or @url.include?('q1s3b') ) %>
 	<%= render 'q1/menu' %>
 <% end %>
 <%= render :template => 'q1s2a/index' %>
@@ -33,19 +33,43 @@
 							"q1s1a/{@user_input_sub1a}/q1s1b/#{@user_input_sub1b}/q1s1c"\
 							"#{@user_input_sub1c}/q1s1d/#{@user_input_sub1d}/q1s2"\
 							"#{@user_input_sub2}/q1s2a/#{@user_input_sub2a}/q1s3" , method: :post) do %>
-						<%= label_tag(:section_sub3_input, "Please choose a path:") %>
-						<%= text_field_tag :section_sub3_input, @response_sub3, maxlength:1 %>
+						<%= label_tag(:section_sub3a_input, "Please choose a path:") %>
+						<%= text_field_tag :section_sub3a_input, @response_sub3a, maxlength:1 %>
 						<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
 					<% end %>
 				<% end %>
 			<% elsif @user_input_sub2a == "3b" %>
-				<%= "test #{@user_input_sub2a} test" %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest1 section 3b pt.1" %> 
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% if not ( @url.include?('3b1') or @url.include?('3b2')) %>
+					<%= "1. Throw beer bottle" %>
+					<br><br>
+					<%= "2. Use axe" %>
+					<br><br>
+					<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
+							"q1s1a/{@user_input_sub1a}/q1s1b/#{@user_input_sub1b}/q1s1c"\
+							"#{@user_input_sub1c}/q1s1d/#{@user_input_sub1d}/q1s2"\
+							"#{@user_input_sub2}/q1s2a/#{@user_input_sub2a}/q1s3" , method: :post) do %>
+						<%= label_tag(:section_sub3b_input, "Please choose a path:") %>
+						<%= text_field_tag :section_sub3b_input, @response_sub3b, maxlength:1 %>
+						<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+					<% end %>
+				<% end %>
 			<% end %>
 		</h2>
 	</center>
 </div>
 
-<% if not @url.include?('q1s3a') %>
+<% if not @url.include?('q1s3b') %>
+	<br><br>
+	<%= render 'homepage/banner' %>
+<% elsif not @url.include?('q1s3b') %>
 	<br><br>
 	<%= render 'homepage/banner' %>
 <% end %>

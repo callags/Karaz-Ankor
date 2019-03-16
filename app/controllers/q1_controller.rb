@@ -74,12 +74,19 @@ class Q1Controller < ApplicationController
 		end
 	end
 	def self.url_sub3a(url)
-		user_input_sub3 = url[110..112]
-		raise user_input_sub3
+		user_input_sub3 = url[91..93]
 		if user_input_sub3 == "3a1"  
 			return "3a1"
 		elsif user_input_sub3 == "3a2" 
 			return "3a2"
+		end
+		end
+	def self.url_sub3b(url)
+		user_input_sub3 = url[91..93]
+		if user_input_sub3 == "3b1"
+			return "3b1"
+		elsif user_input_sub3 == "3b2" 
+			return "3b2"
 		end
 	end
   

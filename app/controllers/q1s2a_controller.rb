@@ -25,10 +25,10 @@ class Q1s2aController < ApplicationController
 			@path1_sub2a = "/" + "#{@response_sub2a}" + "/q1s3#3"
 		end
 		
-		if @path1_sub2a = "/3a/q1s3#3"
+		if @path1_sub2a == "/3a/q1s3#3"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_index_path}\
 						#{@path1_sub2a}" if "#{@path1_sub2a}".present?
-		elsif @path1_sub2a = "/3a/q1s3#3"
+		elsif @path1_sub2a == "/3b/q1s3#3"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_index_path}\
 						#{@path1_sub2a}" if "#{@path1_sub2a}".present?
 		end

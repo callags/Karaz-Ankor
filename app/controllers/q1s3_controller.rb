@@ -16,22 +16,43 @@ class Q1s3Controller < ApplicationController
 	end
 	
 	def create
-		@response_sub3 = params[:section_sub3_input]
+		params.merge!(keg: rand(1..100)) if params[:keg].blank?
+		@keg = params[:keg]
 		
-		if @response_sub3 == "1"
-			@response_sub3 = "3a1"
-			@path1_sub3 = "/" + "#{@response_sub3}" + "/q1s3a#3a"
-		elsif @response_sub3 == "2"
-			@response_sub3 = "3a2"
-			@path1_sub3 = "/" + "#{@response_sub3}" + "/q1s3a#3a"
+		@response_sub3b = params[:section_sub3b_input]
+		
+		if @response_sub3b == "1"
+			@response_sub3b = "3b1"
+			@path1_sub3b = "/" + "#{@response_sub3b}" + "/q1s3b#3b"
+		elsif @response_sub3b == "2"
+			@response_sub3b = "3b2"
+			@path1_sub3b = "/" + "#{@response_sub3b}" + "/q1s3b#3b"
 		end
 		
-		if @path1_sub3 == "/3a1/q1s3a#3a"
+		if @path1_sub3b == "/3b1/q1s3b#3b"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
-						#{@path1_sub2a}" if "#{@path1_sub3}".present?
-		elsif @path1_sub3 == "3a2/q1s3a#3a"
+						#{@path1_sub3b}" if "#{@path1_sub3b}".present?
+		elsif @path1_sub3b == "3b2/q1s3b#3b"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
-						#{@path1_sub2a}" if "#{@path1_sub3}".present?
+						#{@path1_sub3b}" if "#{@path1_sub3b}".present?
+		end
+		
+		@response_sub3a = params[:section_sub3a_input]
+		
+		if @response_sub3a == "1"
+			@response_sub3a = "3a1"
+			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a/?keg=#{@keg}#3a"
+		elsif @response_sub3a == "2"
+			@response_sub3a = "3a2"
+			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a/?keg=#{@keg}#3a"
+		end
+		
+		if @path1_sub3a == "/3a1/q1s3a/?keg=#{@keg}#3a"
+			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
+						#{@path1_sub3a}" if "#{@path1_sub3a}".present?
+		elsif @path1_sub3a == "3a2/q1s3a/?keg=#{@keg}#3a"
+			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
+						#{@path1_sub3a}" if "#{@path1_sub3a}".present?
 		end
 	end
 end

@@ -1,2 +1,0 @@
-class HomepageArticle < ApplicationRecord
-end

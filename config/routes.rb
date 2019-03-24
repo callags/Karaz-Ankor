@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, :controllers => {:registrations => "registrations"}
   
   resources :articles
   resources :about do
@@ -19,8 +19,7 @@ Rails.application.routes.draw do
 								resources :q1s2a do
 									resources :q1s3 do
 										resources :q1s3a #go left
-										resources :q1s3b do #go right
-										end
+										resources :q1s3b #go right
 									end
 								end
 							end

@@ -7,12 +7,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
-  <body>
+  <body> 
 <% if notice %>
 	<div class="message_wrapper">
 		<p class="notice"><%= notice %></p>
+		<script>
+			setTimeout(location.reload.bind(location), 8000);
+		</script>
 	</div>
 <% elsif alert %>
 	<div class="message_wrapper">

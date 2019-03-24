@@ -2,7 +2,7 @@
 <body>
 
 <ul id="menu">
-	<li><%= render 'homepage/banner' %></li>
+	<li><%= render "homepage/banner" %></li>
 	<li><a href="/society">Back to Dwarven Society</a></li>
 </ul>:
 
@@ -51,7 +51,7 @@
 
 <br><br><br><br><br>
 
-<%= image_tag("valaya.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<%= image_tag("valaya.jpg", :class => "rightsidepicture", style:"height:350px; border-left: 10px solid #F0DAF2; background-color:#ffffff") %>
 <br><br>
 <h1>Valaya</h1>
 <% @articles.each do |article| %>
@@ -79,7 +79,7 @@
 
 <br><br><br><br>
 
-<%= image_tag("gazul.jpg", :class => "rightsidepicture", style:"height:350px") %>
+<%= image_tag("gazul.jpg", :class => "rightsidepicture", style:"height:350px; border-left: 10px solid #F0DAF2; background-color:#ffffff") %>
 <br><br>
 <h1>Gazul</h1>
 <% @articles.each do |article| %>
@@ -107,7 +107,7 @@
 
 <br><br><br><br>
 
-<%= image_tag("thungni.png", :class => "rightsidepicture", style:"height:350px") %>
+<%= image_tag("thungni.png", :class => "rightsidepicture", style:"height:350px; border-left: 10px solid #F0DAF2") %>
 <br><br>
 <h1>Thungni</h1>
 <% @articles.each do |article| %>

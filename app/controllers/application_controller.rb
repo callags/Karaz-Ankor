@@ -3,10 +3,8 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def authenticate_admin!
-	authenticate_user!
-	redirect_to :root, status: :unauthorized unless current_user.admin?
+  def auth_user
+	redirect_to :root unless current_user.admin?
   end
-
   
 end

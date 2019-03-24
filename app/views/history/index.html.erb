@@ -2,7 +2,7 @@
 <body>
 
 <ul id="menu">
-	<li><%= render 'homepage/banner' %></li>
+	<li><%= render "homepage/banner" %></li>
 	<li><a href="/">Back to Homepage</a></li>
 </ul>
 <br><br>
@@ -21,9 +21,10 @@
 <% end %>
 <br>
 <h2><span id="left_tab">The Southlands</span></h2>
-
-<%= image_tag("The Southlands.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
-
+<%= link_to "/assets/The Southlands.jpg" do %>
+	<%= image_tag("The Southlands.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
+<% end %>
+	
 <% @articles.each do |article| %>
 	<% if article.title == "history pt.2" %>
 		<p>
@@ -41,7 +42,8 @@
 <% end %>	
 <br>
 <h2><span id="right_tab">The Worlds Edge Mountains in the Old World</span></h2>
-<%= link_to '/assets/Worlds Edge Mountains.jpg' do %>	
+<br>
+<%= link_to "/assets/Worlds Edge Mountains.jpg" do %>	
 	<%= image_tag("Worlds Edge Mountains.jpg", :class => "rightsidepicture") %>
 <% end %>
 
@@ -86,9 +88,10 @@
 	<% end %>
 <% end %>
 <br>
-<h2><span id="right_tab">The Northern Wastes (Chaos Wastes)</span></h2>
-<%= image_tag("The Chaos Wastes.jpg", :class => "rightsidepicture") %>
 
+<h2><span id="right_tab">The Northern Wastes (Chaos Wastes)</span></h2>
+<br>
+<%= image_tag("The Chaos Wastes.jpg", :class => "rightsidepicture") %>
 <br><br><br><br><br><br><br><br><br>
 <h1>The Golden Age</h1> 
 
@@ -101,6 +104,13 @@
 <% end %>
 <br>
 
+<h2>
+	<span id="dragon-black-title">
+		The Dragonback Mountains
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		The Black Mountains
+	</span>
+</h2>
 <%= image_tag("Dragonback Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
  
 <%= image_tag("Black Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
@@ -162,6 +172,7 @@
 <br>
 
 <h2><span id="right_tab">Karak Izor of the Vaults</span></h2>
+<br>
 <%= image_tag("The Vaults.jpg", :class => "rightsidepicture") %>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>

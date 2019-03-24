@@ -34,6 +34,7 @@ p.text-under-image {
     text-align: center;
 	font-size: 130%;
 }
+pre { font: .74em Arial, Sans-Serif; background:  no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
 h2 { background:  no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
 h2 a { text-decoration: underline; 
 }
@@ -159,11 +160,16 @@ table{
 .center { margin: 0 auto; width: 680px; 
 }
 
+#dragon-black-title { 
+		display:inline-block;
+		margin-left: 20px; }
+
 #left_tab { display:inline-block;
-		margin-left: 80px; }
+		margin-left: 20px; }
 
 #right_tab { display:inline-block;
-		margin-left: 650px; }		
+		float: right;
+		margin-right: 20px;}
 
 #options { float: right; color: #B565BE; font-weight: bold; }
 	#options a { color: #B97AC0; padding: 0 0 0 8px; background: url(../images/bullet.gif) no-repeat left 5px; margin: 0 0 0 10px; }

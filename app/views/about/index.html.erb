@@ -7,43 +7,39 @@
 			<li><a href="/">Back to Homepage</a></li>
 		</ul>
 		<br><br>
+		<center>
+			<div class ="title_page">	
+				<h1>About the Karaz Ankor</h1>
+			</div>
+			<h2>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "about pt.1" %>
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>	
+				<% @articles.each do |article| %>
+					<% if article.title == "about pt.2" %>
+						<p>
+							<%= article.text %>
+						</p>
+					<% end %>
+				<% end %>		
+				<br>
+				References
+				<br><br>
+				<a href="https://www.scribd.com/document/39650839/WFRP-1ed-Dwarfs-Stone-and-Steel">Warhammer Fantasy Roleplay 1st Edition - Dwarfs - Stone and Steel</a>
+				<br><br>
+				<a href="http://warhammerfantasy.wikia.com/wiki/Category:Dwarf">Warhammer Wiki Dwarf page</a>
+				<br><br>
+				<a href="https://www.youtube.com/watch?v=f_GifGJtKhk&t=1647s">Arch Warhammer Dwarf lore</a>
 
-		<div class ="title_page">	
-			<h1>About the Karaz Ankor</h1>
-		</div>
+				<br><br><br><br><br><br><br><br><br>
 
-		<br>
-		<% @articles.each do |article| %>
-			<% if article.title == "about pt.1" %>
-				<p>
-					<center><h2><%= article.text %></h2></center>
-				</p>
-			<% end %>
-		<% end %>	
-		<br>	
-		<% @articles.each do |article| %>
-			<% if article.title == "about pt.2" %>
-				<p>
-					<center><h2><%= article.text %></h2></center>
-				</p>
-			<% end %>
-		<% end %>		
-		<br>
-		<h1>References</h1>
-
-		<h2><center><a href="https://www.scribd.com/document/39650839/WFRP-1ed-Dwarfs-Stone-and-Steel">Warhammer Fantasy Roleplay 1st Edition - Dwarfs - Stone and Steel</a></center></h2>
-		<br>
-		<h2><center><a href="http://warhammerfantasy.wikia.com/wiki/Category:Dwarf">Warhammer Wiki Dwarf page</a></center></h2>
-
-		<br><br><br><br><br><br><br><br><br>
-
-		<% if notice %>
-			<script>
-				setTimeout(location.reload.bind(location), 8000);
-			</script>
-		<% end %>
-
-		<%= render 'homepage/banner' %>
-		
+				<%= render 'homepage/banner' %>
+		</center>	
 	</body>
 </html>

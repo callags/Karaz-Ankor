@@ -30,14 +30,4 @@
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
 <% end %>
-
-<% else %>
-<%= render 'homepage/banner' %>
-<div class="title_page">
-	<h1><%= link_to 'Access Denied! Please return to the Homepage', root_path %></h1>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<%= render 'banner' %>
 <% end %>

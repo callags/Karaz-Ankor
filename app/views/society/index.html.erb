@@ -2,7 +2,7 @@
 <body>
 
 <ul id="menu">
-	<li><%= render 'homepage/banner' %></li>
+	<li><%= render "homepage/banner" %></li>
 	<li><a href="/">Back to Homepage</a></li>
 </ul>:
 
@@ -61,12 +61,11 @@
 	​<%= image_tag("thunderer.jpg", :class => "society-rightsidepicture") %>
 	<%= image_tag("thungni.png", :class => "society-leftsidepicture") %>
 
-<% if notice %>
-	<script>
-		setTimeout(location.reload.bind(location), 8000);
-	</script>
-<% end %>
-
+<br><br>
+<%= render "homepage/banner" %>
+</body>
+</html>	
+	
 <script>
 function social() {
 	setTimeout(function(){ window.location.href='society/social' }, 1000);
@@ -98,9 +97,4 @@ function diplomacy() {
 function language() {
 	setTimeout(function(){ window.location.href='society/language' }, 1000);
 }
-
 </script>
-<br><br><br><br><br><br><br>
-<%= render 'homepage/banner' %>
-</body>
-</html>

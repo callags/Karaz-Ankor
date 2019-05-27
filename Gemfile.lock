@@ -38,7 +38,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_textcaptcha (4.4.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
@@ -219,7 +218,6 @@ PLATFORMS
 
 DEPENDENCIES
   actionview (~> 5.1.6.2)
-  acts_as_textcaptcha
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -240,6 +238,3 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-
-BUNDLED WITH
-   1.16.0

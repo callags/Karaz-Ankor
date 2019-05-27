@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
 	end
 	
 	def index
-	  @articles = Article.order(:user_id)
+	  @articles = Article.order(:title)
 	end
 	
 	def edit

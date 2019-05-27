@@ -8,46 +8,58 @@
 	<% if @user_input_sub1a == "1b1"%>
 		<center>
 			<h2>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b1 pt.1" %> 
-						<p>
-							<%= article.text %>
-						</p>
+				<div id="fade">
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b1 pt.1" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b1 pt.2" %> 
-						<p>
-							<%= article.text %>
-						</p>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b1 pt.2" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% segment_sub_1b = 1 %>
+					<br>
+					<% segment_sub_1b = 1 %>
+				</div>
 			</h2>
 		</center>
 
 	<% elsif @user_input_sub1a == "1b2"%>
 		<center>
 			<h2>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b2 pt.1" %> 
-						<p>
-							<%= article.text %>
-						</p>
+				<div id="fade">
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b2 pt.1" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b2 pt.2" %> 
-						<p>
-							<%= article.text %>
-						</p>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b2 pt.2" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% segment_sub_1b = 1 %>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b2 pt.3" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
+					<% end %>
+					<br>
+					<% segment_sub_1b = 1 %>
+				</div>
 			</h2>
 		</center>
 	<% end %>
@@ -55,49 +67,49 @@
 	<% if segment_sub_1b == 1 %>
 		<center>
 			<h2>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b conclusion pt.1" %> 
-						<p>
-							<%= article.text %>
-						</p>
+				<div id="fade">
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b conclusion pt.1" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b conclusion pt.2" %> 
-						<p>
-							<%= article.text %>
-						</p>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b conclusion pt.2" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1b conclusion pt.3" %> 
-						<p>
-							<%= article.text %>
-						</p>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1b conclusion pt.3" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
-				<% end %>
-				<br>
-				<% if not ( @url.include?('1c1') or @url.include?('1c2')) %>
-					<%= "1. Return to camp" %>
-					<br><br>
-					<%= "2. Check the boulder" %>
-					<br><br>
-					<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
-						"q1sub1a/{@user_input_sub1a}/q1s1b", method: :post) do %>
-						<%= label_tag(:section_sub1b_input, "Please choose a path:") %>
-						<%= text_field_tag :section_sub1b_input, @response_sub1b, maxlength:1 %>
-						<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+					<br>
+					<% if not ( @url.include?('1c1') or @url.include?('1c2')) %>
+						<%= "1. Return to camp" %>
+						<br><br>
+						<%= "2. Check the boulder" %>
+						<br><br>
+						<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
+							"q1sub1a/{@user_input_sub1a}/q1s1b", method: :post) do %>
+							<%= label_tag(:section_sub1b_input, "Please choose a path:") %>
+							<%= text_field_tag :section_sub1b_input, @response_sub1b, maxlength:1 %>
+							<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+						<br>
 					<% end %>
-				<% end %>
+				</div>
 			</h2>
 		</center>
+		<% if not ( @url.include?('1c1') or @url.include?('1c2')) %>
+			<%= render 'homepage/banner' %>
+		<% end %>
 	<% end %>
 </div>
-	
-<% if not @url.include?('q1s1c') %>
-	<br><br>
-	<%= render 'homepage/banner' %>
-<% end %>
-

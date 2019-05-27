@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
 	redirect_to :root unless current_user.admin?
   end
   
+  def geolocation_auth
+	client = request.remote_ip
+  end
+  
 end

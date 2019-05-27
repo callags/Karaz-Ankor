@@ -16,8 +16,6 @@ class Q1s3Controller < ApplicationController
 	end
 	
 	def create
-		params.merge!(keg: rand(1..100)) if params[:keg].blank?
-		@keg = params[:keg]
 		
 		@response_sub3b = params[:section_sub3b_input]
 		
@@ -32,7 +30,7 @@ class Q1s3Controller < ApplicationController
 		if @path1_sub3b == "/3b1/q1s3b#3b"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
 						#{@path1_sub3b}" if "#{@path1_sub3b}".present?
-		elsif @path1_sub3b == "3b2/q1s3b#3b"
+		elsif @path1_sub3b == "/3b2/q1s3b#3b"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
 						#{@path1_sub3b}" if "#{@path1_sub3b}".present?
 		end
@@ -41,16 +39,16 @@ class Q1s3Controller < ApplicationController
 		
 		if @response_sub3a == "1"
 			@response_sub3a = "3a1"
-			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a/?keg=#{@keg}#3a"
+			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a#3a"
 		elsif @response_sub3a == "2"
 			@response_sub3a = "3a2"
-			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a/?keg=#{@keg}#3a"
+			@path1_sub3a = "/" + "#{@response_sub3a}" + "/q1s3a#3a"
 		end
 		
-		if @path1_sub3a == "/3a1/q1s3a/?keg=#{@keg}#3a"
+		if @path1_sub3a == "/3a1/q1s3a#3a"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
 						#{@path1_sub3a}" if "#{@path1_sub3a}".present?
-		elsif @path1_sub3a == "3a2/q1s3a/?keg=#{@keg}#3a"
+		elsif @path1_sub3a == "/3a2/q1s3a#3a"
 			redirect_to "#{pathfinder_q1_q1s1_q1s1a_q1s1b_q1s1c_q1s1d_q1s2_q1s2a_q1s3_index_path}\
 						#{@path1_sub3a}" if "#{@path1_sub3a}".present?
 		end

@@ -8,24 +8,24 @@
 <% if @segment_sub_1a == 1 %>
 	<center>
 		<h2>
-			<% if not ( @url.include?('1a1') or @url.include?('1a2')) %>
-				<%= "1. Shoot the light with your gun" %>
-				<br><br>
-				<%= "2. Chuck throwing axes at the support cables of the hanging light" %>
-				<br><br>
-				<br>
-				<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1", method: :post) do %>
-					<%= label_tag(:section_sub1_input, "Please choose a path:") %>
-					<%= text_field_tag :section_sub1_input, @response_sub1, maxlength:1 %>
-					<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+			<div id="fade">
+				<% if not ( @url.include?('1a1') or @url.include?('1a2')) %>
+					<%= "1. Shoot the light with your gun" %>
+					<br><br>
+					<%= "2. Chuck throwing axes at the support cables of the hanging light" %>
+					<br><br>
+					<br>
+					<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1", method: :post) do %>
+						<%= label_tag(:section_sub1_input, "Please choose a path:") %>
+						<%= text_field_tag :section_sub1_input, @response_sub1, maxlength:1 %>
+						<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+					<% end %>
+					<br>
 				<% end %>
-			<% end %>
+			</div>
 		</h2>
 	</center>
-
-<% end %>
-
-<% if not @url.include?('q1s1a') %>
-	<br><br><br>
-	<%= render 'homepage/banner' %>
+	<% if not ( @url.include?('1a1') or @url.include?('1a2')) %>
+		<%= render 'homepage/banner' %>
+	<% end %>
 <% end %>

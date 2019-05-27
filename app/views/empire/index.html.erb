@@ -2,13 +2,107 @@
 <body>
 
 <ul id="menu">
-	<li><%= render 'homepage/banner' %></li>
+	<li><%= render "homepage/banner" %></li>
 	<li><a href="/">Back to Homepage</a></li>
 </ul>:
 
 <div class="title_page">
 	<h1>The Karaz Ankor</h1>
 </div>
+
+<center>
+	<h2>
+		<%= "Spanning from the northern and middle region of the World’s Edge Mountain at the demarc line "\
+		"bordering the chaos wastes and just before the southlands continent, the dwarven people designed "\
+		"and built impregnable fortress that they called home." %>
+	</h2>
+</center>
+<br>
+<h1>
+	The Surface World
+</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.1" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.2" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.3" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.4" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.5" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<h1>
+	Beneath the Earth
+</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.6" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h1>
+	Anatomy of a Karak
+</h1>
+
+<%= link_to "/assets/deep_legend.png" do %>
+	<%= image_tag("deep_legend.png", :class => "leftsidepicture", style:"height:500px; width: 470px; border-right: 10px solid #F0DAF2; margin-left: 140px; ") %> 
+<% end %>
+&ensp; <br><br><br>
+<%= link_to "/assets/deeps.jpg" do %>
+	<%= image_tag("deeps.jpg", :class => "leftsidepicture", style:"height:440px; width: 490px; border-right: 50px solid #F0DAF2; transform: rotate(90deg);") %>
+<% end %>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "empire pt.7" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
 
 <h1>Governed Holds</h1>
 

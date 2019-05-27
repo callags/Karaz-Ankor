@@ -2,7 +2,7 @@
 <body>
 
 <ul id="menu">
-	<li><%= render 'homepage/banner' %></li>
+	<li><%= render "homepage/banner" %></li>
 	<li><a href="/society">Back to Dwarven Society</a></li>
 </ul>:
 
@@ -92,20 +92,22 @@ Enchantments of the Dawi
 <%= image_tag("talisman_runes.jpg", :class => "language-leftsidepicture") %>
 
 <br><br><br><br>
-<h2><span id ="left_tab">
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-&ensp;&ensp; 
-Engineering Runes
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-Scriptures of War
-</span></h2>
+<h2>
+	<span id ="left_tab">
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+	&ensp;&ensp; 
+	Engineering Runes
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
+	Scriptures of War
+</span>
+</h2>
 ​<%= image_tag("engineer_runes.jpg", :class => "language-rightsidepicture", style:"margin-right: 170px") %>
 <%= image_tag("weapon_runes.jpg", :class => "language-leftsidepicture", style:"margin-left: 170px; width: 500px") %>
 
@@ -123,292 +125,716 @@ Scriptures of War
 <br>
 
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "A" %></h2>
-	<h2 class="language-padding"><%= "Argul = Stone Carving; lines in face of a very old dwarf" %></h2>
-	<h2 class="language-padding"><%= "Angaz = Ironwork" %></h2>
-	<h2 class="language-padding"><%= "Ankor = Domain or realm" %></h2>
-	<h2 class="language-padding"><%= "Arm = The Khazalid irregular verb to be (present tense arm - past tense urz)." %></h2>
-	<h2 class="language-padding"><%= "Az = War Axe." %></h2>
-	<h2 class="language-padding"><%= "Azgal = Treasure hold." %></h2>
-	<h2 class="language-padding"><%= "Azul = Metal of any kind;dependable;a sturdy dwarf." %></h2>
+	<h2 class="language-padding">
+		<%= "A" %>
+		<br>
+		<%= "Argul = Stone Carving; lines in face of a very old dwarf" %>
+		<br>
+		<%= "Angaz = Ironwork" %>
+		<br>
+		<%= "Ankor = Domain or realm" %>
+		<br>
+		<%= "Arm = The Khazalid irregular verb to be (present tense arm - past tense urz)." %>
+		<br>
+		<%= "Az = War Axe." %>
+		<br>
+		<%= "Azgal = Treasure hold." %>
+		<br>
+		<%= "Azul = Metal of any kind;dependable;a sturdy dwarf." %>
+	</h2>
 </div>
 
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "B" %></h2>
-	<h2 class="language-padding"><%= "Bak = Fist or punch" %></h2>
-	<h2 class="language-padding"><%= "Bar = A fortified gateway or door" %></h2>
-	<h2 class="language-padding"><%= "Barag = A warmachine" %></h2>
-	<h2 class="language-padding"><%= "Baraz = A bond or promise" %></h2>
-	<h2 class="language-padding"><%= "Boga = A candle that blows unexpectedly plunging the tunnel in darkness" %></h2>
-	<h2 class="language-padding"><%= "Bok = Banging your head on the roof of a low tunnel; characteristic scar on forehead caused by same" %></h2>
-	<h2 class="language-padding"><%= "Boki = Slang word for dwarf miners" %></h2>
-	<h2 class="language-padding"><%= "Bolg = Large, fat belly. Also a state of extreme wealth, age and contentment" %></h2>
-	<h2 class="language-padding"><%= "Bozdok = Unhinged as a result of constantly banging one's head against low roofs and pit-props - 'crosseyed'" %></h2>
-	<h2 class="language-padding"><%= "Bran = Clever, alert, mentally sharp" %></h2>
-	<h2 class="language-padding"><%= "Brodag = An annual brewing festival of Grungni" %></h2>
-	<h2 class="language-padding"><%= "Bryn = Gold that shines strikingly in the sunlight;anything shiny or brillant" %></h2>
-	<h2 class="language-padding"><%= "Bugrit = An invocation against ill-luck uttered by a dwarf who has banged his head, hit his thumb, stubbed his toe or some other minor misfortune. Usually repeated three times for luck" %></h2>
+	<h2 class="language-padding">
+		<%= "B" %>
+		<br>
+		<%= "Bak = Fist or punch" %>
+		<br>
+		<%= "Bar = A fortified gateway or door" %>
+		<br>
+		<%= "Barag = A warmachine" %>
+		<br>
+		<%= "Baraz = A bond or promise" %>
+		<br>
+		<%= "Boga = A candle that blows unexpectedly plunging the tunnel in darkness" %>
+		<br>
+		<%= "Bok = Banging your head on the roof of a low tunnel; characteristic scar on forehead caused by the same act" %>
+		<br>
+		<%= "Boki = Slang word for dwarf miners" %>
+		<br>
+		<%= "Bolg = Large, fat belly. Also a state of extreme wealth, age and contentment" %>
+		<br>
+		<%= "Bozdok = Unhinged as a result of constantly banging one's head against low roofs and pit-props - 'crosseyed'" %>
+		<br>
+		<%= "Bran = Clever, alert, mentally sharp" %>
+		<br>
+		<%= "Brodag = An annual brewing festival of Grungni" %>
+		<br>
+		<%= "Bryn = Gold that shines strikingly in the sunlight;anything shiny or brillant" %>
+		<br>
+		<%= "Bugrit = An invocation against ill-luck uttered by a dwarf who has banged his head, "\
+		"hit his thumb, stubbed his toe or some other minor misfortune. Usually repeated three times "\
+		"for luck" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "C" %></h2>
-	<h2 class="language-padding"><%= "Chuf = Piece of very old cheese a dwarf miner keeps under his hat for emergencies" %></h2>
+	<h2 class="language-padding">
+		<%= "C" %>
+		<br>
+		<%= "Chuf = Piece of very old cheese a dwarf miner keeps under his hat for emergencies" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "D" %></h2>
-	<h2 class="language-padding"><%= "Dal = Old, good" %></h2>
-	<h2 class="language-padding"><%= "Dammaz = A grievance, grudge or insult to be avenged" %></h2>
-	<h2 class="language-padding"><%= "Dammaz Kron= The Book of Grudges" %></h2>
-	<h2 class="language-padding"><%= "Dar = A challenge or bet" %></h2>
-	<h2 class="language-padding"><%= "Dawi = Dwarfs" %></h2>
-	<h2 class="language-padding"><%= "Dawr = As good as something can get without it being proven over time and hard use. Most dwarf words for 'good' imply age and reliability too, but dwar simply means 'looks like it might be good'. It literally translates to 'like dwarf'" %></h2>
-	<h2 class="language-padding"><%= "Deb = New, untried, raw" %></h2>
-	<h2 class="language-padding"><%= "Dibnin = The act of tinkering with something that already works perfectly, out of a belief that if can still be improved - hence Dibna, a dwarf who engages in dibnin." %></h2>
-	<h2 class="language-padding"><%= "Doh = Stupid, slow-witted, gullable" %></h2>
-	<h2 class="language-padding"><%= "Dok = Watch, observe, see, the eye" %></h2>
-	<h2 class="language-padding"><%= "Dongliz = The parts of a dwarf's body impossible for him to scratch" %></h2>
-	<h2 class="language-padding"><%= "Dork = Giant, tall, unstable" %></h2>
-	<h2 class="language-padding"><%= "Drakk = Dragon" %></h2>
-	<h2 class="language-padding"><%= "Drek = Far, a great distance; great ambition or enterprise." %></h2>
-	<h2 class="language-padding"><%= "Dreng = Slay in combat" %></h2>
-	<h2 class="language-padding"><%= "Drengi = Slayer, one of the cult of Slayers" %></h2>
-	<h2 class="language-padding"><%= "Drengnel = Dragon stew with cave mushrooms marinated in strong ale" %></h2>
-	<h2 class="language-padding"><%= "Drung = To vanquish, defeat" %></h2>
-	<h2 class="language-padding"><%= "Duk = low, narrow tunnel" %></h2>
-	<h2 class="language-padding"><%= "Dum = Doom or darkness" %></h2>
-	<h2 class="language-padding"><%= "Dunkin = Annual bath traditionally taken whether needed or not" %></h2>
-	<h2 class="language-padding"><%= "Durak = Hard" %></h2>
-	<h2 class="language-padding"><%= "Duraz = Stone or slab" %></h2>
+	<h2 class="language-padding">
+		<%= "D" %>
+		<br>
+		<%= "Dal = Old, good" %>
+		<br>
+		<%= "Dammaz = A grievance, grudge or insult to be avenged" %>
+		<br>
+		<%= "Dammaz Kron= The Book of Grudges" %>
+		<br>
+		<%= "Dar = A challenge or bet" %>
+		<br>
+		<%= "Dawi = Dwarfs" %>
+		<br>
+		<%= "Dawr = As good as something can get without it being proven over time and hard use. Most "\
+		"dwarf words for 'good' imply age and reliability too, but dwar simply means 'looks like it might "\
+		"be good'. It literally translates to 'like dwarf'" %>
+		<br>
+		<%= "Deb = New, untried, raw" %>
+		<br>
+		<%= "Dibnin = The act of tinkering with something that already works perfectly, out of a belief "\
+		"that if can still be improved - hence Dibna, a dwarf who engages in dibnin." %>
+		<br>
+		<%= "Doh = Stupid, slow-witted, gullable" %>
+		<br>
+		<%= "Dok = Watch, observe, see, the eye" %>
+		<br>
+		<%= "Dongliz = The parts of a dwarf's body impossible for him to scratch" %>
+		<br>
+		<%= "Dork = Giant, tall, unstable" %>
+		<br>
+		<%= "Drakk = Dragon" %>
+		<br>
+		<%= "Drek = Far, a great distance; great ambition or enterprise." %>
+		<br>
+		<%= "Dreng = Slay in combat" %>
+		<br>
+		<%= "Drengi = Slayer, one of the cult of Slayers" %>
+		<br>
+		<%= "Drengnel = Dragon stew with cave mushrooms marinated in strong ale" %>
+		<br>
+		<%= "Drung = To vanquish, defeat" %>
+		<br>
+		<%= "Duk = low, narrow tunnel" %>
+		<br>
+		<%= "Dum = Doom or darkness" %>
+		<br>
+		<%= "Dunkin = Annual bath traditionally taken whether needed or not" %>
+		<br>
+		<%= "Durak = Hard" %>
+		<br>
+		<%= "Duraz = Stone or slab" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "E" %></h2>
-	<h2 class="language-padding"><%= "Ekrund = A stairway decesending beneath the ground" %></h2>
-	<h2 class="language-padding"><%= "Elgi = Elves" %></h2>
-	<h2 class="language-padding"><%= "Elgram = Weak, enfeebled, thin" %></h2>
-	<h2 class="language-padding"><%= "Elgraz = Construction that looks as if it is about to collapse" %></h2>
-	<h2 class="language-padding"><%= "Endrukli = An engineer or mechanic (generally a dwarf engineer)" %></h2>
+	<h2 class="language-padding">
+		<%= "E" %>
+		<br>
+		<%= "Ekrund = A stairway decesending beneath the ground" %>
+		<br>
+		<%= "Elgi = Elves" %>
+		<br>
+		<%= "Elgram = Weak, enfeebled, thin" %>
+		<br>
+		<%= "Elgraz = Construction that looks as if it is about to collapse" %>
+		<br>
+		<%= "Endrukli = An engineer or mechanic (generally a dwarf engineer)" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "F" %></h2>
-	<h2 class="language-padding"><%= "Fleg = Banner, standard" %></h2>
-	<h2 class="language-padding"><%= "Frongol = Mushrooms that grow in the back of a cave" %></h2>
+	<h2 class="language-padding">
+		<%= "F" %>
+		<br>
+		<%= "Fleg = Banner, standard" %>
+		<br>
+		<%= "Frongol = Mushrooms that grow in the back of a cave" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "G" %></h2>
-	<h2 class="language-padding"><%= "Galaz = Gold of particular ornamental value" %></h2>
-	<h2 class="language-padding"><%= "Gand = Find, discover" %></h2>
-	<h2 class="language-padding"><%= "Garaz = Rebellious, fearless" %></h2>
-	<h2 class="language-padding"><%= "Gazan = Plains, wasteland" %></h2>
-	<h2 class="language-padding"><%= "Gibal = Fragments of food enmeshed in a dwarf's beard" %></h2>
-	<h2 class="language-padding"><%= "Ginit = Small stone which works its way into your boot causing discomfort" %></h2>
-	<h2 class="language-padding"><%= "Girt = Broad tunnel with plenty of headroom" %></h2>
-	<h2 class="language-padding"><%= "Git = The Khazalid irregular verb to go (present tense git - past tense ged) the word is related to got (ibid)" %></h2>
-	<h2 class="language-padding"><%= "Gnol = Old, reliable, proven, wise" %></h2>
-	<h2 class="language-padding"><%= "Gnollengrom = Respect due to a dwarf who has a longer and more spectacular beard" %></h2>
-	<h2 class="language-padding"><%= "Gnorl = An especially bright and obvious boil or similar blemish on the end of the nose" %></h2>
-	<h2 class="language-padding"><%= "Gor = Wild beast" %></h2>
-	<h2 class="language-padding"><%= "Gorak = Great cunning, uncanny" %></h2>
-	<h2 class="language-padding"><%= "Gorl = Gold that is especially soft and yellow; the color yellow" %></h2>
-	<h2 class="language-padding"><%= "Gorog = Ale; high spirits; a drinking binge" %></h2>
-	<h2 class="language-padding"><%= "Got = March or travel quickly with purpose" %></h2>
-	<h2 class="language-padding"><%= "Gov = Thane" %></h2>
-	<h2 class="language-padding"><%= "Gozunda = Practically anything kept under the bed 'for emergencies'" %></h2>
-	<h2 class="language-padding"><%= "Gov = Thane" %></h2>
-	<h2 class="language-padding"><%= "Grik = Pain in the neck caused by continually stooping low in tunnels" %></h2>
-	<h2 class="language-padding"><%= "Grim = Harsh, unyielding" %></h2>
-	<h2 class="language-padding"><%= "Grimaz = Barren place" %></h2>
-	<h2 class="language-padding"><%= "Grindal = Long flaxen plaits worn by female maidens" %></h2>
-	<h2 class="language-padding"><%= "Grint = Waste rock or spoil left by miners' excavations" %></h2>
-	<h2 class="language-padding"><%= "Grizal = Poor meat" %></h2>
-	<h2 class="language-padding"><%= "Grizdal = Ale that has been fermented for at least a century" %></h2>
-	<h2 class="language-padding"><%= "Grob = The colour green, also goblins and orcs - literally greenies" %></h2>
-	<h2 class="language-padding"><%= "Grobi = Goblins" %></h2>
-	<h2 class="language-padding"><%= "Grobkaz = Goblin works, evil deeds" %></h2>
-	<h2 class="language-padding"><%= "Grobkul = The art of stalking goblins in caves" %></h2>
-	<h2 class="language-padding"><%= "Grog = Inferior or watered ale; mannish brew" %></h2>
-	<h2 class="language-padding"><%= "Grom = Brave or defiant" %></h2>
-	<h2 class="language-padding"><%= "Gromdal = An ancient artefact" %></h2>
-	<h2 class="language-padding"><%= "Gromthi = Ancestor" %></h2>
-	<h2 class="language-padding"><%= "Grong = Anvil" %></h2>
-	<h2 class="language-padding"><%= "Gronit = The Khazalid irregular verb to do (present tense gronit - past tense gird)" %></h2>
-	<h2 class="language-padding"><%= "Gronti = Giant (as in the creature)" %></h2>
-	<h2 class="language-padding"><%= "Grumbak = A short measure of ale; trivial complaint or grumble" %></h2>
-	<h2 class="language-padding"><%= "Grumbaki = A grumbler or whiner" %></h2>
-	<h2 class="language-padding"><%= "Grund = Hammer (also sometimes called 'rikkaz')" %></h2>
-	<h2 class="language-padding"><%= "Grung = A mine" %></h2>
-	<h2 class="language-padding"><%= "Grungnaz = Making or smithying" %></h2>
-	<h2 class="language-padding"><%= "Grungni = Dwarf ancestor, god of smiths and mines" %></h2>
-	<h2 class="language-padding"><%= "Grungron = A forge" %></h2>
-	<h2 class="language-padding"><%= "Gruntaz = Strip of cloth worn around the loins and supposedly eaten in extreme emergencies hence, 'down to his gruntaz'" %></h2>
-	<h2 class="language-padding"><%= "Gruntitrogg = Secret coming of age ritual practiced amongst dwarfkind - details of this are amongst the mostly kept of all dwarf secrets" %></h2>
-	<h2 class="language-padding"><%= "Guz = To consume food or drink" %></h2>
-	<h2 class="language-padding"><%= "Guzzen = Push, feed, insert" %></h2>
+	<h2 class="language-padding">
+		<%= "G" %>
+		<br>
+		<%= "Galaz = Gold of particular ornamental value" %>
+		<br>
+		<%= "Gand = Find, discover" %>
+		<br>
+		<%= "Garaz = Rebellious, fearless" %>
+		<br>
+		<%= "Gazan = Plains, wasteland" %>
+		<br>
+		<%= "Gibal = Fragments of food enmeshed in a dwarf's beard" %>
+		<br>
+		<%= "Ginit = Small stone which works its way into your boot causing discomfort" %>
+		<br>
+		<%= "Girt = Broad tunnel with plenty of headroom" %>
+		<br>
+		<%= "Git = The Khazalid irregular verb to go (present tense git - past tense ged) the "\
+		"word is related to got (ibid)" %>
+		<br>
+		<%= "Gnol = Old, reliable, proven, wise" %>
+		<br>
+		<%= "Gnollengrom = Respect due to a dwarf who has a longer and more spectacular beard" %>
+		<br>
+		<%= "Gnorl = An especially bright and obvious boil or similar blemish on the end of the nose" %>
+		<br>
+		<%= "Gor = Wild beast" %>
+		<br>
+		<%= "Gorak = Great cunning, uncanny" %>
+		<br>
+		<%= "Gorl = Gold that is especially soft and yellow; the color yellow" %>
+		<br>
+		<%= "Gorog = Ale; high spirits; a drinking binge" %>
+		<br>
+		<%= "Got = March or travel quickly with purpose" %>
+		<br>
+		<%= "Gov = Thane" %>
+		<br>
+		<%= "Gozunda = Practically anything kept under the bed 'for emergencies'" %>
+		<br>
+		<%= "Gov = Thane" %>
+		<br>
+		<%= "Grik = Pain in the neck caused by continually stooping low in tunnels" %>
+		<br>
+		<%= "Grim = Harsh, unyielding" %>
+		<br>
+		<%= "Grimaz = Barren place" %>
+		<br>
+		<%= "Grindal = Long flaxen plaits worn by female maidens" %>
+		<br>
+		<%= "Grint = Waste rock or spoil left by miners' excavations" %>
+		<br>
+		<%= "Grizal = Poor meat" %>
+		<br>
+		<%= "Grizdal = Ale that has been fermented for at least a century" %>
+		<br>
+		<%= "Grob = The colour green, also goblins and orcs - literally greenies" %>
+		<br>
+		<%= "Grobi = Goblins" %>
+		<br>
+		<%= "Grobkaz = Goblin works, evil deeds" %>
+		<br>
+		<%= "Grobkul = The art of stalking goblins in caves" %>
+		<br>
+		<%= "Grog = Inferior or watered ale; mannish brew" %>
+		<br>
+		<%= "Grom = Brave or defiant" %>
+		<br>
+		<%= "Gromdal = An ancient artefact" %>
+		<br>
+		<%= "Gromthi = Ancestor" %>
+		<br>
+		<%= "Grong = Anvil" %>
+		<br>
+		<%= "Gronit = The Khazalid irregular verb to do (present tense gronit - past tense gird)" %>
+		<br>
+		<%= "Gronti = Giant (as in the creature)" %>
+		<br>
+		<%= "Grumbak = A short measure of ale; trivial complaint or grumble" %>
+		<br>
+		<%= "Grumbaki = A grumbler or whiner" %>
+		<br>
+		<%= "Grund = Hammer (also sometimes called 'rikkaz')" %>
+		<br>
+		<%= "Grung = A mine" %>
+		<br>
+		<%= "Grungnaz = Making or smithying" %>
+		<br>
+		<%= "Grungni = Dwarf ancestor, god of smiths and mines" %>
+		<br>
+		<%= "Grungron = A forge" %>
+		<br>
+		<%= "Gruntaz = Strip of cloth worn around the loins and supposedly eaten in extreme emergencies "\
+		"hence, 'down to his gruntaz'" %>
+		<br>
+		<%= "Gruntitrogg = Secret coming of age ritual practiced amongst dwarfkind - details of this are "\
+		"amongst the mostly kept of all dwarf secrets" %>
+		<br>
+		<%= "Guz = To consume food or drink" %>
+		<br>
+		<%= "Guzzen = Push, feed, insert" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "H" %></h2>
-	<h2 class="language-padding"><%= "Hazkal = Ale brewed recently; a fiery young warrior" %></h2>
-	<h2 class="language-padding"><%= "Hunk = Carry heavy rocks or burden" %></h2>
-	<h2 class="language-padding"><%= "Hruki = Breed of mountain goat" %></h2>
+	<h2 class="language-padding">
+		<%= "H" %>
+		<br>
+		<%= "Hazkal = Ale brewed recently; a fiery young warrior" %>
+		<br>
+		<%= "Hunk = Carry heavy rocks or burden" %>
+		<br>
+		<%= "Hruki = Breed of mountain goat" %>
+	</h2>
 </div> 
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "I" %></h2>
-	<h2 class="language-padding"><%= "Ik = Putting your hand in something slimy and unpleasant in the darkness" %></h2>
-	<h2 class="language-padding"><%= "Irkul = Pillared vault hewn in rock" %></h2>
+	<h2 class="language-padding">
+		<%= "I" %>
+		<br>
+		<%= "Ik = Putting your hand in something slimy and unpleasant in the darkness" %>
+		<br>
+		<%= "Irkul = Pillared vault hewn in rock" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "J" %></h2>
-	<h2 class="language-padding"><%= "Jifful = Process of careful and percise adjustment to fit - especially in respect of engineering or stonemasonry" %></h2>
+	<h2 class="language-padding">
+		<%= "J" %>
+		<br>
+		<%= "Jifful = Process of careful and percise adjustment to fit - especially in respect of "\
+		"engineering or stonemasonry" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "K" %></h2>
-	<h2 class="language-padding"><%= "Kadrin = Mountain pass" %></h2>
-	<h2 class="language-padding"><%= "Kalan = Clan" %></h2>
-	<h2 class="language-padding"><%= "Karag = Volcano or barren mountain" %></h2>
-	<h2 class="language-padding"><%= "Karak = Enduring" %></h2>
-	<h2 class="language-padding"><%= "Karaz = Mountain" %></h2>
-	<h2 class="language-padding"><%= "Karin = Shield, temporary protection" %></h2>
-	<h2 class="language-padding"><%= "Kazad = Fortress" %></h2>
-	<h2 class="language-padding"><%= "Kazak = War or battle" %></h2>
-	<h2 class="language-padding"><%= "Khaz = An underground hall" %></h2>
-	<h2 class="language-padding"><%= "Khazhunki = Knight, calvary, rider. Lit. 'carried warrior'" %></h2>
-	<h2 class="language-padding"><%= "Khazukan = Dwarfs - literally hall-dwellers" %></h2>
-	<h2 class="language-padding"><%= "Khrum = War drum" %></h2>
-	<h2 class="language-padding"><%= "Klad = Armour" %></h2>
-	<h2 class="language-padding"><%= "Klinka = Chisel" %></h2>
-	<h2 class="language-padding"><%= "Klinkharum = Common runes" %></h2>
-	<h2 class="language-padding"><%= "Kol = Black stone, the colour black, sombre" %></h2>
-	<h2 class="language-padding"><%= "Konk = Gold that is ruddy in colour; large and bulbous nose" %></h2>
-	<h2 class="language-padding"><%= "Krink = Bad back due to continuous stooping" %></h2>
-	<h2 class="language-padding"><%= "Kro = Crow, raven, dark bird" %></h2>
-	<h2 class="language-padding"><%= "Kron = Book, record, history" %></h2>
-	<h2 class="language-padding"><%= "Kruk = A seemingly promising vein of ore which gives out suddenly; An unexpected disappointment; A venture that comes to nothing" %></h2>
-	<h2 class="language-padding"><%= "Krunk = Underground rockfall; a disaster" %></h2>
-	<h2 class="language-padding"><%= "Krut = A discomforting disease contracted from mountain goats" %></h2>
-	<h2 class="language-padding"><%= "Kruti = A dwarf suffering from Krut; a goatherd; an insult" %></h2>
-	<h2 class="language-padding"><%= "Kulgur = The art of cooking troll" %></h2>
-	<h2 class="language-padding"><%= "Kuri = Meat stew boiled up by travelling dwarfs from whatever ingredients are at hand. Traditionally spiced with wild berries" %></h2>
+	<h2 class="language-padding">
+		<%= "K" %>
+		<br>
+		<%= "Kadrin = Mountain pass" %>
+		<br>
+		<%= "Kalan = Clan" %>
+		<br>
+		<%= "Karag = Volcano or barren mountain" %>
+		<br>
+		<%= "Karak = Enduring" %>
+		<br>
+		<%= "Karaz = Mountain" %>
+		<br>
+		<%= "Karin = Shield, temporary protection" %>
+		<br>
+		<%= "Kazad = Fortress" %>
+		<br>
+		<%= "Kazak = War or battle" %>
+		<br>
+		<%= "Khaz = An underground hall" %>
+		<br>
+		<%= "Khazhunki = Knight, calvary, rider. Lit. 'carried warrior'" %>
+		<br>
+		<%= "Khazukan = Dwarfs - literally hall-dwellers" %>
+		<br>
+		<%= "Khrum = War drum" %>
+		<br>
+		<%= "Klad = Armour" %>
+		<br>
+		<%= "Klinka = Chisel" %>
+		<br>
+		<%= "Klinkharum = Common runes" %>
+		<br>
+		<%= "Kol = Black stone, the colour black, sombre" %>
+		<br>
+		<%= "Konk = Gold that is ruddy in colour; large and bulbous nose" %>
+		<br>
+		<%= "Krink = Bad back due to continuous stooping" %>
+		<br>
+		<%= "Kro = Crow, raven, dark bird" %>
+		<br>
+		<%= "Kron = Book, record, history" %>
+		<br>
+		<%= "Kruk = A seemingly promising vein of ore which gives out suddenly; An unexpected "\
+		"disappointment; A venture that comes to nothing" %>
+		<br>
+		<%= "Krunk = Underground rockfall; a disaster" %>
+		<br>
+		<%= "Krut = A discomforting disease contracted from mountain goats" %>
+		<br>
+		<%= "Kruti = A dwarf suffering from Krut; a goatherd; an insult" %>
+		<br>
+		<%= "Kulgur = The art of cooking troll" %>
+		<br>
+		<%= "Kuri = Meat stew boiled up by travelling dwarfs from whatever ingredients are at hand. "\
+		"Traditionally spiced with wild berries" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "L" %></h2>
-	<h2 class="language-padding"><%= "Lok = Highly embellished or intricate; praiseworthy" %></h2>
+	<h2 class="language-padding">
+		<%= "L" %>
+		<br>
+		<%= "Lok = Highly embellished or intricate; praiseworthy" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "M" %></h2>
-	<h2 class="language-padding"><%= "Makaz = Weapon or tool" %></h2>
-	<h2 class="language-padding"><%= "Mingol = Tall watchtower built on lowland" %></h2>
+	<h2 class="language-padding">
+		<%= "M" %>
+		<br>
+		<%= "Makaz = Weapon or tool" %>
+		<br>
+		<%= "Mingol = Tall watchtower built on lowland" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "N" %></h2>
-	<h2 class="language-padding"><%= "Naggrund = An area of great upheaval, devastation or industry" %></h2>
-	<h2 class="language-padding"><%= "Narwangli = A dung collector or dwarf who smells strongly of dung" %></h2>
-	<h2 class="language-padding"><%= "Nogarung = Drinking tankard made from a troll's skull" %></h2>
-	<h2 class="language-padding"><%= "Nubunki = A dwarf child deformed at birth, shunned by its clan and exiled; A great shame to the clan and the hold" %></h2>
+	<h2 class="language-padding">
+		<%= "N" %>
+		<br>
+		<%= "Naggrund = An area of great upheaval, devastation or industry" %>
+		<br>
+		<%= "Narwangli = A dung collector or dwarf who smells strongly of dung" %>
+		<br>
+		<%= "Nogarung = Drinking tankard made from a troll's skull" %>
+		<br>
+		<%= "Nubunki = A dwarf child deformed at birth, shunned by its clan and exiled; A great shame "\
+		"to the clan and the hold" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "O" %></h2>
-	<h2 class="language-padding"><%= "Ogri = Ogre" %></h2>
-	<h2 class="language-padding"><%= "Ok = Cunning or skill" %></h2>
-	<h2 class="language-padding"><%= "Okri = Craftsman - a common personal name" %></h2>
-	<h2 class="language-padding"><%= "Onk = Comradely accretion of dirt and grime on a company of dwarfs who have spent many days underground." %></h2>
+	<h2 class="language-padding">
+		<%= "O" %>
+		<br>
+		<%= "Ogri = Ogre" %>
+		<br>
+		<%= "Ok = Cunning or skill" %>
+		<br>
+		<%= "Okri = Craftsman - a common personal name" %>
+		<br>
+		<%= "Onk = Comradely accretion of dirt and grime on a company of dwarfs who have spent "\
+		"many days underground." %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "R" %></h2>
-	<h2 class="language-padding"><%= "Ragarin = Coarse and uncomfortable clothing made from a troll's hide" %></h2>
-	<h2 class="language-padding"><%= "Rhun = Rune, word or power" %></h2>
-	<h2 class="language-padding"><%= "Rhunki = Runesmith" %></h2>
-	<h2 class="language-padding"><%= "Rik = King or lord" %></h2>
-	<h2 class="language-padding"><%= "Rikkazen = Crush, to beat to a pulp, to turn to rubble" %></h2>
-	<h2 class="language-padding"><%= "Rikkit = A small stone that falls on your head as you walk down a tunnel" %></h2>
-	<h2 class="language-padding"><%= "Ril = Gold ore that shines brightly in rock" %></h2>
-	<h2 class="language-padding"><%= "Rink = Command, to give orders, to lead" %></h2>
-	<h2 class="language-padding"><%= "Rinn = A lady dwarf or king's consort" %></h2>
-	<h2 class="language-padding"><%= "Rogwak = An improvished team game played underground and using anything on hand as a ball - often a rock, preferably a goblin's head or whole goblin body" %></h2>
-	<h2 class="language-padding"><%= "Rorkaz = Informal shouting contest" %></h2>
-	<h2 class="language-padding"><%= "Ruf = A large underground dome either natural or constructed" %></h2>
-	<h2 class="language-padding"><%= "Runk = A one-sided fight; a sound thrashing" %></h2>
-	<h2 class="language-padding"><%= "Rutz = Slackness of bowels caused by drinking too much ale" %></h2>
+	<h2 class="language-padding">
+		<%= "R" %>
+		<br>
+		<%= "Ragarin = Coarse and uncomfortable clothing made from a troll's hide" %>
+		<br>
+		<%= "Rhun = Rune, word or power" %>
+		<br>
+		<%= "Rhunki = Runesmith" %>
+		<br>
+		<%= "Rik = King or lord" %>
+		<br>
+		<%= "Rikkazen = Crush, to beat to a pulp, to turn to rubble" %>
+		<br>
+		<%= "Rikkit = A small stone that falls on your head as you walk down a tunnel" %>
+		<br>
+		<%= "Ril = Gold ore that shines brightly in rock" %>
+		<br>
+		<%= "Rink = Command, to give orders, to lead" %>
+		<br>
+		<%= "Rinn = A lady dwarf or king's consort" %>
+		<br>
+		<%= "Rogwak = An improvished team game played underground and using anything on hand as "\
+		"a ball - often a rock, preferably a goblin's head or whole goblin body" %>
+		<br>
+		<%= "Rorkaz = Informal shouting contest" %>
+		<br>
+		<%= "Ruf = A large underground dome either natural or constructed" %>
+		<br>
+		<%= "Runk = A one-sided fight; a sound thrashing" %>
+		<br>
+		<%= "Rutz = Slackness of bowels caused by drinking too much ale" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "S" %></h2>
-	<h2 class="language-padding"><%= "Skarrenruf = The colour bright blue, the day time sky" %></h2>
-	<h2 class="language-padding"><%= "Skaz = Thief" %></h2>
-	<h2 class="language-padding"><%= "Skoz = A cold meal eaten underground" %></h2>
-	<h2 class="language-padding"><%= "Skrat = To search for gold amongst rock debris or stream bed; sparse living; scavenge" %></h2>
-	<h2 class="language-padding"><%= "Skrati = Poor prospector" %></h2>
-	<h2 class="language-padding"><%= "Skree = Loose rock on a mountainside" %></h2>
-	<h2 class="language-padding"><%= "Skruff = A scrawny beard; an outrageous insult" %></h2>
-	<h2 class="language-padding"><%= "Skrund = To hew rock; to get stuck in" %></h2>
-	<h2 class="language-padding"><%= "Skuf = A drunken brawl or skirmish" %></h2>
-	<h2 class="language-padding"><%= "Slotch = The sodden mix of water, mud and pulverized stone found at the bottom of a mineworking" %></h2>
-	<h2 class="language-padding"><%= "Smak = Punish physically" %></h2>
-	<h2 class="language-padding"><%= "Stok = To hit or strike" %></h2>
-	<h2 class="language-padding"><%= "Strol = Walk or travel leisurely" %></h2>
-	<h2 class="language-padding"><%= "Stromez = Stream" %></h2>
+	<h2 class="language-padding">
+		<%= "S" %>
+		<br>
+		<%= "Skarrenruf = The colour bright blue, the day time sky" %>
+		<br>
+		<%= "Skaz = Thief" %>
+		<br>
+		<%= "Skoz = A cold meal eaten underground" %>
+		<br>
+		<%= "Skrat = To search for gold amongst rock debris or stream bed; sparse living; scavenge" %>
+		<br>
+		<%= "Skrati = Poor prospector" %>
+		<br>
+		<%= "Skree = Loose rock on a mountainside" %>
+		<br>
+		<%= "Skruff = A scrawny beard; an outrageous insult" %>
+		<br>
+		<%= "Skrund = To hew rock; to get stuck in" %>
+		<br>
+		<%= "Skuf = A drunken brawl or skirmish" %>
+		<br>
+		<%= "Slotch = The sodden mix of water, mud and pulverized stone found at the bottom of "\
+		"a mineworking" %>
+		<br>
+		<%= "Smak = Punish physically" %>
+		<br>
+		<%= "Stok = To hit or strike" %>
+		<br>
+		<%= "Strol = Walk or travel leisurely" %>
+		<br>
+		<%= "Stromez = Stream" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "T" %></h2>
-	<h2 class="language-padding"><%= "Thag = Slay by act of treachery" %></h2>
-	<h2 class="language-padding"><%= "Thagi = Murderous traitor" %></h2>
-	<h2 class="language-padding"><%= "Thaggoraki = Skaven, assassin, footpad" %></h2>
-	<h2 class="language-padding"><%= "Thindrongal = Secret vault in which ale or treasure is hidden" %></h2>
-	<h2 class="language-padding"><%= "Thingaz = Dense forest" %></h2>
-	<h2 class="language-padding"><%= "Throng = Army, huge assembly of dwarfs; a clan" %></h2>
-	<h2 class="language-padding"><%= "Thrund = A handgun" %></h2>
-	<h2 class="language-padding"><%= "Trogg = A feast or heavy drinking bout" %></h2>
-	<h2 class="language-padding"><%= "Troll = Troll" %></h2>
-	<h2 class="language-padding"><%= "Tromm = Beard; respect due to age or experience" %></h2>
-	<h2 class="language-padding"><%= "Tusk = Tooth" %></h2>
+	<h2 class="language-padding">
+		<%= "T" %>
+		<br>
+		<%= "Thag = Slay by act of treachery" %>
+		<br>
+		<%= "Thagi = Murderous traitor" %>
+		<br>
+		<%= "Thaggoraki = Skaven, assassin, footpad" %>
+		<br>
+		<%= "Thindrongal = Secret vault in which ale or treasure is hidden" %>
+		<br>
+		<%= "Thingaz = Dense forest" %>
+		<br>
+		<%= "Throng = Army, huge assembly of dwarfs; a clan" %>
+		<br>
+		<%= "Thrund = A handgun" %>
+		<br>
+		<%= "Trogg = A feast or heavy drinking bout" %>
+		<br>
+		<%= "Troll = Troll" %>
+		<br>
+		<%= "Tromm = Beard; respect due to age or experience" %>
+		<br>
+		<%= "Tusk = Tooth" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "U" %></h2>
-	<h2 class="language-padding"><%= "Ufdi = A dwarf overfond of preening and decorating his beard; a vain dwarf; a dwarf who cannot be trusted to fight" %></h2>
-	<h2 class="language-padding"><%= "Umanar = Roughly or approximately, and also indecision or vaillation" %></h2>
-	<h2 class="language-padding"><%= "Umgak = Shoddy, poorly made" %></h2>
-	<h2 class="language-padding"><%= "Umgi = Men" %></h2>
-	<h2 class="language-padding"><%= "Unbak = Break permanently" %></h2>
-	<h2 class="language-padding"><%= "Unbaraki = An oathbreaker - there is nothing worse in dwarf estimation" %></h2>
-	<h2 class="language-padding"><%= "Und = A watchpost carved into the mountainside" %></h2>
-	<h2 class="language-padding"><%= "Ungdrin = Ankor Underway, the ancient underground roadway of the dwarfs" %></h2>
-	<h2 class="language-padding"><%= "Ungor = Cavern" %></h2>
-	<h2 class="language-padding"><%= "Ungrim = A dwarf who has not yet fulfilled an important oath; an untrustworthy dwarf" %></h2>
-	<h2 class="language-padding"><%= "Urbar = trade" %></h2>
-	<h2 class="language-padding"><%= "Urbaz = A trading post or market" %></h2>
-	<h2 class="language-padding"><%= "Urk = Orc or enemy (also fear, to be afraid of, to retreat)" %></h2>
-	<h2 class="language-padding"><%= "Uzkul = Bones or death" %></h2>
-	<h2 class="language-padding"><%= "Uzkular = Undead" %></h2>
+	<h2 class="language-padding">
+		<%= "U" %>
+		<br>
+		<%= "Ufdi = A dwarf overfond of preening and decorating his beard; a vain dwarf; "\
+		"a dwarf who cannot be trusted to fight" %>
+		<br>
+		<%= "Umanar = Roughly or approximately, and also indecision or vaillation" %>
+		<br>
+		<%= "Umgak = Shoddy, poorly made" %>
+		<br>
+		<%= "Umgi = Men" %>
+		<br>
+		<%= "Unbak = Break permanently" %>
+		<br>
+		<%= "Unbaraki = An oathbreaker - there is nothing worse in dwarf estimation" %>
+		<br>
+		<%= "Und = A watchpost carved into the mountainside" %>
+		<br>
+		<%= "Ungdrin = Ankor Underway, the ancient underground roadway of the dwarfs" %>
+		<br>
+		<%= "Ungor = Cavern" %>
+		<br>
+		<%= "Ungrim = A dwarf who has not yet fulfilled an important oath; an untrustworthy dwarf" %>
+		<br>
+		<%= "Urbar = trade" %>
+		<br>
+		<%= "Urbaz = A trading post or market" %>
+		<br>
+		<%= "Urk = Orc or enemy (also fear, to be afraid of, to retreat)" %>
+		<br>
+		<%= "Uzkul = Bones or death" %>
+		<br>
+		<%= "Uzkular = Undead" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "V" %></h2>
-	<h2 class="language-padding"><%= "Valdahaz = Brewery" %></h2>
-	<h2 class="language-padding"><%= "Varf = Wolf, hound" %></h2>
-	<h2 class="language-padding"><%= "Varn = Mountain lake" %></h2>
-	<h2 class="language-padding"><%= "Vongol = Raiding band" %></h2>
-	<h2 class="language-padding"><%= "Vorn = Farm" %></h2>
+	<h2 class="language-padding">
+		<%= "V" %>
+		<br>
+		<%= "Valdahaz = Brewery" %>
+		<br>
+		<%= "Varf = Wolf, hound" %>
+		<br>
+		<%= "Varn = Mountain lake" %>
+		<br>
+		<%= "Vongol = Raiding band" %>
+		<br>
+		<%= "Vorn = Farm" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "W" %></h2>
-	<h2 class="language-padding"><%= "Wan = On its own at the start of a phrase, wan shows the phrase is a question. It's the dwarf equivalent of a question mark. This is usually missed where a standard wan - question word is used instead (wanrag, wanrak, wanrum). Wan - is also used immediately before another word to frame a question(ek wangit? 'are you going' literally 'you go?', wandar 'Is it good?' lit. 'good?)'" %></h2>
-	<h2 class="language-padding"><%= "Wanaz = A disreputable dwarf with an unkempt beard, an insult" %></h2>
-	<h2 class="language-padding"><%= "Wattock = An unsuccessful dwarf prospector; a down-at-heel dwarf; an insult" %></h2>
-	<h2 class="language-padding"><%= "Wazzock = A dwarf who has exchanged gold or some other valuable item for something of little or no worth; a foolish or gullible dwarf; an insult" %></h2>
-	<h2 class="language-padding"><%= "Werit = A dwarf who has forgotten where he placed his tankard of ale; a state of befuddlement" %></h2>
-	<h2 class="language-padding"><%= "Wutroth = Wood from ancient mountain oak" %></h2>
+	<h2 class="language-padding">
+		<%= "W" %>
+		<br>
+		<%= "Wan = On its own at the start of a phrase, wan shows the phrase is a question. It's the "\
+		"dwarf equivalent of a question mark. This is usually missed where a standard wan - question "\
+		"word is used instead (wanrag, wanrak, wanrum). Wan - is also used immediately before another "\
+		"word to frame a question(ek wangit? 'are you going' literally 'you go?', wandar 'Is it good?' "\
+		"lit. 'good?)'" %>
+		<br>
+		<%= "Wanaz = A disreputable dwarf with an unkempt beard, an insult" %>
+		<br>
+		<%= "Wattock = An unsuccessful dwarf prospector; a down-at-heel dwarf; an insult" %>
+		<br>
+		<%= "Wazzock = A dwarf who has exchanged gold or some other valuable item for something of "\
+		"little or no worth; a foolish or gullible dwarf; an insult" %>
+		<br>
+		<%= "Werit = A dwarf who has forgotten where he placed his tankard of ale; a state of befuddlement" %>
+		<br>
+		<%= "Wutroth = Wood from ancient mountain oak" %>
+	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding"><%= "Z" %></h2>
-	<h2 class="language-padding"><%= "Zak = An isolated hut in the mountains" %></h2>
-	<h2 class="language-padding"><%= "Zaki = A crazed dwarf who wanders the mountains" %></h2>
-	<h2 class="language-padding"><%= "Zan = Blood, the colour red" %></h2>
-	<h2 class="language-padding"><%= "Zanen = A bleeding wound" %></h2>
-	<h2 class="language-padding"><%= "Zanguzaz = Vampire" %></h2>
-	<h2 class="language-padding"><%= "Zank = Cleave, cut, divide" %></h2>
-	<h2 class="language-padding"><%= "Zhazz = Fire" %></h2>
-	<h2 class="language-padding"><%= "Zhuf = Waterfall or rapidly flowing river" %></h2>
-	<h2 class="language-padding"><%= "Zint = The metal tin - hence zinti, a tinsmith or tinker" %></h2>
-	<h2 class="language-padding"><%= "Zorn = Upland plateau or high meadow" %></h2>
-	<h2 class="language-padding"><%= "Zon = Sun" %></h2>
+	<h2 class="language-padding">
+		<%= "Z" %>
+		<br>
+		<%= "Zak = An isolated hut in the mountains" %>
+		<br>
+		<%= "Zaki = A crazed dwarf who wanders the mountains" %>
+		<br>
+		<%= "Zan = Blood, the colour red" %>
+		<br>
+		<%= "Zanen = A bleeding wound" %>
+		<br>
+		<%= "Zanguzaz = Vampire" %>
+		<br>
+		<%= "Zank = Cleave, cut, divide" %>
+		<br>
+		<%= "Zhazz = Fire" %>
+		<br>
+		<%= "Zhuf = Waterfall or rapidly flowing river" %>
+		<br>
+		<%= "Zint = The metal tin - hence zinti, a tinsmith or tinker" %>
+		<br>
+		<%= "Zorn = Upland plateau or high meadow" %>
+		<br>
+		<%= "Zon = Sun" %>
+	</h2>
 </div>
-<br><br><br><br><br>
-<%= render 'homepage/banner' %>
 
+<center>
+<h1>
+	The basic structure of Khazalid
+</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.8" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.9" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.10" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.11" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("signifier pt.1.png", :class => "language-centerpicture", :style => "width: 50%; height: 25%") %>
+<br><br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.12" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("signifier pt.2.png", :class => "language-centerpicture", :style => "width: 50%; height: 25%") %>
+<br><br>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.13" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("signifier pt.3.png", :class => "language-centerpicture", :style => "height: 25%; width: 25%;") %>
+<br><br>
+
+<h1>
+	Common Signifiers
+</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.14" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<%= image_tag("lang_elements.png", :class => "language-centerpicture", :style => "height: 25%; width: 65%;") %>
+<br><br>
+	
+<h1>
+	Useful Elements
+</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "language pt.15" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+</center>
+
+<div class="language-index-layout">
+	<h2 class="language-padding">
+		<%= "A = Of, with, within, to" %>
+		<br>
+		<%= "Ad = Did, done, (preceding a verb)" %>
+		<br>
+		<%= "Af = They, you (plural)" %>
+		<br>
+		<%= "Ai, I, Ap and Ip = All forms of yes" %>
+		<br>
+		<%= "An = Will/shall/am going to/with purpose (preceding a verb)"%>
+		<br>
+		<%= "Anad = Will have done or shall have done" %>
+		<br>
+		<%= "Bin = In, on, beside" %>
+		<br>
+		<%= "Anu = Soon, very soon, any minute now!" %>
+		<br>
+		<%= "Bar = But, bear in mind, except for (also the word for a fortified gate)" %>
+		<br>
+		<%= "Ek = He, she, it, you (singular)" %>
+		<br>
+		<%= "Nai, Na or Nuf = All forms of no, not and never" %>
+		<br>
+		<%= "Nu = Now, at this time" %>
+		<br>
+		<%= "Ok = Why, how" %>
+		<br>
+		<%= "Or = I, me, myself" %>
+		<br>
+		<%= "Sar = May, could, might (preceding a verb)" %>
+		<br>
+		<%= "Um = Them, those, these" %>
+		<br>
+		<%= "Un = And" %>
+		<br>
+		<%= "Ut = Us, we, ourselves" %>
+		<br>
+		<%= "Wanrag = Where" %>
+		<br>
+		<%= "Wanrak = When (preceding a verb)" %>
+		<br>
+	</h2>
+</div>
+
+<br><br><br><br><br>
+<%= render "homepage/banner" %>
 </body>
 </html>

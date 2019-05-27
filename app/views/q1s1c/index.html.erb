@@ -8,60 +8,66 @@
 	<% if @user_input_sub1b == "1c1" %>
 		<center>
 			<h2>
-				<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 1 sub1c1" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-				<% end %>
-				<br>
-				<%= "You have failed!" %>
-				<br><br>
-				<%= button_to 'restart', pathfinder_q1_index_path %>
+				<div id="fade">
+					<% @articles.each do |article| %>
+							<% if article.title == "quest1 section 1 sub1c1" %> 
+								<p>
+									<%= article.text %>
+								</p>
+							<% end %>
+					<% end %>
+					<br>
+					<%= "You have failed!" %>
+					<br><br>
+					<%= render 'q1/restart' %>
+					<br>
+				</div>
 			</h2>
 		</center>
+		<%= render 'homepage/banner' %>
 	<% elsif @user_input_sub1b == "1c2" %>
 		<center>
 			<h2>
-				<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 1 sub1c2 pt.1" %> 
+				<div id="fade">
+					<% @articles.each do |article| %>
+							<% if article.title == "quest1 section 1 sub1c2 pt.1" %> 
+								<p>
+									<%= article.text %>
+								</p>
+							<% end %>
+					<% end %>
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest1 section 1 sub1c2 pt.2" %> 
 							<p>
 								<%= article.text %>
 							</p>
 						<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest1 section 1 sub1c2 pt.2" %> 
-						<p>
-							<%= article.text %>
-						</p>
 					<% end %>
-				<% end %>
-				<br>
-				<%= "As the goblins were defeated and eaten by the beastmen, Klarkel knew he"\
-				" had two options; Run or Fight" %>
-				<br><br>
-				<% if not ( @url.include?('1d1') or @url.include?('1d2')) %>
-					<%= "1. Run from them" %>
+					<br>
+					<%= "As the goblins were defeated and eaten by the beastmen, Klarkel knew he"\
+					" had two options; Run or Fight" %>
 					<br><br>
-					<%= "2. Fight the Beastmen" %>
-					<br><br>
-					<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
-						"q1s1a/{@user_input_sub1a}/q1s1b/#{@user_input_sub1b}/q1s1c"\
-						, method: :post) do %>
-						<%= label_tag(:section_sub1c_input, "Please choose a path:") %>
-						<%= text_field_tag :section_sub1c_input, @response_sub1c, maxlength:1 %>
-						<%= submit_tag("Submit", 'data-disable-with' => "Please wait.." ) %>
+					
+					<% if not ( @url.include?('1d1') or @url.include?('1d2')) %>
+						<%= "1. Run from them" %>
+						<br><br>
+						<%= "2. Fight the Beastmen" %>
+						<br><br>
+						<%= form_for("pathfinder/a/q1/#{@user_input}/q1s1/#{@user_input_sub1}/"\
+							"q1s1a/{@user_input_sub1a}/q1s1b/#{@user_input_sub1b}/q1s1c"\
+							, method: :post) do %>
+							<%= label_tag(:section_sub1c_input, "Please choose a path:") %>
+							<%= text_field_tag :section_sub1c_input, @response_sub1c, maxlength:1 %>
+							<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+						<br>
 					<% end %>
-				<% end %>
+				</div>
 			</h2>
 		</center>
+		<% if not ( @url.include?('1d1') or @url.include?('1d2')) %>
+			<%= render 'homepage/banner' %>
+		<% end %>
 	<% end %>
 </div>
-	
-<% if not @url.include?('q1s1d') %>
-	<br><br>
-	<%= render 'homepage/banner' %>
-<% end %>

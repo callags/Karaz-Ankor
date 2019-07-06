@@ -1,9 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
 	
-	def new 
-		render 'devise/fido_usf_registrations/new'
-	end
-	
 	def create
 		@response = params[:"g-recaptcha-response"]
 		if @response == nil

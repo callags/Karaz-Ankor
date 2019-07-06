@@ -1,5 +1,7 @@
 <h2>Sign up</h2>
 
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -20,9 +22,9 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-  
-  <div class="g-recaptcha" data-sitekey="6LeeL5gUAAAAADbq0vt4d9biAs8oegkPx9ttUkKb"></div>
-
+  <br>
+  <div class="g-recaptcha" data-sitekey="6LfYYawUAAAAAOvUM-u7H2kc9mg5BNHfqBxmE7EY"></div>
+  <br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

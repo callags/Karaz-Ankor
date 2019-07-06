@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, :controllers => {:registrations => "registrations", :sessions => "sessions" }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   
   resources :articles
   resources :about do
@@ -71,7 +71,8 @@ Rails.application.routes.draw do
 	resources :prominent
 	resources :language
 	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'society/' }, via: :get
-  end
+  end 
+
   get "*path" => redirect { |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; '/' }
   root 'homepage#index'
 

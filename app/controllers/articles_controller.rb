@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_action :auth_user
+	before_action :authenticate_user!
 	
 	def new
 	  @articles = current_user.articles.build

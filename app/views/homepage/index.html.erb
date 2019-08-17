@@ -25,12 +25,14 @@
 		setTimeout(location.reload.bind(location), 8000);
 	</script>
 <% end %>
-<%= render 'banner' %>
+<br><br><br>
+<div class="banner-bottom">
+	<%= render 'banner' %>
 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
-<% end %>
-
+	<% if user_signed_in? %>
+		<%= link_to('Logout', destroy_user_session_path, :id => "submit", method: :delete) %>  
+	<% end %>
+</div>
 
 
 </body>

@@ -9,8 +9,6 @@ end
 gem 'rails', '~> 5.1.4'
 # Devise for authentication
 gem 'devise'
-#Devise Fido gem for U2F
-gem 'devise_fido_usf'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '~> 0.4.10'
 # Use Puma as the app server

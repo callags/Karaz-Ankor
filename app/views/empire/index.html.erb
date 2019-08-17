@@ -12,9 +12,9 @@
 
 <center>
 	<h2>
-		<%= "Spanning from the northern and middle region of the World’s Edge Mountain at the demarc line "\
-		"bordering the chaos wastes and just before the southlands continent, the dwarven people designed "\
-		"and built impregnable fortress that they called home." %>
+		<%= "Spanning from the center of the World’s Edge Mountain, bordering "\
+		"the Chaos Wastes and neighboring the Southlands, live the dwarven people in well"\
+		" built impregnable fortresses referred to as a karak." %>
 	</h2>
 </center>
 <br>
@@ -106,7 +106,7 @@
 
 <h1>Governed Holds</h1>
 
-	<div class="empire-category-layout">
+	<center>
 		<div class="category-layout-item">
 			<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"capital()", style:"height: 100px") %>
 			<p class="text-under-image">Karaz-A-Karak</p>
@@ -143,7 +143,7 @@
 			<%= link_to image_tag("zhufbar.png", onclick:"zhufbar()", style:"height: 100px") %>
 			<p class="text-under-image">Zhufbar</p>
 		</div>
-	</div>
+	</center>
 
 <br>
 
@@ -153,9 +153,9 @@
 
 <h1>Captured/Lost Holds</h1>
 
-	<div class="empire-category-layout">
+	<center>
 		<div class="category-layout-item">
-			<%= link_to image_tag("karak-8-peaks.jpg", onclick:"peaks()", style:"height: 100px") %>
+			<%= link_to image_tag("karak-8-peaks.png", onclick:"peaks()", style:"height: 100px") %>
 			<p class="text-under-image">Karak 8 Peaks</p>
 		</div>
 		<div class="category-layout-item">
@@ -190,7 +190,7 @@
 			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"ekrund()", style:"height: 100px") %>
 			<p class="text-under-image">Ekrund</p>
 		</div>
-	</div>
+	</center>
 </div>
 
 <br>
@@ -259,7 +259,7 @@ function ekrund() {
 </script>
 <br>
 
-<%= render 'homepage/banner' %>
+<%= render "homepage/banner" %>
 
 </body>
 </html>

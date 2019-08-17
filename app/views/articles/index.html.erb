@@ -1,8 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type=text/javascript>
+	function articleFinder(){
+		var article = document.getElementById("search").value;
+		window.find(article);
+	}
+	function scrollTop(){
+		window.scrollTo(0);
+	}
+</script>
+
+<div id="top"></div>
+
 <% if current_user.admin? %>
 
 	<%= render 'homepage/banner' %>
 	
 	<h1>Listing articles</h1>
+	
+	<center>
+		<div class="search-container">
+			<input type="text" placeholder="Search.." id="search" name="search" value="" maxlength="20">
+			<input type="submit" id="submit" onclick="articleFinder();" value="Search" />
+		</div>
+	</center>
 	
 	<table>
 		<tr>
@@ -14,22 +35,27 @@
 			<tr>
 				<td><%= article.title %></td>
 				<td><%= article.text %></td>
-				<% if current_user.admin? %>
-					<td><%= link_to 'Show', article_path(article) %></td>
-					<td><%= link_to 'Edit', edit_article_path(article) %></td>
-					<td><%= link_to 'Destroy', article_path(article),
-							method: :delete,
-							data: { confirm: 'Are you sure you want to delete this article?' } %></td>
-				<% end %>
+				<td><%= link_to 'Show', article_path(article), id: "submit" %></td>
+				<td><%= link_to 'Edit', edit_article_path(article), id: "submit" %></td>
+				<td><%= link_to 'Destroy', article_path(article), id: "submit",
+						method: :delete,
+						data: { confirm: 'Are you sure you want to delete this article?' } %></td>
+				<td><a href=#top id="submit">Top</a></td>
 			</tr>
 		<% end %>
 		
 		
 		
-		<%= link_to 'Create a new article', new_article_url %>
+		&nbsp;<%= link_to 'Create a new article', new_article_url, id: "submit" %>
 	</table>
 	<%= render 'homepage/banner' %>
 <% end %>	
 <% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>         
+  &nbsp;<%= link_to('Logout', destroy_user_session_path, method: :delete, id: "submit") %>         
+<% end %>
+
+<% if notice %>
+	<script>
+		setTimeout(location.reload.bind(location), 8000);
+	</script>
 <% end %>

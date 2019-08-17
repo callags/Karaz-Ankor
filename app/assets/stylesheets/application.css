@@ -29,6 +29,10 @@ body, html {
 a { color: #752B7D; text-decoration: underline; }
 /* a:hover { color: #0000FF; } */
 
+html{
+	scroll-behavior: smooth;
+}
+
 #fade {
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -87,6 +91,20 @@ table{
 	border-collapse: separate;
     border-spacing: 0 1em;
 }
+
+.search-container button:hover {
+	color: #fff; background: #cc0000; 
+}
+
+.search-container button {
+  margin-top: 6px;
+  margin-right: 4px;
+  background: #7f7f7f;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
 .message_wrapper{
 	position: relative;
 	top: 0;
@@ -112,14 +130,14 @@ table{
 }
 .homepage-leftsidepicture { 
 				width: 33%;  
-				height: 600px;
+				height: 350px;
 }
 .homepage-rightsidepicture { 
 				width: 33%; 
-				height: 600px;
+				height: 350px;
 }
 .homepage-centerpicture { 
-				height: 600px;
+				height: 350px;
 				width: 33%;
 }
 .society-leftsidepicture { 
@@ -179,10 +197,15 @@ table{
 .language-padding {
 				padding-left: 50px;
 }
-.empire-category-layout { background-color: #7f7f7f;
-				   position: relative; 
-				   width: 90%;
-				   margin-left: 50px;
+
+.banner-bottom {
+	position: fixed;
+	bottom: 0%;
+}
+
+.category-layout-item:hover { 
+				background-color: #7f7f7f;
+
 }
 
 .category-layout-item {
@@ -231,11 +254,3 @@ table{
 	.box { background: #E3C6E6; border-bottom: 1px solid #D1AFD5; border-right: 1px solid #D1AFD5; color: #9C5CA3; padding: 15px; }
 	.box h3 { margin: 0 0 10px; }
 	.box p { margin: 0; }
-
-#footer { clear: both; color: #808080; padding: 10px 0; }
-	#footer ul { float: left; width: 20px;}
-	#footer li { padding: 5px 8px; background: url(../images/dot.gif) repeat-x bottom; }
-		#footer li a { color: #CB799F; }
-		#footer li a:hover { color: #F5CFE1; }
-	#footer #col { float: left; width: 200px;   }
-	#copyright { color: #595959; padding: 24px 0 0; font-size: .9em; }

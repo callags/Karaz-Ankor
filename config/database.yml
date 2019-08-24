@@ -8,7 +8,7 @@ default: &default
   adapter: mysql2
   database: karaz-ankor
   username: root
-  password: Dolphin32##
+  password: ENV["db_password"]
   host: localhost
   port: 3306
 

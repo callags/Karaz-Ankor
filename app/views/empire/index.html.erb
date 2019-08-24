@@ -10,14 +10,17 @@
 	<h1>The Karaz Ankor</h1>
 </div>
 
-<center>
-	<h2>
-		<%= "Spanning from the center of the World’s Edge Mountain, bordering "\
-		"the Chaos Wastes and neighboring the Southlands, live the dwarven people in well"\
-		" built impregnable fortresses referred to as a karak." %>
-	</h2>
-</center>
+<% @articles.each do |article| %>
+	<% if article.title == "empire intro" %>
+		<p>
+			<center>
+				<h2><%= article.text %></h2>
+			</center>
+		</p>
+	<% end %>
+<% end %>
 <br>
+
 <h1>
 	The Surface World
 </h1>
@@ -104,9 +107,9 @@
 <% end %>
 <br>
 
-<h1>Governed Holds</h1>
-
+<div id="governed-hold">
 	<center>
+		<h1>Governed Holds</h1>
 		<div class="category-layout-item">
 			<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"capital()", style:"height: 100px") %>
 			<p class="text-under-image">Karaz-A-Karak</p>
@@ -143,16 +146,18 @@
 			<%= link_to image_tag("zhufbar.png", onclick:"zhufbar()", style:"height: 100px") %>
 			<p class="text-under-image">Zhufbar</p>
 		</div>
+		<br>
+		<%= image_tag("Karaz-a-Karak.jpg", :class => "empire-centerpicture") %>
+		<br>
+		<a href=#menu id="submit">Return to top</a>
 	</center>
+</div>
 
-<br>
-
-<br>
-<center><%= image_tag("Karaz-a-Karak.jpg", :class => "empire-centerpicture") %></center>
 <br><br><br>
 
-<h1>Captured/Lost Holds</h1>
 
+<div id="lost-hold">
+	<h1>Captured/Lost Holds</h1>
 	<center>
 		<div class="category-layout-item">
 			<%= link_to image_tag("karak-8-peaks.png", onclick:"peaks()", style:"height: 100px") %>
@@ -190,11 +195,11 @@
 			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"ekrund()", style:"height: 100px") %>
 			<p class="text-under-image">Ekrund</p>
 		</div>
+		<%= image_tag("captured hold.png", :class => "empire-centerpicture") %>
+		<br>
+		<a href=#menu id="submit">Return to top</a>
 	</center>
 </div>
-
-<br>
-<center><%= image_tag("captured hold.png", :class => "empire-centerpicture") %></center>
 
 <% if notice %>
 	<script>

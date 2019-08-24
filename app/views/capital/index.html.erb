@@ -1,6 +1,6 @@
 <ul id="menu">
 	<li><%= render 'homepage/banner' %></li>
-	<li><a href="/empire">Back to the Dwarven Empire</a></li>
+	<li><a href="/empire#governed-hold">Back to the Dwarven Empire</a></li>
 </ul>:
 
 <div class="title_page">
@@ -8,7 +8,8 @@
 </div>
 
 
-<%= image_tag("Karaz-a-Karak banner.jpg", :class => "leftsidepicture-with-background") %> <%= image_tag("everpeak.jpg", :class => "rightsidepicture", style:"height:250px") %>
+<%= image_tag("Karaz-a-Karak banner.jpg", :class => "leftsidepicture-with-background", style:"border-right: 10px solid #F0DAF2") %>
+<%= image_tag("everpeak.jpg", :class => "rightsidepicture", style:"height: 250px; border-left: 10px solid #F0DAF2 ") %>
 <% @articles.each do |article| %>
 	<% if article.title == "capital pt.1" %>
 		<p>

@@ -7,7 +7,8 @@
 	<h1>Karag Agilwutraz</h1>
 </div>
 
-<%= image_tag("lost-dwarfhold-banner.png", :class => "leftsidepicture-with-background") %> <%= image_tag("silver.jpg", :class => "rightsidepicture", style:"height:210px") %>
+<%= image_tag("lost-dwarfhold-banner.png", :class => "leftsidepicture-with-background", style:"border-right: 10px solid #F0DAF2") %> 
+<%= image_tag("silver.jpg", :class => "rightsidepicture", style:"height:210px; border-left: 10px solid #F0DAF2") %>
 
 <% @articles.each do |article| %>
 	<% if article.title == "agilwutraz pt.1" %>
@@ -24,5 +25,6 @@
 		</p>
 	<% end %>
 <% end %>
-<br><br><br><br><br>
-<%= render 'homepage/banner' %>
+<div class="banner-bottom">
+	<%= render 'homepage/banner' %>
+</div>

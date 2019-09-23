@@ -25,12 +25,7 @@
 	<% end %>
 <% end %>
 <br>
-<% @articles.each do |article| %>
-	<% if article.title == "drak pt.3" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
-	<% end %>
-<% end %>
-<br><br><br><br>
-<%= render 'homepage/banner' %>
+
+<div class="banner-bottom">
+	<%= render 'homepage/banner' %>
+</div>

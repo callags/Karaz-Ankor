@@ -1,18 +1,16 @@
 <html>
 <body>
 
-<%= render 'homepage/banner' %>
+<%= render "homepage/banner" %>
 
 <ul id="menu">
 	<li><a href="/">Back to Homepage</a></li>
 </ul>
-<br><br>
-<br><br>
-<br><br>
+<br><br><br><br><br><br>
 
-<h1>Governed Holds</h1>
-
-	<div class="empire-category-layout">
+<center>
+	<div id="governed-holds">
+		<h1>Governed Holds</h1>
 		<div class="category-layout-item">
 			<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"quest1()", style:"height: 100px") %>
 			<p class="text-under-image">Karaz-A-Karak</p>
@@ -49,17 +47,14 @@
 			<%= link_to image_tag("zhufbar.png", onclick:"quest9()", style:"height: 100px") %>
 			<p class="text-under-image">Zhufbar</p>
 		</div>
+		<%= image_tag("Karaz-a-Karak.jpg", :class => "empire-centerpicture") %>
 	</div>
-
-<br>
-
-<br>
-<center><%= image_tag("Karaz-a-Karak.jpg", :class => "empire-centerpicture") %></center>
+</center>
 <br><br><br>
 
-<h1>Captured/Lost Holds</h1>
-
-	<div class="empire-category-layout">
+<center>
+	<div id="lost-holds">	
+		<h1>Captured/Lost Holds</h1>
 		<div class="category-layout-item">
 			<%= link_to image_tag("karak-8-peaks.jpg", onclick:"quest10()", style:"height: 100px") %>
 			<p class="text-under-image">Karak 8 Peaks</p>
@@ -96,20 +91,22 @@
 			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest18()", style:"height: 100px") %>
 			<p class="text-under-image">Ekrund</p>
 		</div>
+		<%= image_tag("captured hold.png", :class => "empire-centerpicture") %>
 	</div>
-</div>
+</center>
 
-<br>
-<center><%= image_tag("captured hold.png", :class => "empire-centerpicture") %></center>
+<br><br><br><br>
+
+<%= render "homepage/banner" %>
+	
+</body>
+</html>
 
 <% if notice %>
 	<script>
 		setTimeout(location.reload.bind(location), 8000);
 	</script>
 <% end %>
-
-	
-<br><br><br>
 
 <% if notice %>
 	<script>
@@ -173,8 +170,3 @@ function quest18() {
 	setTimeout(function(){ window.location.href='/pathfinder/quest18' }, 1000);
 }
 </script>
-
-<%= render 'homepage/banner' %>
-	
-</body>
-</html>

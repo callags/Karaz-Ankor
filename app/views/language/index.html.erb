@@ -10,124 +10,109 @@
 	<h1>Khazalid</h1>
 </div>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.2" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+<center>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.2" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.3" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.3" %> 
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.4" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.4" %> 
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<center><h1>The Runic Script</h1></center>
+	<h1>The Runic Script</h1>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.5" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.5" %> 
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.6" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.6" %> 
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-​<center><%= image_tag("rhunic_alphabet.jpg") %></center>
+	<%= image_tag("rhunic_alphabet.jpg") %>
 
-<br>
+	<br>
 
-<center><h1>Magic Runes</h1></center>
+	<h1>Magic Runes</h1>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.7" %> 
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.7" %> 
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br><br>
-<h2><span id="left_tab">
-Runes of Armour 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-Spells of Protection
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-&ensp;&ensp;&ensp; 
-Enchantments of the Dawi
-</span></h2>
-<%= image_tag("armour_runes.jpg", :class => "language-centerpicture") %>
-​<%= image_tag("protection_runes.jpg", :class => "language-rightsidepicture") %>
-<%= image_tag("talisman_runes.jpg", :class => "language-leftsidepicture") %>
+	<br><br>
 
-<br><br><br><br>
-<h2>
-	<span id ="left_tab">
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-	&ensp;&ensp; 
-	Engineering Runes
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; 
-	Scriptures of War
-</span>
-</h2>
-​<%= image_tag("engineer_runes.jpg", :class => "language-rightsidepicture", style:"margin-right: 170px") %>
-<%= image_tag("weapon_runes.jpg", :class => "language-leftsidepicture", style:"margin-left: 170px; width: 500px") %>
+	<h1>
+		Runes of Armour
+		<br><br>
+		<%= image_tag("armour_runes.jpg", style:"width: 50%; height: 400px") %>
+		<br><br>
+		Spells of Protection
+		<br><br>
+	​	<%= image_tag("protection_runes.jpg", style:"width: 50%; height: 400px") %>
+		<br><br>
+		Enchantments of the Dawi
+		<br><br>
+		<%= image_tag("talisman_runes.jpg", style:"width: 50%; height: 400px") %>
+		<br><br>
+		Engineering Runes
+		<br><br>
+	​	<%= image_tag("engineer_runes.jpg", style:"width: 50%; height: 400px") %>
+		<br><br>
+		Scriptures of War
+		<br><br>
+		<%= image_tag("weapon_runes.jpg", style:"width: 50%; height: 400px") %>
+		<br><br>
+	</h1>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1>Thesaurus</h1>
 
-<center><h1>Thesaurus</h1></center>
-
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.1" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.1" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
+
+</center>
 
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "A" %>
-		<br>
+		<br><br>
 		<%= "Argul = Stone Carving; lines in face of a very old dwarf" %>
 		<br>
 		<%= "Angaz = Ironwork" %>
@@ -141,13 +126,13 @@ Enchantments of the Dawi
 		<%= "Azgal = Treasure hold." %>
 		<br>
 		<%= "Azul = Metal of any kind;dependable;a sturdy dwarf." %>
+		<br><br>
 	</h2>
 </div>
-
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "B" %>
-		<br>
+		<br><br>
 		<%= "Bak = Fist or punch" %>
 		<br>
 		<%= "Bar = A fortified gateway or door" %>
@@ -175,19 +160,21 @@ Enchantments of the Dawi
 		<%= "Bugrit = An invocation against ill-luck uttered by a dwarf who has banged his head, "\
 		"hit his thumb, stubbed his toe or some other minor misfortune. Usually repeated three times "\
 		"for luck" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "C" %>
-		<br>
+		<br><br>
 		<%= "Chuf = Piece of very old cheese a dwarf miner keeps under his hat for emergencies" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "D" %>
-		<br>
+		<br><br>
 		<%= "Dal = Old, good" %>
 		<br>
 		<%= "Dammaz = A grievance, grudge or insult to be avenged" %>
@@ -236,12 +223,13 @@ Enchantments of the Dawi
 		<%= "Durak = Hard" %>
 		<br>
 		<%= "Duraz = Stone or slab" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "E" %>
-		<br>
+		<br><br>
 		<%= "Ekrund = A stairway decesending beneath the ground" %>
 		<br>
 		<%= "Elgi = Elves" %>
@@ -251,21 +239,23 @@ Enchantments of the Dawi
 		<%= "Elgraz = Construction that looks as if it is about to collapse" %>
 		<br>
 		<%= "Endrukli = An engineer or mechanic (generally a dwarf engineer)" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "F" %>
-		<br>
+		<br><br>
 		<%= "Fleg = Banner, standard" %>
 		<br>
 		<%= "Frongol = Mushrooms that grow in the back of a cave" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "G" %>
-		<br>
+		<br><br>
 		<%= "Galaz = Gold of particular ornamental value" %>
 		<br>
 		<%= "Gand = Find, discover" %>
@@ -302,8 +292,6 @@ Enchantments of the Dawi
 		<%= "Gov = Thane" %>
 		<br>
 		<%= "Gozunda = Practically anything kept under the bed 'for emergencies'" %>
-		<br>
-		<%= "Gov = Thane" %>
 		<br>
 		<%= "Grik = Pain in the neck caused by continually stooping low in tunnels" %>
 		<br>
@@ -364,40 +352,44 @@ Enchantments of the Dawi
 		<%= "Guz = To consume food or drink" %>
 		<br>
 		<%= "Guzzen = Push, feed, insert" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "H" %>
-		<br>
+		<br><br>
 		<%= "Hazkal = Ale brewed recently; a fiery young warrior" %>
 		<br>
 		<%= "Hunk = Carry heavy rocks or burden" %>
 		<br>
 		<%= "Hruki = Breed of mountain goat" %>
+		<br><br>
 	</h2>
 </div> 
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2 >
 		<%= "I" %>
-		<br>
+		<br><br>
 		<%= "Ik = Putting your hand in something slimy and unpleasant in the darkness" %>
 		<br>
 		<%= "Irkul = Pillared vault hewn in rock" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "J" %>
-		<br>
+		<br><br>
 		<%= "Jifful = Process of careful and percise adjustment to fit - especially in respect of "\
 		"engineering or stonemasonry" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "K" %>
-		<br>
+		<br><br>
 		<%= "Kadrin = Mountain pass" %>
 		<br>
 		<%= "Kalan = Clan" %>
@@ -451,28 +443,31 @@ Enchantments of the Dawi
 		<br>
 		<%= "Kuri = Meat stew boiled up by travelling dwarfs from whatever ingredients are at hand. "\
 		"Traditionally spiced with wild berries" %>
+		<br><br>
 	</h2>
-</div>
+</div> <%#= "Continue editing here"%>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "L" %>
-		<br>
+		<br><br>
 		<%= "Lok = Highly embellished or intricate; praiseworthy" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "M" %>
-		<br>
+		<br><br>
 		<%= "Makaz = Weapon or tool" %>
 		<br>
 		<%= "Mingol = Tall watchtower built on lowland" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "N" %>
-		<br>
+		<br><br>
 		<%= "Naggrund = An area of great upheaval, devastation or industry" %>
 		<br>
 		<%= "Narwangli = A dung collector or dwarf who smells strongly of dung" %>
@@ -481,12 +476,13 @@ Enchantments of the Dawi
 		<br>
 		<%= "Nubunki = A dwarf child deformed at birth, shunned by its clan and exiled; A great shame "\
 		"to the clan and the hold" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "O" %>
-		<br>
+		<br><br>
 		<%= "Ogri = Ogre" %>
 		<br>
 		<%= "Ok = Cunning or skill" %>
@@ -495,12 +491,13 @@ Enchantments of the Dawi
 		<br>
 		<%= "Onk = Comradely accretion of dirt and grime on a company of dwarfs who have spent "\
 		"many days underground." %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "R" %>
-		<br>
+		<br><br>
 		<%= "Ragarin = Coarse and uncomfortable clothing made from a troll's hide" %>
 		<br>
 		<%= "Rhun = Rune, word or power" %>
@@ -529,12 +526,13 @@ Enchantments of the Dawi
 		<%= "Runk = A one-sided fight; a sound thrashing" %>
 		<br>
 		<%= "Rutz = Slackness of bowels caused by drinking too much ale" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "S" %>
-		<br>
+		<br><br>
 		<%= "Skarrenruf = The colour bright blue, the day time sky" %>
 		<br>
 		<%= "Skaz = Thief" %>
@@ -563,12 +561,13 @@ Enchantments of the Dawi
 		<%= "Strol = Walk or travel leisurely" %>
 		<br>
 		<%= "Stromez = Stream" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "T" %>
-		<br>
+		<br><br>
 		<%= "Thag = Slay by act of treachery" %>
 		<br>
 		<%= "Thagi = Murderous traitor" %>
@@ -590,12 +589,13 @@ Enchantments of the Dawi
 		<%= "Tromm = Beard; respect due to age or experience" %>
 		<br>
 		<%= "Tusk = Tooth" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2 >
 		<%= "U" %>
-		<br>
+		<br><br>
 		<%= "Ufdi = A dwarf overfond of preening and decorating his beard; a vain dwarf; "\
 		"a dwarf who cannot be trusted to fight" %>
 		<br>
@@ -626,12 +626,13 @@ Enchantments of the Dawi
 		<%= "Uzkul = Bones or death" %>
 		<br>
 		<%= "Uzkular = Undead" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "V" %>
-		<br>
+		<br><br>
 		<%= "Valdahaz = Brewery" %>
 		<br>
 		<%= "Varf = Wolf, hound" %>
@@ -641,12 +642,13 @@ Enchantments of the Dawi
 		<%= "Vongol = Raiding band" %>
 		<br>
 		<%= "Vorn = Farm" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "W" %>
-		<br>
+		<br><br>
 		<%= "Wan = On its own at the start of a phrase, wan shows the phrase is a question. It's the "\
 		"dwarf equivalent of a question mark. This is usually missed where a standard wan - question "\
 		"word is used instead (wanrag, wanrak, wanrum). Wan - is also used immediately before another "\
@@ -663,12 +665,13 @@ Enchantments of the Dawi
 		<%= "Werit = A dwarf who has forgotten where he placed his tankard of ale; a state of befuddlement" %>
 		<br>
 		<%= "Wutroth = Wood from ancient mountain oak" %>
+		<br><br>
 	</h2>
 </div>
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "Z" %>
-		<br>
+		<br><br>
 		<%= "Zak = An isolated hut in the mountains" %>
 		<br>
 		<%= "Zaki = A crazed dwarf who wanders the mountains" %>
@@ -690,107 +693,102 @@ Enchantments of the Dawi
 		<%= "Zorn = Upland plateau or high meadow" %>
 		<br>
 		<%= "Zon = Sun" %>
+		<br><br>
 	</h2>
 </div>
 
 <center>
-<h1>
-	The basic structure of Khazalid
-</h1>
+	<h1>The basic structure of Khazalid</h1>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.8" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.8" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.9" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.9" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.10" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.10" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.11" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.11" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<%= image_tag("signifier pt.1.png", :class => "language-centerpicture", :style => "width: 50%; height: 25%") %>
-<br><br>
+	<%= image_tag("signifier pt.1.png", :style => "width: 50%; height: 25%") %>
+	<br><br>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.12" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.12" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<%= image_tag("signifier pt.2.png", :class => "language-centerpicture", :style => "width: 50%; height: 25%") %>
-<br><br>
+	<%= image_tag("signifier pt.2.png", :style => "width: 50%; height: 25%") %>
+	<br><br>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.13" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.13" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<%= image_tag("signifier pt.3.png", :class => "language-centerpicture", :style => "height: 25%; width: 25%;") %>
-<br><br>
+	<%= image_tag("signifier pt.3.png", :style => "height: 25%; width: 25%;") %>
+	<br><br>
 
-<h1>
-	Common Signifiers
-</h1>
+	<h1>Common Signifiers</h1>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.14" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.14" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
-<%= image_tag("lang_elements.png", :class => "language-centerpicture", :style => "height: 25%; width: 65%;") %>
-<br><br>
-	
-<h1>
-	Useful Elements
-</h1>
+	<%= image_tag("lang_elements.png", :style => "height: 25%; width: 65%;") %>
+	<br><br>
+		
+	<h1>Useful Elements</h1>
 
-<% @articles.each do |article| %>
-	<% if article.title == "language pt.15" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
+	<% @articles.each do |article| %>
+		<% if article.title == "language pt.15" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
 	<% end %>
-<% end %>
-<br>
+	<br>
 
 </center>
 
 <div class="language-index-layout">
-	<h2 class="language-padding">
+	<h2>
 		<%= "A = Of, with, within, to" %>
 		<br>
 		<%= "Ad = Did, done, (preceding a verb)" %>

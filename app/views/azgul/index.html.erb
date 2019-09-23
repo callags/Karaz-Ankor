@@ -7,7 +7,8 @@
 	<h1>Karak Azgal</h1>
 </div>
 
-<%= image_tag("lost-dwarfhold-banner.png", :class => "leftsidepicture-with-background") %> <%= image_tag("azgal.jpg", :class => "rightsidepicture", style:"height:250px") %>
+<%= image_tag("lost-dwarfhold-banner.png", :class => "leftsidepicture-with-background", style:"border-right: 10px solid #F0DAF2") %> 
+<%= image_tag("azgal.jpg", :class => "rightsidepicture", style:"height:250px; border-left: 10px solid #F0DAF2") %>
 
 <% @articles.each do |article| %>
 	<% if article.title == "azgal pt.1" %>
@@ -41,4 +42,5 @@
 	<% end %>
 <% end %>
 <br>
+
 <%= render 'homepage/banner' %>

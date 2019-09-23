@@ -20,11 +20,13 @@
 	<% end %>
 <% end %>
 <br>
-<h2><span id="left_tab">The Southlands</span></h2>
-<%= link_to "/assets/The Southlands.jpg" do %>
-	<%= image_tag("The Southlands.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
-<% end %>
-	
+
+<div class="category-layout-language">
+	<%= link_to "/assets/The Southlands.jpg" do %>
+		<%= image_tag("The Southlands.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2; height: 300px;",\
+			:title => "The Southlands") %>
+	<% end %>
+</div>
 <% @articles.each do |article| %>
 	<% if article.title == "history pt.2" %>
 		<p>
@@ -40,14 +42,13 @@
 		</p>
 	<% end %>
 <% end %>	
-<br>
-<h2><span id="right_tab">The Worlds Edge Mountains in the Old World</span></h2>
-<br>
+<br><br>
 <%= link_to "/assets/Worlds Edge Mountains.jpg" do %>	
-	<%= image_tag("Worlds Edge Mountains.jpg", :class => "rightsidepicture") %>
+	<%= image_tag("Worlds Edge Mountains.jpg", :class => "rightsidepicture", style:"border-left: 10px solid #F0DAF2;",\
+	:title => "The World's Edge Mountains" ) %>
 <% end %>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
 <h1>Threat of Chaos</h1>
 
 <% @articles.each do |article| %>
@@ -77,8 +78,8 @@
 	<% end %>
 <% end %>	
 <br>
-<h2><span id="left_tab">The city of Marienburg</span></h2>
-<%= image_tag("Marienburg.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2") %>
+
+<%= image_tag("Marienburg.jpg", :class => "leftsidepicture", style:"border-right: 10px solid #F0DAF2", :title => "The City of Marienburg") %>
 <br>
 <% @articles.each do |article| %>
 	<% if article.title == "history pt.7" %>
@@ -87,12 +88,11 @@
 		</p>
 	<% end %>
 <% end %>
-<br>
 
-<h2><span id="right_tab">The Northern Wastes (Chaos Wastes)</span></h2>
-<br>
-<%= image_tag("The Chaos Wastes.jpg", :class => "rightsidepicture") %>
-<br><br><br><br><br><br><br><br><br>
+<br><br>
+
+<%= image_tag("The Chaos Wastes.jpg", :class => "rightsidepicture", style:"border-left: 10px solid #F0DAF2") %>
+<br><br>
 <h1>The Golden Age</h1> 
 
 <% @articles.each do |article| %>
@@ -104,19 +104,11 @@
 <% end %>
 <br>
 
-<h2>
-	<span id="dragon-black-title">
-		The Dragonback Mountains
-		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-		The Black Mountains
-	</span>
-</h2>
 <%= image_tag("Dragonback Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
  
 <%= image_tag("Black Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
 
 <br><br><br><br>
-
 <h1>War of Vengeance</h1> 
 
 <% @articles.each do |article| %>
@@ -159,7 +151,6 @@
 <% end %>
 <br>
 
-<h2><span id="left_tab">Karak Norn of the Grey Mountains</span></h2>
 <%= image_tag("Grey Mountains.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
 
 <% @articles.each do |article| %>
@@ -169,13 +160,11 @@
 		</p>
 	<% end %>
 <% end %>
-<br>
 
-<h2><span id="right_tab">Karak Izor of the Vaults</span></h2>
-<br>
-<%= image_tag("The Vaults.jpg", :class => "rightsidepicture") %>
+<br><br>
+<%= image_tag("The Vaults.jpg", :class => "rightsidepicture", style:"height:350px; border-left: 10px solid #F0DAF2") %>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
 
 <h1>The Emergence of Humanity</h1>
 
@@ -213,10 +202,9 @@
 		</p>
 	<% end %>
 <% end %>
-
 <br>
 
-<%= render 'homepage/banner' %>
+<%= render "homepage/banner" %>
 
 <% if notice %>
 	<script>

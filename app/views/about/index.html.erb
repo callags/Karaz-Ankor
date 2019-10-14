@@ -5,35 +5,37 @@
 	<li><%= render "homepage/banner" %></li>
 	<li><a href="/">Back to Homepage</a></li>
 </ul>
-	<div class ="title_page">	
-		<h1>About the Karaz Ankor</h1>
-	</div>
-	<center>
-		<br>
-		<% @articles.each do |article| %>
-			<% if article.title == "about pt.1" %>
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
-			<% end %>
-		<% end %>	
-		<br>	
-		<% @articles.each do |article| %>
-			<% if article.title == "about pt.2" %>
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
-			<% end %>
-		<% end %>		
-		<br>
-		<h2>References</h2>
-		<br>
-		<a class="link-color" href="https://www.scribd.com/document/39650839/WFRP-1ed-Dwarfs-Stone-and-Steel">Warhammer Fantasy Roleplay 1st Edition - Dwarfs - Stone and Steel</a>
-		<br><br>
-		<a class="link-color" href="http://warhammerfantasy.wikia.com/wiki/Category:Dwarf">Warhammer Wiki Dwarf page</a>
-		<br><br>
-		<a class="link-color" href="https://www.youtube.com/watch?v=f_GifGJtKhk">Arch Warhammer Dwarf lore</a>
-	</center>
+<div class ="title_page">	
+	<h1>About the Karaz Ankor</h1>
+</div>
+<center>
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "about pt.1" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>	
+	<% @articles.each do |article| %>
+		<% if article.title == "about pt.2" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>		
+	<br>
+	<h2>References</h2>
+	<br>
+	<a class="link-color" href="https://www.scribd.com/document/39650839/WFRP-1ed-Dwarfs-Stone-and-Steel">Warhammer Fantasy Roleplay 1st Edition - Dwarfs - Stone and Steel</a>
+	<br><br>
+	<a class="link-color" href="http://warhammerfantasy.wikia.com/wiki/Category:Dwarf">Warhammer Wiki Dwarf page</a>
+	<br><br>
+	<a class="link-color" href="https://www.youtube.com/watch?v=f_GifGJtKhk">Arch Warhammer Dwarf lore</a>
+	<br><br>
+	<h2>The creator himself</h2>
+</center>
 <div class="banner-bottom">
 	<%= render "homepage/banner" %>
 </div>

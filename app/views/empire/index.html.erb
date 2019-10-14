@@ -89,15 +89,14 @@
 	<%= link_to "/assets/deep_legend.png" do %>
 		<%= image_tag("deep_legend.png", :class => "leftsidepicture", style:"height:500px; width: 470px; border-right: 10px solid #F0DAF2; margin-left: 140px; ") %> 
 	<% end %>
-	&ensp; <br><br><br>
+	<br><br><br><br>
 	<%= link_to "/assets/deeps.jpg" do %>
-		<%= image_tag("deeps.jpg", :class => "leftsidepicture", style:"height:440px; width: 490px; border-right: 50px solid #F0DAF2; transform: rotate(90deg);") %>
+		<%= image_tag("deeps.jpg", style:"height:400px; width: 480px; border-right: 50px solid #F0DAF2; transform: rotate(90deg);") %>
 	<% end %>
 </center>
 
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
+<br><br><br>
+
 
 <% @articles.each do |article| %>
 	<% if article.title == "empire pt.7" %>

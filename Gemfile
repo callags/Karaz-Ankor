@@ -39,7 +39,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem "bcrypt", "~> 3.1.12"
+gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+#gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 
 #Updated loofah (1/13/19)
 gem 'loofah', '>= 2.2.3'

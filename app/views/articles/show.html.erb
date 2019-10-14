@@ -9,9 +9,9 @@
 </p>
 <br>
 <p>
- <%= link_to 'Back to list of articles', articles_path %>
+ <%= link_to 'Back to list of articles', articles_path, id: "submit", 'data-disable-with' => "Please wait.." %>
 </p>  
 <br>
 <p>
- <%= link_to 'Edit this article', edit_article_path(@article) %>
+ <%= link_to 'Edit this article', edit_article_path(@article), id: "submit", 'data-disable-with' => "Please wait.." %>
 </p>  

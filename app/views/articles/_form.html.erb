@@ -18,19 +18,19 @@
 			<%= form.label :title %><br>
 			<%= form.text_field :title %>
 		</p>
-		
+		<br>
 		<p>
 			<%= form.label :text %><br>
 			<%= form.text_area :text %>
 		</p>
-		
+		<br>
 		<p>
 			<%= form.label :user_id %><br>
 			<%= form.text_field :user_id %>
 		</p>
-		
+		<br>
 		<p>
-			<%= form.submit %>
+			<%= form.button :Submit, id: "submit", 'data-disable-with' => "Please wait.." %>
 		</p>
 	<% end %>
 	

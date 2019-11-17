@@ -30,7 +30,30 @@ Rails.application.routes.draw do
 		end
 	end
 	
-	resources :quest2
+	resources :q2 do
+		resources :q2s1 do
+			resources :q2s2 do
+				resources :q2s3 do
+					resources :q2s4 do
+							resources :q2s5 do
+							end
+						end
+					resources :q2s3a do
+						resources :q2s4 do
+							resources :q2s5 do
+							end
+						end
+					end
+					resources :q2s3b do
+						resources :q2s4 do
+							resources :q2s5 do
+							end
+						end
+					end
+				end
+			end
+		end
+	end
 	resources :quest3
 	resources :quest4
 	resources :quest5

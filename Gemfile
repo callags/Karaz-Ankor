@@ -14,8 +14,8 @@ gem 'mysql2', '~> 0.4.10'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
-#gem 'sassc'
-gem 'sassc', require: false
+
+gem 'sassc', '2.2.1', git: 'https://github.com/sass/sassc.git'
 gem "sassc-rails"
 
 # Figaro gem for setting ENV variables
@@ -37,10 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-gem 'bcrypt', '~> 3.1', '>= 3.1.13'
-#gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 #Updated loofah (1/13/19)
 gem 'loofah', '>= 2.2.3'

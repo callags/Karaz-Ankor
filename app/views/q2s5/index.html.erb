@@ -1,0 +1,202 @@
+<% @url = request.original_fullpath %>
+<% if not @url.include?('q2s6') %>
+	<%= render 'q2/menu' %>
+<% end %>
+
+<% if @user_input_sub3b == "3b2"%>
+	<%= render :template => "q2s3b/index" %>
+<% end %>
+<% if @user_input_sub3a == "3a1"%>
+	<%= render :template => "q2s3a/index" %>
+<% end %>
+
+<%= render :template => "q2s4/index" %>
+
+<% finale_section = false %>
+
+<div id="fade">
+	<center>
+		<% if @user_input_sub4 == "5a" %>
+			<div id="5a">
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5a pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5a pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5a pt.3" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5a pt.4" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% finale_section = true %>
+			</div>
+		<% elsif @user_input_sub4 == "5b" %>
+			<div id="5b">
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5b pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5b pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5b pt.3" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5b pt.4" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 5b pt.5" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% finale_section = true %>
+			</div>
+		<% end %>
+		<% if finale_section %>
+			<% if @user_input_sub3 == "4a" %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.3" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.4" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.5" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.6" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.7" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.8" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true pt.9" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 conclusion pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<%= render 'q2/restart' %>
+				<br>
+				<%= render 'homepage/banner' %>
+			<% elsif @user_input_sub3 == "4b" %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed false pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<h2><%= "You have failed!" %></h2>
+				<br>
+				<%= render 'q2/restart' %>
+				<br>
+				<%= render 'homepage/banner' %>
+			<% end %>
+		<% end %>
+	</center>
+</div>

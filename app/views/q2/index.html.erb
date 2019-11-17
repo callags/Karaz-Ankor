@@ -1,0 +1,73 @@
+<% @url = request.original_fullpath %>
+<div id="top">
+</div>
+<% if not @url.include?('q2s1') %>
+	<%= render 'q2/menu' %>
+<% end %>
+
+<div id="fade">
+	<center>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.1" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.2" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.3" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.4" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.5" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% @articles.each do |article| %>
+			<% if article.title == "quest2 intro pt.6" %>
+				<p>
+					<h2><%= article.text %></h2>
+				</p>
+			<% end %>
+		<% end %>	
+		<br>
+		<% if not (@url.include?('/1a') or @url.include?('/1b')) %>
+			<h2>
+			<%= "1. Show the wolf sigil." %>
+			<br><br>
+			<%= "2. Show the tattered cloak." %>
+			<br><br>
+			<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1", method: :post) do %>
+				<%= label_tag(:section_1_input, "Please choose a path:") %>
+				<%= text_field_tag :section_1_input, @response, maxlength:1 %>
+				<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+			<% end %>
+			<br>
+			</h2>
+		<% end %>
+	</center>
+</div>

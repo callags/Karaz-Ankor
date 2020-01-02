@@ -10,7 +10,7 @@
 <h1>Dwarven Anatomy</h1>
 
 <% @articles.each do |article| %>
-	<% if article.title == "social pt.30" %>
+	<% if article.title == "social pt.31" %>
 		<p>
 			<h2><%= article.text %></h2>
 		</p>
@@ -21,14 +21,6 @@
 <h1>Diet</h1>
 
 <%= image_tag("dwarf beer.jpg", :class => "leftsidepicture", style:"height:350px; border-right: 10px solid #F0DAF2") %>
-<% @articles.each do |article| %>
-	<% if article.title == "social pt.31" %>
-		<p>
-			<h2><%= article.text %></h2>
-		</p>
-	<% end %>
-<% end %>
-<br>
 <% @articles.each do |article| %>
 	<% if article.title == "social pt.32" %>
 		<p>
@@ -61,9 +53,6 @@
 	<% end %>
 <% end %>
 <br>
-
-<h1>Reproduction</h1>
-
 <% @articles.each do |article| %>
 	<% if article.title == "social pt.36" %>
 		<p>
@@ -74,6 +63,41 @@
 <br>
 <% @articles.each do |article| %>
 	<% if article.title == "social pt.37" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.38" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.39" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+
+<h1>Reproduction</h1>
+
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.40" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.41" %>
 		<p>
 			<h2><%= article.text %></h2>
 		</p>
@@ -117,6 +141,14 @@
 <br>
 <% @articles.each do |article| %>
 	<% if article.title == "social pt.29" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.30" %>
 		<p>
 			<h2><%= article.text %></h2>
 		</p>
@@ -205,7 +237,15 @@
 <h1>Honor</h1>
 
 <% @articles.each do |article| %>
-	<% if article.title == "social pt.38" %>
+	<% if article.title == "social pt.42" %>
+		<p>
+			<h2><%= article.text %></h2>
+		</p>
+	<% end %>
+<% end %>
+<br>
+<% @articles.each do |article| %>
+	<% if article.title == "social pt.43" %>
 		<p>
 			<h2><%= article.text %></h2>
 		</p>
@@ -365,7 +405,3 @@
 	<% end %>
 <% end %>
 <br>
-
-
-
-<%= render 'homepage/banner' %>

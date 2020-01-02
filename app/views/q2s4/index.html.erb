@@ -1,10 +1,8 @@
 <% @url = request.original_fullpath %>
-<% if not @url.include?('q2s5') %>
-	<%= render 'q2/menu' %>
+
+<% if @user_input_sub2 == "3b"%>
+	<%= render :template => "q2s3/index" %>
 <% end %>
-<%# if @user_input_sub2 == "3b"%>
-	<%#= render :template => "q2s3/index" %>
-<%# end %>
 <% if @user_input_sub3b == "3b2"%>
 	<%= render :template => "q2s3b/index" %>
 <% end %>
@@ -41,43 +39,201 @@
 			</div>
 		<% elsif @user_input_sub3 == "4a" && @user_input_sub2 == "3b" %>
 			<div id="4a">
-				<%= "user_input_sub3 is #{@user_input_sub3} and user_input_sub2 is #{@user_input_sub2}" %>
-				sagsagasd
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.3" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.4" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.5" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.6" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.7" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.8" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.9" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 sound true pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 sound true pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 sound true pt.3" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.10" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.11" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.12" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.13" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% section_4 = true %>
 			</div>
 		<% elsif @user_input_sub3 == "4b" && @user_input_sub2 == "3b" %>
-			<%= "user_input_sub3 is #{@user_input_sub3} and user_input_sub2 is #{@user_input_sub2}" %>
+			<div id="4b">
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 cave left a2 sound failure wrong path pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<h2><%= "You have failed!" %></h2>
+				<br>
+				<%= render 'q2/restart' %>
+				<br>
+				<%= render 'homepage/banner' %>
+			</div>
 		<% end %>
 		<% if section_4 %>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 4 pt.14" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 4 pt.15" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>
-			<br>
-			<% if not (@url.include?('/5a') or @url.include?('/5b')) %>
-				<h2>
-					<%= "1. Go through the ventilation shaft." %>
-					<br><br>
-					<%= "2. Go through the sewers." %>
-					<br><br>
-					<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/"\
-							"#{@user_input_sub2}/q2s3/@user_input_sub3a/q2s3a/#{@user_input_sub3a}"\
-							"/q2s4", method: :post) do %>
-							<%= label_tag(:section_5_input, "Please choose a path:") %>
-							<%= text_field_tag :section_5_input, @response_5, maxlength:1 %>
-							<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+			<% if ( @url.include?('q2s3a') or @url.include?('q2s3b') )%>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.14" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
 					<% end %>
-				</h2>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.15" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% if not (@url.include?('/5a') or @url.include?('/5b')) %>
+					<h2>
+						<%= "1. Go through the ventilation shaft." %>
+						<br><br>
+						<%= "2. Go through the sewers." %>
+						<br><br>
+						<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/"\
+								"#{@user_input_sub2}/q2s3/#{@user_input_sub3a}/q2s3a/#{@user_input_sub3a}"\
+								"/q2s4", method: :post) do %>
+								<%= label_tag(:section_5_input, "Please choose a path:") %>
+								<%= text_field_tag :section_5_input, @response_5, maxlength:1 %>
+								<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+					</h2>
+				<% end %>
+			<% else %>
+				<% if not (@url.include?('/5a') or @url.include?('/5b')) %>
+					<h2>
+						<%= "1. Klarkel destroys the display." %>
+						<br><br>
+						<%= "2. Klarkel doesn't destroys the display." %>
+						<br><br>
+						<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/"\
+								"#{@user_input_sub2}/q2s3/#{@user_input_sub3}/q2s4", method: :post) do %>
+								<%= label_tag(:section_5_input, "Please choose a path:") %>
+								<%= text_field_tag :section_5_input, @response_5, maxlength:1 %>
+								<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+					</h2>
+				<% end %>
 			<% end %>
 		<% end %>
 	</center>

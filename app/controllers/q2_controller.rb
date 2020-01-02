@@ -49,6 +49,15 @@ class Q2Controller < ApplicationController
 	end
 	
 	def self.url_sub4(url)
+		user_input_sub3 = url[42..43]
+		if user_input_sub3 == "4a"
+			return "4a"
+		elsif user_input_sub3 == "4b"
+			return "4b"
+		end
+	end
+	
+	def self.url_sub4_1(url)
 		user_input_sub3 = url[52..53]
 		if user_input_sub3 == "4a"
 			return "4a"
@@ -57,15 +66,17 @@ class Q2Controller < ApplicationController
 		end
 	end
 	
-	def self.url_sub4_2(url)
-		user_input_sub3_2 = url[34..35]
-		if user_input_sub3_2 == "3b"
-			return "3b"
+	def self.url_sub5(url)
+		user_input_sub4 = url[60..61]
+		if user_input_sub4 == "5a"
+			return "5a"
+		elsif user_input_sub4 == "5b"
+			return "5b"
 		end
 	end
 	
-	def self.url_sub5(url)
-		user_input_sub4 = url[60..61]
+	def self.url_sub5_1(url)
+		user_input_sub4 = url[50..51]
 		if user_input_sub4 == "5a"
 			return "5a"
 		elsif user_input_sub4 == "5b"

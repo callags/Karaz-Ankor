@@ -1,7 +1,4 @@
 <% @url = request.original_fullpath %>
-<% if not @url.include?('q2s3') %>
-	<%= render 'q2/menu' %>
-<% end %>
 
 <%= render :template => "q2s1/index" %>
 
@@ -11,22 +8,67 @@
 
 <div id="fade">
 	<center>
-		<% if @user_input_sub1 == "1a1" %>
-			<div id="1a1">
+		<div id="1a1">
+			<% if @user_input_sub1 == "1a1" %>
+				<div id="1a1">
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 check body failure" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+					<% medallion_failure = true %>
+				</div>
+			<% elsif @user_input_sub1 == "1b1" %>
+				<div id="1b1">
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 check body success pt.1" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 check body success pt.2" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+					<% medallion_success = true %>
+				</div>
+			<% end %>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest2 section 2 pt.1" %>
+					<p>
+						<h2><%= article.text %></h2>
+					</p>
+				<% end %>
+			<% end %>	
+			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest2 section 2 pt.2" %>
+					<p>
+						<h2><%= article.text %></h2>
+					</p>
+				<% end %>
+			<% end %>	
+			<br>
+			<% if medallion_failure %>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 check body failure" %>
+					<% if article.title == "quest2 medallion failure pt.1" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
 					<% end %>
 				<% end %>	
 				<br>
-				<% medallion_failure = true %>
-			</div>
-		<% elsif @user_input_sub1 == "1b1" %>
-			<div id="1b1">
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 check body success pt.1" %>
+					<% if article.title == "quest2 medallion failure pt.2" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
@@ -34,141 +76,98 @@
 				<% end %>	
 				<br>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 check body success pt.2" %>
+					<% if article.title == "quest2 medallion failure pt.3" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
 					<% end %>
 				<% end %>	
 				<br>
-				<% medallion_success = true %>
-			</div>
-		<% end %>
-		<% @articles.each do |article| %>
-			<% if article.title == "quest2 section 2 pt.1" %>
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
-			<% end %>
-		<% end %>	
-		<br>
-		<% @articles.each do |article| %>
-			<% if article.title == "quest2 section 2 pt.2" %>
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
-			<% end %>
-		<% end %>	
-		<br>
-		<% if medallion_failure %>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.1" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.2" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.3" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.4" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.5" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion failure pt.6" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 cave path intro" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
-				<h2>
-					<%= "1. Go Left." %>
-					<br><br>
-					<%= "2. Go Right." %>
-					<br><br>
-					<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/", method: :post) do %>
-						<%= label_tag(:section_3_input, "Please choose a path:") %>
-						<%= text_field_tag :section_3_input, @response_3, maxlength:1 %>
-						<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion failure pt.4" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
 					<% end %>
-				</h2>
-			<% end %>
-		<% end %>
-		<% if medallion_success %>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion succeess pt.1" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 medallion success pt.2" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 cave path intro" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
-				<h2>
-					<%= "1. Go Left." %>
-					<br><br>
-					<%= "2. Go Right." %>
-					<br><br>
-					<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/", method: :post) do %>
-						<%= label_tag(:section_3_input, "Please choose a path:") %>
-						<%= text_field_tag :section_3_input, @response_3, maxlength:1 %>
-						<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion failure pt.5" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
 					<% end %>
-				</h2>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion failure pt.6" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 cave path intro" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
+					<h2>
+						<%= "1. Go Left." %>
+						<br><br>
+						<%= "2. Go Right." %>
+						<br><br>
+						<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/", method: :post) do %>
+							<%= label_tag(:section_3_input, "Please choose a path:") %>
+							<%= text_field_tag :section_3_input, @response_3, maxlength:1 %>
+							<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+					</h2>
+				<% end %>
 			<% end %>
-		<% end %>
+			<% if medallion_success %>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion succeess pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion success pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 cave path intro" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
+					<h2>
+						<%= "1. Go Left." %>
+						<br><br>
+						<%= "2. Go Right." %>
+						<br><br>
+						<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/", method: :post) do %>
+							<%= label_tag(:section_3_input, "Please choose a path:") %>
+							<%= text_field_tag :section_3_input, @response_3, maxlength:1 %>
+							<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+						<% end %>
+					</h2>
+				<% end %>
+			<% end %>
+		</div>
 	</center>
 </div>

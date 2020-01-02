@@ -12,10 +12,11 @@ gem 'devise'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '~> 0.4.10'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets
 
-gem 'sassc', '2.2.1', git: 'https://github.com/sass/sassc.git'
+#gem 'sassc', '2.2.1', git: 'https://github.com/sass/sassc.git', :require => 'sassc'
+
 gem "sassc-rails"
 
 # Figaro gem for setting ENV variables

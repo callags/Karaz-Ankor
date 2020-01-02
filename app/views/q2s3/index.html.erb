@@ -1,7 +1,4 @@
 <% @url = request.original_fullpath %>
-<% if not (@url.include?('q2s3a') or @url.include?('q2s3b')) %>
-	<%= render 'q2/menu' %>
-<% end %>
 
 <%= render :template => "q2s2/index" %>
 
@@ -75,6 +72,36 @@
 							<% end %>
 						<% end %>	
 						<br>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
+								<p>
+									<h2><%= article.text %></h2>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+								<p>
+									<h2><%= article.text %></h2>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
+						<% if not (@url.include?('/3a1') or @url.include?('/3a2')) %>
+							<h2>
+								<%= "1. Other path." %>
+								<br><br>
+								<%= "2. Path the voice came from." %>
+								<br><br>
+								<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/"\
+									"#{@user_input_sub2}/q2s3", method: :post) do %>
+									<%= label_tag(:section_3a_input, "Please choose a path:") %>
+									<%= text_field_tag :section_3a_input, @response_3a, maxlength:1 %>
+									<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
+								<% end %>
+							</h2>
+						<% end %>
 					<% else %>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest2 cave left a1 bullet failure pt.1" %>
@@ -236,7 +263,7 @@
 								<% end %>
 							<% end %>	
 							<br>
-							<% if not (@url.include?('/3b1') or @url.include?('/3b2')) %>
+							<% if not (@url.include?('/3a1') or @url.include?('/3a2')) %>
 								<h2>
 									<%= "1. Other path." %>
 									<br><br>
@@ -244,8 +271,8 @@
 									<br><br>
 									<%= form_for("pathfinder/a/q2/#{@user_input}/q2s1/#{@user_input_sub1}/q2s2/"\
 										"#{@user_input_sub2}/q2s3", method: :post) do %>
-										<%= label_tag(:section_3b_input, "Please choose a path:") %>
-										<%= text_field_tag :section_3b_input, @response_3b, maxlength:1 %>
+										<%= label_tag(:section_3a_input, "Please choose a path:") %>
+										<%= text_field_tag :section_3a_input, @response_3a, maxlength:1 %>
 										<%= submit_tag "Submit", :id => "submit", 'data-disable-with' => "Please wait.." %>
 									<% end %>
 								</h2>

@@ -1,14 +1,4 @@
 <% @url = request.original_fullpath %>
-<% if not @url.include?('q2s6') %>
-	<%= render 'q2/menu' %>
-<% end %>
-
-<% if @user_input_sub3b == "3b2"%>
-	<%= render :template => "q2s3b/index" %>
-<% end %>
-<% if @user_input_sub3a == "3a1"%>
-	<%= render :template => "q2s3a/index" %>
-<% end %>
 
 <%= render :template => "q2s4/index" %>
 

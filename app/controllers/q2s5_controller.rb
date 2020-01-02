@@ -12,8 +12,13 @@ class Q2s5Controller < ApplicationController
 		if @user_input_sub2 == "3a"
 			@user_input_sub3a = Q2Controller.url_sub3a(url)
 			@user_input_sub3b = Q2Controller.url_sub3b(url)
+			@user_input_sub3 = Q2Controller.url_sub4_1(url)
+			@user_input_sub4 = Q2Controller.url_sub5(url)
+		elsif @user_input_sub2 == "3b"
+			@user_input_sub3 = Q2Controller.url_sub4(url)
+			@user_input_sub4 = Q2Controller.url_sub5_1(url)
+			#raise @user_input_sub4.inspect
 		end
-		@user_input_sub3 = Q2Controller.url_sub4(url)
-		@user_input_sub4 = Q2Controller.url_sub5(url)
+
 	end
 end

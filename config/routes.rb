@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, :controllers => {:registrations => "registrations"}
+
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, :controllers => {:registrations => "registrations"}
   
+  resources :webauthn
   resources :articles
   resources :about do
 	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'about/' }, via: :get
@@ -61,6 +63,15 @@ Rails.application.routes.draw do
 	resources :quest7
 	resources :quest8
 	resources :quest9
+	resources :quest10
+	resources :quest11
+	resources :quest12
+	resources :quest13
+	resources :quest14
+	resources :quest15
+	resources :quest16
+	resources :quest17
+	resources :quest18
 	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'pathfinder/' }, via: :get
   end
   resources :empire do

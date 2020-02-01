@@ -107,16 +107,16 @@
 					<% end %>
 				<% end %>	
 				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 cave path intro" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
 				<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
 					<h2>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave path intro" %>
+								<p>
+									<%= article.text %>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
 						<%= "1. Go Left." %>
 						<br><br>
 						<%= "2. Go Right." %>
@@ -131,7 +131,7 @@
 			<% end %>
 			<% if medallion_success %>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 medallion succeess pt.1" %>
+					<% if article.title == "quest2 medallion success pt.1" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
@@ -146,16 +146,16 @@
 					<% end %>
 				<% end %>	
 				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 cave path intro" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
 				<% if not (@url.include?('/3a') or @url.include?('/3b')) %>
 					<h2>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave path intro" %>
+								<p>
+									<%= article.text %>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
 						<%= "1. Go Left." %>
 						<br><br>
 						<%= "2. Go Right." %>

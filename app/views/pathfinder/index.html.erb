@@ -9,6 +9,47 @@
 <br><br><br><br><br><br>
 
 <center>
+	<% @articles.each do |article| %>
+		<% if article.title == "pathfinder pt.1" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "pathfinder pt.2" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "pathfinder pt.3" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "pathfinder pt.4" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>
+	<% @articles.each do |article| %>
+		<% if article.title == "pathfinder pt.5" %>
+			<p>
+				<h2><%= article.text %></h2>
+			</p>
+		<% end %>
+	<% end %>	
+	<br>
+
 	<div id="governed-holds">
 		<h1>Governed Holds</h1>
 		<div class="category-layout-item">
@@ -56,8 +97,8 @@
 	<div id="lost-holds">	
 		<h1>Captured/Lost Holds</h1>
 		<div class="category-layout-item">
-			<%= link_to image_tag("karak-8-peaks.jpg", onclick:"quest10()", style:"height: 100px") %>
-			<p class="text-under-image">Karak 8 Peaks</p>
+			<%= link_to image_tag("karak-8-peaks.png", onclick:"quest10()", style:"height: 100px") %>
+			<p class="text-under-image">Karak Eight Peaks</p>
 		</div>
 		<div class="category-layout-item">
 			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest11()", style:"height: 100px") %>
@@ -118,51 +159,51 @@ function quest2() {
 	setTimeout(function(){ window.location.href='/pathfinder/a/q2' }, 1000);
 }
 function quest3() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest3' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest3' }, 1000);
 }
 function quest4() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest4' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest4' }, 1000);
 }
 function quest5() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest5' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest5' }, 1000);
 }
 function quest6() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest6' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest6' }, 1000);
 }
 function quest7() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest7' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest7' }, 1000);
 }
 function quest8() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest8' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest8' }, 1000);
 }
 function quest9() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest9' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest9' }, 1000);
 }
 function quest10() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest10' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest10' }, 1000);
 }
 function quest11() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest11' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest11' }, 1000);
 }
 function quest12() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest12' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest12' }, 1000);
 }
 function quest13() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest13' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest13' }, 1000);
 }
 function quest14() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest14' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest14' }, 1000);
 }
 function quest15() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest15' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest15' }, 1000);
 }
 function quest16() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest16' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest16' }, 1000);
 }
 function quest17() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest17' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest17' }, 1000);
 }
 function quest18() {
-	setTimeout(function(){ window.location.href='/pathfinder/quest18' }, 1000);
+	setTimeout(function(){ window.location.href='/pathfinder/a/quest18' }, 1000);
 }
 </script>

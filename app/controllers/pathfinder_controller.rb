@@ -1,7 +1,7 @@
 class PathfinderController < ApplicationController
 
 	def index
-		
+		@articles = Article.all
 	end
 	
 	def show

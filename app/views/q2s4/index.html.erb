@@ -16,7 +16,15 @@
 		<% if @user_input_sub3 == "4a" && @user_input_sub2 == "3a"%>
 			<div id="4a">
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 medallion destroyed true intro" %>
+					<% if article.title == "quest2 medallion destroyed true intro pt.1" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 medallion destroyed true intro pt.2" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
@@ -112,6 +120,22 @@
 				<% end %>
 				<br>
 				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.10" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.11" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
 					<% if article.title == "quest2 sound true pt.1" %>
 						<p>
 							<h2><%= article.text %></h2>
@@ -136,22 +160,6 @@
 				<% end %>
 				<br>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 4 pt.10" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 4 pt.11" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
 					<% if article.title == "quest2 section 4 pt.12" %>
 						<p>
 							<h2><%= article.text %></h2>
@@ -161,6 +169,22 @@
 				<br>
 				<% @articles.each do |article| %>
 					<% if article.title == "quest2 section 4 pt.13" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.14" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.15" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
@@ -187,17 +211,9 @@
 			</div>
 		<% end %>
 		<% if section_4 %>
-			<% if ( @url.include?('q2s3a') or @url.include?('q2s3b') )%>
+			<% if ( @url.include?('q2s3a') or @url.include?('q2s3b') or @url.include?('q2s4') )%>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 4 pt.14" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 4 pt.15" %>
+					<% if article.title == "quest2 section 4 pt.16" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>

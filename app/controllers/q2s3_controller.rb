@@ -41,9 +41,8 @@ class Q2s3Controller < ApplicationController
 	end
 
 	def create_3a(response_3a)
-	
+		
 		@response_3a = response_3a
-	
 		if @response_3a == "1"
 			@response_3a = "3a1"
 			@path3a = "/" + "#{@response_3a}" + "/q2s3a#3a1"
@@ -51,7 +50,7 @@ class Q2s3Controller < ApplicationController
 			@response_3a = "3a2"
 			@path3a = "/" + "#{@response_3a}" + "/q2s3a#3a2"
 		end
-		
+
 		if @path3a == "/3a1/q2s3a#3a1"
 			redirect_to "#{pathfinder_q2_q2s1_q2s2_q2s3_index_path}#{@path3a}" if @path3a.present?
 		elsif @path3a == "/3a2/q2s3a#3a2"

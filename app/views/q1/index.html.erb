@@ -1,9 +1,14 @@
 <% @url = request.original_fullpath %>
+<%= render 'q1/menu' %>
 <div id="top">
 </div>
-<% if not @url.include?('q1s1') %>
-	<%= render 'menu' %>
-<% end %>
+
+<script type="text/javascript">
+	function preback(){window.history.forward();}
+	setTimeout("preback()",0);
+	window.onunload=function(){null};
+</script>
+
 <% segment_sub_1a = 0 %>
 <center>
 	<h2>
@@ -24,6 +29,14 @@
 				<% end %>
 			<% end %>
 			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest1 intro pt.3" %> 
+					<p>
+						<%= article.text %>
+					</p>
+				<% end %>
+			<% end %>
+			<br>
 		</div>
 	</h2>
 </center>
@@ -32,8 +45,6 @@
 	<center>
 		<h2>
 			<div id="fade">
-				<%= "You come up with the following choices" %>
-				<br><br>
 				<%= "1. Climb down to the rope fastened on the side of the staircase" %>
 				<br><br>
 				<%= "2. Willingly jump to grab the rope from the staircase" %>
@@ -52,7 +63,6 @@
 			</div>
 		</h2>
 	</center>
-	<%= render "homepage/banner" %>
 <% end %> 
 
 <% if @user_input == "1a" %>
@@ -64,16 +74,14 @@
 					<br><br>
 					<% if $climb.between?(1,10) %>
 						<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
-						<br>
+						<br><br>
 						<% if $fall_outcome.between?(1,10) %>
-							<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
-							<br><br>
 							<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling the recoil of the rope throughout his body, he is thrown up and down vigorously." %>
 							<br><br>
 							<%= "Mustering all of his strength, our friend manages to reach the top of the statue." %>
 							<br><br>
 							<% @articles.each do |article| %>
-								<% if article.title == "quest1 section 1 pt.2" %> 
+								<% if article.title == "quest1 section 1 pt.1" %> 
 									<p>
 										<%= article.text %></h2>
 									</p>
@@ -92,7 +100,7 @@
 						<% end %>
 					<% else %>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 1 pt.2" %> 
+							<% if article.title == "quest1 section 1 pt.1" %> 
 								<p>
 									<%= article.text %></h2>
 								</p>
@@ -107,7 +115,6 @@
 	</div>
 
 <% elsif @user_input == "1b" %>	
-
 	<div id="1b">
 		<center>
 			<h2>
@@ -131,7 +138,7 @@
 						<%= "Mustering all of his strength, our friend manages to reach the top of the statue." %>
 						<br><br>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 1 pt.2" %> 
+							<% if article.title == "quest1 section 1 pt.1" %> 
 								<p>
 									<%= article.text %>
 								</p>

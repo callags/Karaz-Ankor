@@ -190,30 +190,6 @@
 					<% end %>
 				<% end %>	
 				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 1 pt.23" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 1 pt.24" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 1 pt.25" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
 				<% if not (@url.include?('/1a1') or @url.include?('/1b1')) %>
 					<h2>
 						<% @articles.each do |article| %>

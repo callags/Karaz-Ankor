@@ -1,8 +1,13 @@
 <% @url = request.original_fullpath %>
+<%= render 'q2/menu' %>
 <div id="top">
 </div>
-<%= render 'q2/menu' %>
 
+<script type="text/javascript">
+	function preback(){window.history.forward();}
+	setTimeout("preback()",0);
+	window.onunload=function(){null};
+</script>
 
 <div id="fade">
 	<center>
@@ -80,14 +85,6 @@
 		<br>
 		<% @articles.each do |article| %>
 			<% if article.title == "quest2 intro pt.10" %>
-				<p>
-					<h2><%= article.text %></h2>
-				</p>
-			<% end %>
-		<% end %>	
-		<br>
-		<% @articles.each do |article| %>
-			<% if article.title == "quest2 intro pt.11" %>
 				<p>
 					<h2><%= article.text %></h2>
 				</p>

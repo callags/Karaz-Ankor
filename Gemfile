@@ -6,14 +6,18 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6.2'
+gem 'rails', '~> 5.2.4.3'
 # Devise for authentication
 gem 'devise'
+# Devise Authy for two-factor authentication
+gem 'devise-authy'
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '~> 0.4.10'
 # Use Puma as the app server
 gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets
+
+gem 'bootsnap', require: false 
 
 #gem 'sassc', '2.2.1', git: 'https://github.com/sass/sassc.git', :require => 'sassc'
 
@@ -25,7 +29,6 @@ gem 'figaro'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
 
 gem 'i18n'
 
@@ -43,9 +46,6 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 
 #Updated loofah (1/13/19)
 gem 'loofah', '>= 2.2.3'
-
-#Updated actionview (3/17/19)
-gem 'actionview', '~> 5.1.6.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

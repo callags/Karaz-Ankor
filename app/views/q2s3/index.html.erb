@@ -39,6 +39,14 @@
 						<% end %>
 					<% end %>	
 					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave left a1 pt.5" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
 					<% if $bullet_hit.between?(1,15) %>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest2 cave left a1 bullet success pt.1" %>
@@ -65,23 +73,7 @@
 						<% end %>	
 						<br>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest2 cave left a1 bullet success pt.4" %>
-								<p>
-									<h2><%= article.text %></h2>
-								</p>
-							<% end %>
-						<% end %>	
-						<br>
-						<% @articles.each do |article| %>
 							<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
-								<p>
-									<h2><%= article.text %></h2>
-								</p>
-							<% end %>
-						<% end %>	
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
 								<p>
 									<h2><%= article.text %></h2>
 								</p>
@@ -90,6 +82,14 @@
 						<br>
 						<% if not (@url.include?('/3a1') or @url.include?('/3a2')) %>
 							<h2>
+								<% @articles.each do |article| %>
+									<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+										<p>
+											<%= article.text %>
+										</p>
+									<% end %>
+								<% end %>	
+								<br>
 								<%= "1. Other path." %>
 								<br><br>
 								<%= "2. Path the voice came from." %>
@@ -184,6 +184,22 @@
 								<% end %>
 							<% end %>	
 							<br>
+							<% @articles.each do |article| %>
+								<% if article.title == "quest2 cave left a1 sound success pt.7" %>
+									<p>
+										<h2><%= article.text %></h2>
+									</p>
+								<% end %>
+							<% end %>	
+							<br>
+							<% @articles.each do |article| %>
+								<% if article.title == "quest2 cave left a1 sound success pt.8" %>
+									<p>
+										<h2><%= article.text %></h2>
+									</p>
+								<% end %>
+							<% end %>	
+							<br>
 							<% if not (@url.include?('/3a1') or @url.include?('/3a2')) %>
 								<h2>
 									<%= "1. Turn the Forgebreaker Left." %>
@@ -248,7 +264,7 @@
 							<% end %>	
 							<br>
 							<% @articles.each do |article| %>
-								<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
+								<% if article.title == "quest2 cave left a1 sound failure pt.7" %>
 									<p>
 										<h2><%= article.text %></h2>
 									</p>
@@ -256,7 +272,7 @@
 							<% end %>	
 							<br>
 							<% @articles.each do |article| %>
-								<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+								<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
 									<p>
 										<h2><%= article.text %></h2>
 									</p>
@@ -265,6 +281,14 @@
 							<br>
 							<% if not (@url.include?('/3a1') or @url.include?('/3a2')) %>
 								<h2>
+									<% @articles.each do |article| %>
+										<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+											<p>
+												<%= article.text %>
+											</p>
+										<% end %>
+									<% end %>	
+									<br>
 									<%= "1. Other path." %>
 									<br><br>
 									<%= "2. Path the voice came from." %>
@@ -328,6 +352,14 @@
 						<% end %>
 					<% end %>	
 					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave left a2 pt.7" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
 					<% if $sound.between?(1,35) %>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest2 cave left a2 sound success pt.1" %>
@@ -371,6 +403,22 @@
 						<br>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest2 cave left a2 sound success pt.6" %>
+								<p>
+									<h2><%= article.text %></h2>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave left a2 sound success pt.7" %>
+								<p>
+									<h2><%= article.text %></h2>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 cave left a2 sound success pt.8" %>
 								<p>
 									<h2><%= article.text %></h2>
 								</p>
@@ -441,7 +489,7 @@
 						<% end %>	
 						<br>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
+							<% if article.title == "quest2 cave left a2 sound failure pt.7" %>
 								<p>
 									<h2><%= article.text %></h2>
 								</p>
@@ -449,7 +497,7 @@
 						<% end %>	
 						<br>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+							<% if article.title == "quest2 cave left a2 sound failure outro pt.1" %>
 								<p>
 									<h2><%= article.text %></h2>
 								</p>
@@ -458,6 +506,14 @@
 						<br>
 						<% if not (@url.include?('/3b1') or @url.include?('/3b2')) %>
 							<h2>
+								<% @articles.each do |article| %>
+									<% if article.title == "quest2 cave left a2 sound failure outro pt.2" %>
+										<p>
+											<%= article.text %>
+										</p>
+									<% end %>
+								<% end %>	
+								<br>
 								<%= "1. Other path." %>
 								<br><br>
 								<%= "2. Path the voice came from." %>
@@ -500,7 +556,7 @@
 				<% end %>	
 				<br>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 3 outro pt.1" %>
+					<% if article.title == "quest2 section 3 pt.4" %>
 							<p>
 								<h2><%= article.text %></h2>
 							</p>
@@ -508,7 +564,23 @@
 				<% end %>	
 				<br>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 section 3 outro pt.2" %>
+					<% if article.title == "quest2 section 3 pt.5" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 3 pt.6" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 3 outro pt.1" %>
 							<p>
 								<h2><%= article.text %></h2>
 							</p>
@@ -517,6 +589,14 @@
 				<br>
 				<% if not (@url.include?('/4a') or @url.include?('/4b')) %>
 					<h2>
+						<% @articles.each do |article| %>
+							<% if article.title == "quest2 section 3 outro pt.2" %>
+								<p>
+									<%= article.text %>
+								</p>
+							<% end %>
+						<% end %>	
+						<br>
 						<%= "1. Other path." %>
 						<br><br>
 						<%= "2. Path the voice came from." %>

@@ -50,14 +50,6 @@
 				<% end %>
 			<% end %>	
 			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 2 pt.2" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
 			<% if medallion_failure %>
 				<% @articles.each do |article| %>
 					<% if article.title == "quest2 medallion failure pt.1" %>
@@ -100,7 +92,7 @@
 				<% end %>	
 				<br>
 				<% @articles.each do |article| %>
-					<% if article.title == "quest2 medallion failure pt.6" %>
+					<% if article.title == "quest2 section 2 pt.2" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>
@@ -140,6 +132,14 @@
 				<br>
 				<% @articles.each do |article| %>
 					<% if article.title == "quest2 medallion success pt.2" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 2 pt.2" %>
 						<p>
 							<h2><%= article.text %></h2>
 						</p>

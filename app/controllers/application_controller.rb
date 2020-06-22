@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def authenticate_user!
+  def authenticate_admin_user!
 	if (redirect_to :root if current_user.nil? || !current_user.admin?)
 		url = request.path_info
 		host = request.host

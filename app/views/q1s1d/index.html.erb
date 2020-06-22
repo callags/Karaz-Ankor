@@ -1,7 +1,3 @@
-<% @url = request.original_fullpath %>
-<% if not @url.include?('q1s2') %>
-	<%= render 'q1/menu' %>
-<% end %>
 <%= render :template => 'q1s1c/index' %>
 
 <div id="1d">
@@ -45,7 +41,6 @@
 						<%= render 'q1/restart' %>
 					<% end %>
 				<% end %>
-				
 				<% if segment_sub_1d == 1 %>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1d pt.1" %> 
@@ -97,7 +92,4 @@
 			</div>
 		</h2>
 	</center>
-	<% if not ( @url.include?('2a') or @url.include?('2b')) %>
-		<%= render 'homepage/banner' %>
-	<% end %>
 </div>

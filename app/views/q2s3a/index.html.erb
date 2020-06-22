@@ -8,22 +8,33 @@
 	<center>
 		<% if @user_input_sub3a == "3a1" %>
 			<div id="3a1">
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 cave left a1 hammer left" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 cave 3a pt.1" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
-				<br>
+				<% if $bullet_hit.between?(16,100) && $sound.between?(1,35) %>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave left a2 hammer right" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave 3a pt.1" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+				<% else %>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave 3a pt.1" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+					<br>
+				<% end %>
 				<% @articles.each do |article| %>
 					<% if article.title == "quest2 section 4 pt.2" %>
 						<p>
@@ -88,6 +99,22 @@
 					<% end %>
 				<% end %>	
 				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.10" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
+				<% @articles.each do |article| %>
+					<% if article.title == "quest2 section 4 pt.11" %>
+						<p>
+							<h2><%= article.text %></h2>
+						</p>
+					<% end %>
+				<% end %>	
+				<br>
 				<% if $sound.between?(1,35) %>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest2 sound true pt.1" %>
@@ -128,13 +155,23 @@
 			</div>
 		<% elsif @user_input_sub3a == "3a2" %>
 			<div id="3a2">
-				<% @articles.each do |article| %>
-					<% if article.title == "quest2 cave left a1 hammer right" %>
-						<p>
-							<h2><%= article.text %></h2>
-						</p>
-					<% end %>
-				<% end %>	
+				<% if $bullet_hit.between?(16,100) && $sound.between?(1,35) %>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave left a1 hammer right" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+				<% elsif $bullet_hit.between?(1,15) || $sound.between?(36,100) %>
+					<% @articles.each do |article| %>
+						<% if article.title == "quest2 cave left a2 sound failure wrong path pt.1" %>
+							<p>
+								<h2><%= article.text %></h2>
+							</p>
+						<% end %>
+					<% end %>	
+				<% end %>
 				<br>
 				<h2><%= "You have failed!" %></h2>
 				<br>
@@ -145,23 +182,23 @@
 		<% end %>
 		<% if section_4 %>
 			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 4 pt.10" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 4 pt.11" %>
-					<p>
-						<h2><%= article.text %></h2>
-					</p>
-				<% end %>
-			<% end %>	
-			<br>
-			<% @articles.each do |article| %>
 				<% if article.title == "quest2 section 4 pt.12" %>
+					<p>
+						<h2><%= article.text %></h2>
+					</p>
+				<% end %>
+			<% end %>	
+			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest2 section 4 pt.13" %>
+					<p>
+						<h2><%= article.text %></h2>
+					</p>
+				<% end %>
+			<% end %>	
+			<br>
+			<% @articles.each do |article| %>
+				<% if article.title == "quest2 section 4 pt.14" %>
 					<p>
 						<h2><%= article.text %></h2>
 					</p>
@@ -169,7 +206,7 @@
 			<% end %>
 			<br>
 			<% @articles.each do |article| %>
-				<% if article.title == "quest2 section 4 pt.13" %>
+				<% if article.title == "quest2 section 4 pt.15" %>
 					<p>
 						<h2><%= article.text %></h2>
 					</p>

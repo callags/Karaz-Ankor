@@ -5,7 +5,7 @@ class Q2s3aController < ApplicationController
 		@articles = Article.all
 		
 		url = request.path
-
+		
 		@user_input = Q2Controller.url_sub1(url)
 		@user_input_sub1 = Q2Controller.url_sub2(url)
 		@user_input_sub2 = Q2Controller.url_sub3(url)

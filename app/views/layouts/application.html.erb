@@ -4,13 +4,13 @@
     <title>Karaz Ankor</title>
 	<%= favicon_link_tag "karaz_ankor_homepage_image.png" %>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <%=javascript_include_tag "https://www.authy.com/form.authy.min.js" %>
+  <%=stylesheet_link_tag "https://www.authy.com/form.authy.min.css" %>
+
   </head>
-
-  <body> 
-
+  <body class="<%= controller_name %> <%= action_name %>"> 
 <% if notice %>
 	<div class="message_wrapper">
 		<p class="notice"><%= notice %></p>
@@ -23,8 +23,6 @@
 		<p class="alert"><%= alert %></p>
 	</div>
 <% end %>
-
-    <%= yield %>
-
+	<%= yield %>
   </body>
 </html>

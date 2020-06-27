@@ -11,8 +11,12 @@ gem 'rails', '~> 5.2.4.3'
 gem 'devise'
 # Devise Authy for two-factor authentication
 gem 'devise-authy'
+# PG gem for heroku deployment
+gem 'pg', '1.2.3', group: :production
+# Rails factor for heroku deployment 
+gem 'rails_12factor', group: :production
 # Use mysql2 as the database for Active Record
-gem 'mysql2', '~> 0.4.10'
+gem 'mysql2', '~> 0.4.10', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets

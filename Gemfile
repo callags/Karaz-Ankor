@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-#test edit
-
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -19,8 +17,6 @@ gem 'devise-authy'
 gem 'pg', '1.2.3', group: :production
 # Rails factor for heroku deployment 
 gem 'rails_12factor', group: :production
-# Use mysql2 as the database for Active Record
-gem 'mysql2', '~> 0.4.10', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets
@@ -64,6 +60,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Use mysql2 as the database for Active Record
+  gem 'mysql2', '~> 0.4.10'
 end
 
 group :development do
@@ -73,6 +71,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+	# PG gem for heroku deployment
+	gem 'pg', '1.2.3'
+	# Rails factor for heroku deployment 
+	gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

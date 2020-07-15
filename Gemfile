@@ -13,10 +13,9 @@ gem 'rails', '5.2.4.3'
 gem 'devise'
 # Devise Authy for two-factor authentication
 gem 'devise-authy'
-# PG gem for heroku deployment
-gem 'pg', '1.2.3', group: :production
+
 # Rails factor for heroku deployment 
-gem 'rails_12factor', group: :production
+#gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets
@@ -60,8 +59,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  # Use mysql2 as the database for Active Record
-  gem 'mysql2', '~> 0.4.10'
 end
 
 group :development do
@@ -71,11 +68,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use mysql2 as the database for Active Record
+	gem 'mysql2', '~> 0.4.10'
 end
 
 group :production do
-	# PG gem for heroku deployment
-	gem 'pg', '1.2.3'
+	# Use mysql2 as the database for Active Record
+	gem 'mysql2', '~> 0.4.10'
 	# Rails factor for heroku deployment 
 	gem 'rails_12factor'
 end

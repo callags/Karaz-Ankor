@@ -98,7 +98,7 @@ class Q2Controller < ApplicationController
 		
 		if @path1 == "/1a/q2s1#1a"
 			redirect_to "#{pathfinder_q2_index_path}#{@path1}" if @path1.present?
-		elsif @path1 = "/1b/q2s1#1b"
+		elsif @path1 == "/1b/q2s1#1b"
 			redirect_to "#{pathfinder_q2_index_path}#{@path1}" if @path1.present?
 		else
 			redirect_to "#{pathfinder_q2_index_path}" if not @path1.present?

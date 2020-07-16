@@ -140,6 +140,8 @@ GEM
       nio4r (~> 2.0)
     puma (4.3.1-java)
       nio4r (~> 2.0)
+    puma-heroku (1.1.0)
+      puma (>= 3.0, < 5.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -254,6 +256,7 @@ DEPENDENCIES
   loofah (>= 2.2.3)
   mysql2 (~> 0.4.10)
   puma (~> 4.0)
+  puma-heroku
   rails (= 5.2.4.3)
   rails_12factor
   sassc-rails

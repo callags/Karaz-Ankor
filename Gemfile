@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Puma Heroku gem
+gem 'puma-heroku'
 # Declaring ruby version
 ruby "2.6.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

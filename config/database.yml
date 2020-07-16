@@ -25,6 +25,7 @@ test:
 
 production:
    <<: *default
-   adapter: postgresql
-   database: db/production.sqlite3
+   adapter: mysql2
+   url: <%= ENV['DATABASE_URL'] %>
+   #database: db/production.sqlite3
 

@@ -72,10 +72,12 @@
 				<div id="fade">
 					<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down to the statue." %>
 					<br><br>
-					<% if $climb.between?(1,10) %>
+					<% if $climb.between?(1, 10) %>
+						<br>
+			
 						<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
 						<br><br>
-						<% if $fall_outcome.between?(1,10) %>
+						<% if $fall_outcome.between?(1, 10) %>
 							<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling the recoil of the rope throughout his body, he is thrown up and down vigorously." %>
 							<br><br>
 							<%= "Mustering all of his strength, our friend manages to reach the top of the statue." %>

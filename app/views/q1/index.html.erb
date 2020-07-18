@@ -73,8 +73,6 @@
 					<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down to the statue." %>
 					<br><br>
 					<% if $climb.between?(1, 10) %>
-						<br>
-			
 						<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
 						<br><br>
 						<% if $fall_outcome.between?(1, 10) %>
@@ -121,7 +119,7 @@
 		<center>
 			<h2>
 				<div id="fade">
-					<% if $fall_outcome.between?(1,95) %>
+					<% if $fall_outcome.between?(1, 95) %>
 						<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
 						<br><br>
 						<%= "Klarkel plummets to his death" %>
@@ -179,8 +177,6 @@
 					<%= "You have failed!" %>
 					<br><br>
 					<%= render 'q1/restart' %>
-					<br>
-					<%= render 'homepage/banner' %>
 				</div>
 			</h2>
 		</center>	

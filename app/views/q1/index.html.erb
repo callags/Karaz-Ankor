@@ -70,10 +70,11 @@
 		<center>
 			<h2>
 				<% climb = @climb %>
+				<% $climb = climb %>
 				<div id="fade">
 					<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down to the statue." %>
 					<br><br>
-					<% if climb.between?(1, 10) %>
+					<% if $climb.between?(1, 10) %>
 						<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
 						<br><br>
 						<% if fall_outcome.between?(1, 10) %>

@@ -5,11 +5,11 @@ class Q1s1Controller < ApplicationController
 		
 		params.merge(climb: rand(1..100)) if params[:climb].blank?
 		@climb = params[:climb].to_i
-		$climb = @climb
+		climb = @climb
 		
 		params.merge(fall_outcome: rand(1..100)) if params[:fall_outcome].blank?
 		@fall_outcome = params[:fall_outcome].to_i
-		$fall_outcome = @fall_outcome
+		fall_outcome = @fall_outcome
 		
 		@articles = Article.all
 		

@@ -102,19 +102,19 @@ class Q1Controller < ApplicationController
 	  
 	  if @response == "1"
 		@response = "1a"
-		@path1 = "/" + "#{@response}" + "/q1s1/?climb=#{@climb}&fall_outcome=#{@fall_outcome}&#1a"
+		@path1 = "/" + "#{@response}" + "/q1s1/?climb=#{@climb}&fall_outcome=#{@fall_outcome}#1a"
 	  elsif @response == "2"
 		@response = "1b"
-		@path1 = "/" + "#{@response}" + "/q1s1/?fall_outcome=#{@fall_outcome}&#1b"
+		@path1 = "/" + "#{@response}" + "/q1s1/?fall_outcome=#{@fall_outcome}#1b"
 	  elsif @response == "3"
 		@response = "1c"
 		@path1 = "/" + "#{@response}" + "/q1s1#1c"
 	  end
 
 	  
-	  if @path1 == "/1a/q1s1/?climb=#{@climb}&fall_outcome=#{@fall_outcome}&#1a"
+	  if @path1 == "/1a/q1s1/?climb=#{@climb}&fall_outcome=#{@fall_outcome}#1a"
 		redirect_to "#{pathfinder_q1_index_path}#{@path1}" if @path1.present?
-	  elsif @path1 == "/1b/q1s1/?fall_outcome=#{@fall_outcome}&#1b"
+	  elsif @path1 == "/1b/q1s1/?fall_outcome=#{@fall_outcome}#1b"
 		redirect_to "#{pathfinder_q1_index_path}#{@path1}" if @path1.present?
 	  elsif @path1 == "/1c/q1s1#1c"
 		redirect_to "#{pathfinder_q1_index_path}#{@path1}" if @path1.present?

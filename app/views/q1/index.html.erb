@@ -117,7 +117,7 @@
 		<center>
 			<h2>
 				<div id="fade">
-					<% if $fall_outcome.between?(1, 95) %>
+					<% if session[:fall_outcome].between?(1, 95) %>
 						<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
 						<br><br>
 						<%= "Klarkel plummets to his death" %>

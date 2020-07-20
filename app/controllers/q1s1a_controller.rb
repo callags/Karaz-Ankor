@@ -5,23 +5,23 @@ class Q1s1aController < ApplicationController
 	
 		params.merge(bullet_hit: rand(1..100)) if params[:bullet_hit].blank?
 		@bullet_hit = params[:bullet_hit].to_i
-		$bullet_hit = @bullet_hit
+		session[:bullet_hit] = @bullet_hit
 		
 		params.merge(bullet_success: rand(1..10)) if params[:bullet_success].blank?
 		@bullet_success = params[:bullet_success].to_i
-		$bullet_success = @bullet_success
+		session[:bullet_success] = @bullet_success
 		
 		params.merge(recoil_success: rand(1..10)) if params[:recoil_success].blank?
 		@recoil_success = params[:recoil_success].to_i
-		$recoil_success = @recoil_success
+		session[:recoil_success] = @recoil_success
 		
 		params.merge(axe_hit: rand(1..10)) if params[:axe_hit].blank?
 		@axe_hit = params[:axe_hit].to_i
-		$axe_hit = @axe_hit
+		session[:axe_hit] = @axe_hit
 		
 		params.merge(axe_recoil: rand(1..10)) if params[:axe_recoil].blank?
 		@axe_recoil = params[:axe_recoil].to_i
-		$axe_recoil = @axe_recoil
+		session[:axe_recoil] = @axe_recoil
 		
 		@articles = Article.all
 		

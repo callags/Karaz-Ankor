@@ -13,7 +13,7 @@ class Q1s1dController < ApplicationController
 	
 		params.merge(survival: rand(1..100)) if params[:survival].blank?
 		@survival = params[:survival].to_i
-		$survival = @survival
+		session[:survival] = @survival
 	end
 
 	def create

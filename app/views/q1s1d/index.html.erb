@@ -23,7 +23,7 @@
 						<% end %>
 					<% end %>
 					<br>
-					<% if $survival.between?(1, 35) %>
+					<% if session[:survival].between?(1, 35) %>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest1 section 1 sub1d2 survival success" %> 
 								<p>

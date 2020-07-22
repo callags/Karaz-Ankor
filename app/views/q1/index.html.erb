@@ -72,9 +72,13 @@
 				<div id="fade">
 					<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down to the statue." %>
 					<br><br>
+					<%= "Current value of session climb is #{session[:climb]}"%>
+					<br>
 					<% if session[:climb].between?(1, 10) %>
 						<%= "As he lowers himself on the side of the brick staircase, Klarkel misplaces his footing on a damp stone making him lose his grip and fall." %>
 						<br><br>
+						<%= "Current value of session fall outcome is #{session[:fall_outcome]}"%>
+						<br>
 						<% if session[:fall_outcome].between?(1, 10) %>
 							<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling the recoil of the rope throughout his body, he is thrown up and down vigorously." %>
 							<br><br>
@@ -117,6 +121,8 @@
 		<center>
 			<h2>
 				<div id="fade">
+					<%= "Current value of session fall outcome is #{session[:fall_outcome]}" %>
+					<br>
 					<% if session[:fall_outcome].between?(1, 95) %>
 						<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
 						<br><br>

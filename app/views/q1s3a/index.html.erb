@@ -1,9 +1,10 @@
 <%= render :template => 'q1s3/index' %>
 
 <div id="3a">
-	<center>
-		<h2>
-			<div id="fade">
+	<h2>
+		<div id="fade">
+			
+			<center>
 				<% if @user_input_sub3 == "3a1"%>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 3a1 pt.1" %> 
@@ -46,7 +47,10 @@
 					<%= render 'q1/restart' %>
 					<br>
 				<% end %>
-				<% if segment_sub4 == 1 %>
+			</center>
+			
+			<% if segment_sub4 == 1 %>
+				<center>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 4 pt.1" %> 
 							<p>
@@ -228,8 +232,11 @@
 						<br>
 						<% segment_end = 1 %>
 					<% end %>
-				<% end %>
-				<% if segment_end == 1 %>
+				</center>
+			<% end %>
+			
+			<% if segment_end == 1 %>
+				<center>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 end pt.1" %> 
 							<p>
@@ -256,8 +263,9 @@
 					<br>
 					<%= render 'q1/restart' %>
 					<br>
-				<% end %>
-			</div>
-		</h2>
-	</center>
+				</center>
+				
+			<% end %>
+		</div>
+	</h2>
 </div>

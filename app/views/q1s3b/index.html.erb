@@ -2,9 +2,9 @@
 
 <div id="3b">
 	<div id="fade">
-		<% if @user_input_sub3 == "3b1" %>
-			<center>
-				<h2>
+		<h2>
+			<% if @user_input_sub3 == "3b1" %>
+				<center>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 3b1 pt.1" %> 
 							<p>
@@ -22,11 +22,9 @@
 					<% end %>
 					<br>
 					<% segment_4 = 1 %>
-				</h2>
-			</center>
-		<% elsif @user_input_sub3 == "3b2" %>
-			<center>
-				<h2>
+				</center>
+			<% elsif @user_input_sub3 == "3b2" %>
+				<center>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 3b2 pt.1" %> 
 							<p>
@@ -42,18 +40,13 @@
 							</p>
 						<% end %>
 					<% end %>
-					<br>
 					<%= "You have failed!" %>
 					<br><br>
 					<%= render 'q1/restart' %>
-				</h2>
-			</center>
-			<br>
-			<%= render 'homepage/banner' %>
-		<% end %>
-		<% if segment_4 == 1 %>
-			<center>	
-				<h2>
+				</center>
+			<% end %>
+			<% if segment_4 == 1 %>
+				<center>	
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 4 pt.1" %> 
 							<p>
@@ -235,12 +228,10 @@
 						<br>
 						<% segment_end = 1 %>
 					<% end %>
-				</h2>
-			</center>
-		<% end %>
-		<% if segment_end == 1 %>
-			<center>
-				<h2>
+				</center>
+			<% end %>
+			<% if segment_end == 1 %>
+				<center>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 end pt.1" %> 
 							<p>
@@ -265,13 +256,9 @@
 						<% end %>
 					<% end %>
 					<br>
-					<%= "End of episode 1" %>
-					<br><br>
-				</h2>
-			</center>
-		<% end %>
-		<%= render 'q1/restart' %>
-		<br>
-		<%= render 'homepage/banner' %>
+					<%= render 'q1/restart' %>
+				</center>
+			<% end %>
+		</h2>
 	</div>
 </div>

@@ -1,5 +1,3 @@
-<% @url = request.original_fullpath %>
-
 <%= render :template => "q2/index" %>
 
 <div id="fade">
@@ -227,8 +225,6 @@
 				<h2><%= "You have failed!" %></h2>
 				<br>
 				<%= render 'q2/restart' %>
-				<br>
-				<%= render 'homepage/banner' %>
 			</center>
 		</div>
 	<% end %>

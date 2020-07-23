@@ -4,11 +4,11 @@ class Q2s3Controller < ApplicationController
 	
 		params.merge(bullet_hit: rand(1..100)) if params[:bullet_hit].blank?
 		@bullet_hit = params[:bullet_hit].to_i
-		$bullet_hit = @bullet_hit
+		session[:bullet_hit] = @bullet_hit
 		
 		params.merge(sound: rand(1..100)) if params[:sound].blank?
 		@sound = params[:sound].to_i
-		$sound = @sound
+		session[:sound] = @sound
 		
 		@articles = Article.all
 		

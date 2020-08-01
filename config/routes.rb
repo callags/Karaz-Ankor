@@ -107,7 +107,7 @@ Rails.application.routes.draw do
 	resources :language
 	match '*path' => redirect{ |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; 'society/' }, via: :get
   end 
-
+  resources :assets
   get "*path" => redirect { |p, req| req.flash[:notice] = "Error, #{req.env["HTTP_HOST"]}#{req.env["REQUEST_PATH"]} is not a valid URL"; '/' }
   root 'homepage#index'
 

@@ -19,7 +19,7 @@ gem 'devise-authy'
 # Rails factor for heroku deployment 
 #gem 'rails_12factor', group: :production
 # Use Puma as the app server
-gem 'puma', '~> 4.0'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 
 gem 'bootsnap', require: false 

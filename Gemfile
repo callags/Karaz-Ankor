@@ -12,7 +12,8 @@ gem 'puma-heroku'
 # Declaring ruby version
 ruby "3.2.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.4.3'
+#gem 'rails', '5.2.4.3'
+gem 'rails', '~> 7.0', '>= 7.0.8'
 # Devise for authentication
 gem 'devise'
 # Devise Authy for two-factor authentication

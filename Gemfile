@@ -5,10 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Bundler Gem update
+gem 'bundler', '~> 2.4', '>= 2.4.19'
 # Puma Heroku gem
 gem 'puma-heroku'
 # Declaring ruby version
-ruby "2.6.3"
+ruby "2.6.4"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2.4.3'
 # Devise for authentication
@@ -61,6 +63,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'irb', require: false
 end
 
 group :development do

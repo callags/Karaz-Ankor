@@ -5,14 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundler Gem update
-#gem 'bundler', '~> 2.4', '>= 2.4.19'
 # Puma Heroku gem
 gem 'puma-heroku'
 # Declaring ruby version
 ruby "3.2.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'rails', '5.2.4.3'
 gem 'rails', '~> 7.0', '>= 7.0.8'
 # Devise for authentication
 gem 'devise'
@@ -75,12 +72,12 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use mysql2 as the database for Active Record
-	gem 'mysql2', '~> 0.4.10'
+	gem 'mysql2', '~> 0.5.5'
 end
 
 group :production do
 	# Use mysql2 as the database for Active Record
-	gem 'mysql2', '~> 0.4.10'
+	gem 'mysql2', '~> 0.5.5'
 	# Rails factor for heroku deployment 
 	gem 'rails_12factor'
 end

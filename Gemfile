@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundler Gem update
-gem 'bundler', '~> 2.4', '>= 2.4.19'
+#gem 'bundler', '~> 2.4', '>= 2.4.19'
 # Puma Heroku gem
 gem 'puma-heroku'
 # Declaring ruby version

@@ -33,7 +33,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 #
 # preload_app!
 
-plugin 'heroku'
+#plugin 'heroku'
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
@@ -44,7 +44,7 @@ threads threads_count, threads_count
 
 preload_app!
 
-rackup      DefaultRackup
+#rackup      DefaultRackup
 port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
 

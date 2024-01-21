@@ -6,8 +6,10 @@
 <ul id="menu">
 	<li><a href="/">Back to Homepage</a></li>
 </ul>
-<br><br><br><br><br><br>
-
+<br><br><br>
+<div class ="title_page">
+        <h1>Goldvein Ventures</h1>
+</div>
 <center>
 	<% @articles.each do |article| %>
 		<% if article.title == "pathfinder pt.1" %>
@@ -25,116 +27,21 @@
 		<% end %>
 	<% end %>	
 	<br>
-	<% @articles.each do |article| %>
-		<% if article.title == "pathfinder pt.3" %>
-			<p>
-				<h2><%= article.text %></h2>
-			</p>
-		<% end %>
-	<% end %>	
-	<br>
-	<% @articles.each do |article| %>
-		<% if article.title == "pathfinder pt.4" %>
-			<p>
-				<h2><%= article.text %></h2>
-			</p>
-		<% end %>
-	<% end %>	
-	<br>
-	<% @articles.each do |article| %>
-		<% if article.title == "pathfinder pt.5" %>
-			<p>
-				<h2><%= article.text %></h2>
-			</p>
-		<% end %>
-	<% end %>	
-	<br>
 
-	<div id="governed-holds">
-		<h1>Governed Holds</h1>
-		<div class="category-layout-item">
-			<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"quest1()", style:"height: 100px") %>
-			<p class="text-under-image">Karaz-A-Karak</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-kadrin-banner.png", onclick:"quest2()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Kadrin</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-norn-banner.png", onclick:"quest3()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Norn</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("barak-varr-banner.png", onclick:"quest4()", style:"height: 100px") %>
-			<p class="text-under-image">Barak Varr</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-azul-banner.png", onclick:"quest5()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Azul</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-hirn-banner.png", onclick:"quest6()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Hirn</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karaka-drak-banner.png", onclick:"quest7()", style:"height: 100px") %>
-			<p class="text-under-image">Kraka Drak</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-izor-banner.png", onclick:"quest8()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Izor</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("zhufbar.png", onclick:"quest9()", style:"height: 100px") %>
-			<p class="text-under-image">Zhufbar</p>
-		</div>
-		<%= image_tag("Karaz-a-Karak.jpg", :class => "empire-centerpicture") %>
+	<div class="category-layout-item">
+		<%= link_to image_tag("Karaz-a-Karak banner.jpg", onclick:"quest1()", style:"height: 100px") %>
+		<p class="text-under-image">Karaz-A-Karak</p>
+	</div>
+	<div class="category-layout-item">
+		<%= link_to image_tag("karak-kadrin-banner.png", onclick:"quest2()", style:"height: 100px") %>
+		<p class="text-under-image">Karak Kadrin</p>
+	</div>
+	<div class="category-layout-item">
+		<%= link_to image_tag("karak-norn-banner.png", onclick:"quest3()", style:"height: 100px") %>
+		<p class="text-under-image">Karak Norn</p>
 	</div>
 </center>
 <br><br><br>
-
-<center>
-	<div id="lost-holds">	
-		<h1>Captured/Lost Holds</h1>
-		<div class="category-layout-item">
-			<%= link_to image_tag("karak-8-peaks.png", onclick:"quest10()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Eight Peaks</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest11()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Azgal</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest12()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Drazh</p>
-		</div>
-		<div class="category-layout-item">
-			&nbsp; <%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest13()", style:"height: 100px") %>
-			<p class="text-under-image">Karag Agilwutraz</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest14()", style:"height: 100px") %>
-			<p class="text-under-image">Karaz Gunbad</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest15()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Varn</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest16()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Ungor</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest17()", style:"height: 100px") %>
-			<p class="text-under-image">Karak Vlag</p>
-		</div>
-		<div class="category-layout-item">
-			<%= link_to image_tag("lost-dwarfhold-banner.png", onclick:"quest18()", style:"height: 100px") %>
-			<p class="text-under-image">Ekrund</p>
-		</div>
-		<%= image_tag("captured hold.png", :class => "empire-centerpicture") %>
-	</div>
-</center>
 	
 </body>
 </html>
@@ -160,50 +67,5 @@ function quest2() {
 }
 function quest3() {
 	setTimeout(function(){ window.location.href='/pathfinder/a/quest3' }, 1000);
-}
-function quest4() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest4' }, 1000);
-}
-function quest5() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest5' }, 1000);
-}
-function quest6() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest6' }, 1000);
-}
-function quest7() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest7' }, 1000);
-}
-function quest8() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest8' }, 1000);
-}
-function quest9() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest9' }, 1000);
-}
-function quest10() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest10' }, 1000);
-}
-function quest11() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest11' }, 1000);
-}
-function quest12() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest12' }, 1000);
-}
-function quest13() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest13' }, 1000);
-}
-function quest14() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest14' }, 1000);
-}
-function quest15() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest15' }, 1000);
-}
-function quest16() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest16' }, 1000);
-}
-function quest17() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest17' }, 1000);
-}
-function quest18() {
-	setTimeout(function(){ window.location.href='/pathfinder/a/quest18' }, 1000);
 }
 </script>

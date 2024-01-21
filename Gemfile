@@ -6,20 +6,19 @@ git_source(:github) do |repo_name|
 end
 
 # Puma Heroku gem
-gem 'puma-heroku'
+#gem 'puma-heroku'
 # Declaring ruby version
 ruby "3.2.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0', '>= 7.0.8'
 # Devise for authentication
 gem 'devise'
-# Devise Authy for two-factor authentication
-gem 'devise-authy'
 
 # Rails factor for heroku deployment 
 #gem 'rails_12factor', group: :production
 # Use Puma as the app server
-gem 'puma', '~> 4.0'
+#gem 'puma', '~> 6.0'
+gem 'puma'
 # Use SCSS for stylesheets
 
 gem 'bootsnap', require: false 
@@ -67,7 +66,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '>= 3.0.5', '< 3.6'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

@@ -37,6 +37,30 @@
 				<% end %>
 			<% end %>
 			<br>
+                        <% @articles.each do |article| %>
+                                <% if article.title == "quest1 intro pt.4" %>
+                                        <p>
+                                                <%= article.text %>
+                                        </p>
+                                <% end %>
+                        <% end %>
+                        <br>
+                        <% @articles.each do |article| %>
+                                <% if article.title == "quest1 intro pt.5" %>
+                                <p>
+                                        <%= article.text %>
+                                </p>
+                                <% end %>
+                        <% end %>
+                        <br>
+                        <% @articles.each do |article| %>
+                                <% if article.title == "quest1 intro pt.6" %>
+                                <p>
+                                        <%= article.text %>
+                                </p>
+                                <% end %>
+                        <% end %>
+                        <br>
 		</div>
 	</h2>
 </center>
@@ -100,11 +124,27 @@
 						<% @articles.each do |article| %>
 							<% if article.title == "quest1 section 1 pt.1" %> 
 								<p>
-									<%= article.text %></h2>
+									<%= article.text %>
 								</p>
 							<% end %>
 						<% end %>
 						<br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 section 1 pt.2" %>
+                                                                <p>
+                                                                        <%= article.text %>
+                                                                </p>
+                                                        <% end %>
+                                                <% end %>
+                                                <br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 section 1 pt.3" %>
+                                                                <p>
+                                                                        <%=  article.text %>
+                                                                </p>
+                                                        <% end %>
+                                                <% end %>
+                                                <br>
 						<% @segment_sub_1a = 1 %>
 					<% end %>
 				</div>
@@ -169,6 +209,30 @@
 						<% end %>
 					<% end %>
 					<br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 pt.1cc" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 pt.1cd" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 pt.1ce" %>
+                                                        <p>
+                                                                <%=  article.text%>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
 					<%= "You have failed!" %>
 					<br><br>
 					<%= render 'q1/restart' %>

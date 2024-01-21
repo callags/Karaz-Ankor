@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', :verify_authy => "/verify-token",
-	:enable_authy => "/enable-two-factor", :verify_authy_installation => "/verify-installation",
-	:authy_onetouch_status => "/onetouch-status"}, :controllers => {:registrations => "registrations"}
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, :controllers => {:registrations => "registrations"}
 
   resources :articles
   resources :about do

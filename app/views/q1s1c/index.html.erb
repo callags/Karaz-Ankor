@@ -56,6 +56,38 @@
 						<% end %>
 					<% end %>
 					<br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 sub1c2 pt.5" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 sub1c2 pt.6" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 sub1c2 pt.7" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 1 sub1c2 pt.8" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
 					<% if not ( @url.include?('1d1') or @url.include?('1d2')) %>
 						<%= "1. Run from them" %>
 						<br><br>

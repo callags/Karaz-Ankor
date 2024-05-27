@@ -25,13 +25,21 @@
 					<br>
 					<% if session[:survival].between?(1,35) %>
 						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 1 sub1d2 survival success" %> 
+							<% if article.title == "quest1 section 1 sub1d2 survival success pt.1" %> 
 								<p>
 									<%= article.text %>
 								</p>
 							<% end %>
 						<% end %>
 						<br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 section 1 sub1d2 survival success pt.2"%>
+                                                                <p>
+                                                                        <%= article.text%>
+                                                                </p>
+                                                        <% end %>     
+                                                <% end %>
+                                                <br>
 						<% segment_sub_1d = 1 %>
 					<% else %>
 						<%= "Scared to move, the beast slashes Klarkel across his face killing him instantly." %>

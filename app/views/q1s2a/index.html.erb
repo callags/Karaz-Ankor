@@ -45,6 +45,38 @@
 						<% end %>
 					<% end %>
 					<br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 2a1 pt.6" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 2a1 pt.7" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 2a1 pt.8" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest section 2a1 pt.9" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
 					<% segment_sub2a = 1%>
 				<% elsif @user_input_sub2 == "2a2" %>
 					<%= "Klarkel charges out to face the minotaurs and is torn to pieces." %>

@@ -70,7 +70,7 @@
                                         <% end %>
                                         <br>
                                         <% @articles.each do |article| %>
-                                                <% if article.title == "quest section 2a1 pt.9" %>
+                                                <% if article.title == "quest1 section 2a1 pt.9" %>
                                                         <p>
                                                                 <%= article.text %>
                                                         </p>
@@ -88,14 +88,6 @@
 				<% end %>
 				<% if segment_sub2a == 1 %>
 					<% if not ( @url.include?('3a') or @url.include?('3b')) %>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 2a1 pt.6" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
 						<%= "1. Go left" %>
 						<br><br>
 						<%= "2. Go right" %>

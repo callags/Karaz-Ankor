@@ -5,7 +5,7 @@
 		<div id="fade">
 			
 			<center>
-				<% if @user_input_sub3 == "3a1"%>
+				<% if @user_input_sub3 == "3a1" %>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 3a1 pt.1" %> 
 							<p>
@@ -38,8 +38,25 @@
 						<% end %>
 					<% end %>
 					<br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3a1 pt.5" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3a1 pt.6" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
 					<% segment_sub4 = 1 %>
-				<% elsif @user_input_sub3 == "3a2"%>
+                                <% end %>
+				<% if @user_input_sub3 == "3a2" %>
 					<%= "Klarkel was overwhelmed by the fanatics." %>
 					<br><br>
 					<%= "You have failed!" %>

@@ -33,13 +33,6 @@
 						<% end %>
 					<% end %>
 					<br>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 3b2 pt.2" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
 					<%= "You have failed!" %>
 					<br><br>
 					<%= render 'q1/restart' %>

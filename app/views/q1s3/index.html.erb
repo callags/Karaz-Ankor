@@ -149,6 +149,38 @@
 						<% end %>
 					<% end %>
 					<br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3b pt.3" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3b pt.4" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3b pt.5" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
+                                        <% @articles.each do |article| %>
+                                                <% if article.title == "quest1 section 3b pt.6" %>
+                                                        <p>
+                                                                <%= article.text %>
+                                                        </p>
+                                                <% end %>
+                                        <% end %>
+                                        <br>
 				</h2>
 			</center>
 			<% if not ( @url.include?('3b1') or @url.include?('3b2')) %>

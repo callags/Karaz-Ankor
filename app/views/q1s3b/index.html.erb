@@ -185,6 +185,22 @@
 							<% end %>
 						<% end %>
 						<br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 secton 4 slayer pt.11" %>
+                                                                <p>
+                                                                        <%= article.text %>
+                                                                </p>
+                                                        <% end %>
+                                                <% end %>
+                                                <br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 section 4 slayer pt.12" %>
+                                                                <p>
+                                                                        <%= article.text %>
+                                                                </p>
+                                                        <% end %>
+                                                <% end %>
+                                                <br>
 						<% segment_end = 1 %>
 					<% elsif @user_input_sub1a == "1b2" %>
 						<% @articles.each do |article| %>

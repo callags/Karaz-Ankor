@@ -98,10 +98,12 @@ table{
 
 
 .chapter-title {
-  font-style: italic;
-  font-family: Garamond, serif;
+  font-family: 'font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;', 'Book Antiqua', Palatino, serif;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: normal; /* Or 'bold' if desired */
+  color: #0056b3;
+  text-transform: uppercase; /* Converts text to uppercase */
+  letter-spacing: 2px; /* Adds space between letters */
 }
 
 

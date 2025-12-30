@@ -2,25 +2,27 @@
 
 <div id="3b">
 	<div id="fade">
-		<h2>
-			<% if @user_input_sub3 == "3b1" %>
-				<center>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 3b1 pt.1" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 3b1 pt.2" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
+                <% if @user_input_sub3 == "3b1" %>
+                        <center>
+                                <h2>
+                                        <p class="chapter-title">Roasting some land slugs!</p>
+                                        <br>
+				        <% @articles.each do |article| %>
+					        <% if article.title == "quest1 section 3b1 pt.1" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
+			                <% @articles.each do |article| %>
+				                <% if article.title == "quest1 section 3b1 pt.2" %> 
+					                <p>
+						                <%= article.text %>
+					                </p>
+				                <% end %>
+			                <% end %>
+			                <br>
                                         <% @articles.each do |article| %>
                                                 <% if article.title == "quest1 section 3b1 pt.3" %>
                                                         <p>
@@ -45,41 +47,47 @@
                                                 <% end %>
                                         <% end %>
                                         <br>
-					<% segment_4 = 1 %>
-				</center>
-			<% elsif @user_input_sub3 == "3b2" %>
-				<center>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 3b2 pt.1" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
-					<%= "You have failed!" %>
-					<br><br>
-					<%= render 'q1/restart' %>
-				</center>
-			<% end %>
-			<% if segment_4 == 1 %>
-				<center>	
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 4 pt.1" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 section 4 pt.2" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
+			                <% segment_4 = 1 %>
+                                </h2>
+			</center>
+		<% elsif @user_input_sub3 == "3b2" %>
+		        <center>
+                                <h2>
+                                        <p class="chapter-title">Slicing and dicing!</p>
+                                        <br>
+				        <% @articles.each do |article| %>
+					        <% if article.title == "quest1 section 3b2 pt.1" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
+				        <%= "You have failed!" %>
+				        <br><br>
+				        <%= render 'q1/restart' %>
+                                </h2>
+			</center>
+		<% end %>
+		<% if segment_4 == 1 %>
+		        <center>
+                	        <h2>
+				        <% @articles.each do |article| %>
+					        <% if article.title == "quest1 section 4 pt.1" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
+				        <% @articles.each do |article| %>
+					        <% if article.title == "quest1 section 4 pt.2" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
                                         <% @articles.each do |article| %>
                                                 <% if article.title == "quest1 section 4 pt.3" %>
                                                         <p>
@@ -104,89 +112,89 @@
                                                 <% end %>
                                         <% end %>
                                         <br>
-					<% if @user_input_sub1a == "1b1"%>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.1" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.2" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.3" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.4" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.5" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.6" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.7" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.8" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.9" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 slayer pt.10" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
+				        <% if @user_input_sub1a == "1b1"%>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.1" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.2" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.3" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.4" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.5" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.6" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.7" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.8" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.9" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 slayer pt.10" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
                                                 <% @articles.each do |article| %>
-                                                        <% if article.title == "quest1 secton 4 slayer pt.11" %>
+                                                        <% if article.title == "quest1 section 4 slayer pt.11" %>
                                                                 <p>
                                                                         <%= article.text %>
                                                                 </p>
@@ -201,88 +209,88 @@
                                                         <% end %>
                                                 <% end %>
                                                 <br>
-						<% segment_end = 1 %>
-					<% elsif @user_input_sub1a == "1b2" %>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.1" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.2" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.3" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.4" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.5" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.6" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.7" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.8" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.9" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
-						<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 4 warrior pt.10" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
-						<% end %>
-						<br>
+				                <% segment_end = 1 %>
+				        <% elsif @user_input_sub1a == "1b2" %>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.1" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.2" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.3" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.4" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.5" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.6" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.7" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.8" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+					        <% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.9" %> 
+							        <p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
+				        	<% @articles.each do |article| %>
+						        <% if article.title == "quest1 section 4 warrior pt.10" %> 
+						        	<p>
+								        <%= article.text %>
+							        </p>
+						        <% end %>
+					        <% end %>
+					        <br>
                                                 <% @articles.each do |article| %>
                                                         <% if article.title == "quest1 section 4 warrior pt.11" %>
                                                                 <p>
@@ -331,31 +339,33 @@
                                                         <% end %>
                                                 <% end %>
                                                 <br>
-						<% segment_end = 1 %>
-					<% end %>
-				</center>
-			<% end %>
-			<% if segment_end == 1 %>
-				<center>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 end pt.1" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
-					<% @articles.each do |article| %>
-						<% if article.title == "quest1 end pt.2" %> 
-							<p>
-								<%= article.text %>
-							</p>
-						<% end %>
-					<% end %>
-					<br>
-					<%= render 'q1/restart' %>
-				</center>
-			<% end %>
-		</h2>
-	</div>
+			                        <% segment_end = 1 %>
+				        <% end %>
+			        </h2>    
+                        </center>
+		<% end %>
+		<% if segment_end == 1 %>
+	                <center>
+                                <h2>
+		        		<% @articles.each do |article| %>
+	        				<% if article.title == "quest1 end pt.1" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
+				        <% @articles.each do |article| %>
+				        	<% if article.title == "quest1 end pt.2" %> 
+						        <p>
+							        <%= article.text %>
+						        </p>
+					        <% end %>
+				        <% end %>
+				        <br>
+				        <%= render 'q1/restart' %>
+			        </h2>
+                        </center>
+	        <% end %>
+        </div>
 </div>

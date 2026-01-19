@@ -8,6 +8,8 @@
 			<center>
 				<h2>
 					<div id="fade">
+                                                <p class="chapter-title">Shot heard under the world</p>
+                                                <br>
 						<% if session[:bullet_hit].between?(1, 10) %>
 							<% if session[:bullet_success].between?(1, 7) %>
 								<%= "Despite emptying his clip, not a single bullet was able to pierce the support cable." %>
@@ -68,6 +70,8 @@
 			<center>
 				<h2>
 					<div id="fade">
+                                                <p class="chapter-title">Blades be a flying</p>
+                                                <br>
 						<% if session[:axe_hit].between?(1, 75) %>
 							<% if session[:axe_recoil].between?(1, 85) %>
 								<% @articles.each do |article| %>

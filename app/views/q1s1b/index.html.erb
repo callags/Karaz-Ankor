@@ -6,6 +6,8 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">Seated among the Slayers</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1b1 pt.1" %> 
 							<p>
@@ -62,7 +64,9 @@
 		<center>
 			<h2>
 				<div id="fade">
-					<% @articles.each do |article| %>
+                                        <p class="chapter-title">Seated among the Warriors</p>
+                                        <br>
+                                        <% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1b2 pt.1" %> 
 							<p>
 								<%= article.text %>

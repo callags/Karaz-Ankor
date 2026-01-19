@@ -13,6 +13,8 @@
 <center>
 	<h2>
 		<div id="fade">
+                <p class="chapter-title">Genesis</p>
+                <br>
 			<% @articles.each do |article| %>
 				<% if article.title == "quest1 intro pt.1" %>
 					<p>
@@ -94,6 +96,8 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">A worthy descent</p>
+                                        <br>
 					<%= "Klarkel grabs on to the lose marble blocks, slowly climbing down to the statue." %>
 					<br><br>
 					<% if session[:climb].between?(1, 10) %>
@@ -157,17 +161,15 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">Flying gamble</p>
+                                        <br>
 					<% if session[:fall_outcome].between?(1, 95) %>
-						<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
-						<br><br>
 						<%= "Klarkel plummets to his death" %>
 						<br><br>
 						<%= "You have failed!" %>
 						<br><br>
 						<%= render 'q1/restart' %>
 					<% else %>
-						<%= "Taking a dangerous leap of faith, the moronic dwarf jumps over the edge." %>
-						<br><br>
 						<%= "By some ludricus miracle Klarkel managed to grab the rope upon his descent. Feeling "\
 						"the recoil of the rope spring throughout his body, he is thrown up and down vigorously." %>
 						<br><br>
@@ -193,6 +195,8 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">Stroll to city hall</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 pt.1ca" %> 
 							<p>

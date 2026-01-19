@@ -5,12 +5,14 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">Cracks in the wind</p>
+                                        <br>
 					<% @articles.each do |article| %>
-							<% if article.title == "quest1 section 1 sub1c1" %> 
-								<p>
-									<%= article.text %>
-								</p>
-							<% end %>
+						<% if article.title == "quest1 section 1 sub1c1" %> 
+							<p>
+								<%= article.text %>
+							</p>
+						<% end %>
 					<% end %>
 					<br>
 					<%= "You have failed!" %>
@@ -24,6 +26,8 @@
 		<center>
 			<h2>
 				<div id="fade">
+                                        <p class="chapter-title">Nosing around</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1c2 pt.1" %> 
 							<p>

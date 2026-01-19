@@ -5,6 +5,8 @@
 		<h2>
 			<div id="fade">
 				<% if @user_input_sub1c == "1d1" %>
+                                        <p class="chapter-title">El Encierro!</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1d1 pt.1" %> 
 							<p>
@@ -15,6 +17,8 @@
 					<br>
 					<% segment_sub_1d = 1 %>
 				<% elsif @user_input_sub1c == "1d2" %>
+                                        <p class="chapter-title">Jab' em good, senpai!</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 1 sub1d2 pt.1" %> 
 							<p>

@@ -72,6 +72,8 @@
 			
 			<% if segment_sub4 == 1 %>
 				<center>
+                                        <p class="chapter-title">Bearding the unknown</p>
+                                        <br>
 					<% @articles.each do |article| %>
 						<% if article.title == "quest1 section 4 pt.1" %> 
 							<p>
@@ -129,6 +131,8 @@
 							<% end %>
 						<% end %>
 						<br>
+                                                <p class="chapter-title">Sneaking into peril</p>
+                                                <br>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest1 section 4 slayer pt.3" %> 
 								<p>
@@ -251,6 +255,8 @@
 							<% end %>
 						<% end %>
 						<br>
+                                                <p class="chapter-title">Friends amongst wraiths</p>
+                                                <br>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest1 section 4 warrior pt.6" %> 
 								<p>
@@ -275,6 +281,14 @@
 							<% end %>
 						<% end %>
 						<br>
+                                                <% @articles.each do |article| %>
+                                                        <% if article.title == "quest1 section 4 warrior pt.9" %>
+                                                                <p>
+                                                                        <%= article.text %>
+                                                                </p>
+                                                        <% end %>
+                                                <% end %>
+                                                <br>
 						<% @articles.each do |article| %>
 							<% if article.title == "quest1 section 4 warrior pt.10" %> 
 								<p>
